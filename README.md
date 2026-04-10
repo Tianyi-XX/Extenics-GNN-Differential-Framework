@@ -8,10 +8,10 @@ EGDF/
 ├── train.py          
 ├── inference.py     
 ├── data/             
-│   ├── Ecological field/   
-│   ├── Financial field/    
-│   ├── Medical field/      
-│   └── Production field/   
+│   ├── ecological/   
+│   ├── financial/    
+│   ├── medical/      
+│   └── production/   
 └── requirements.txt
 ```
 
