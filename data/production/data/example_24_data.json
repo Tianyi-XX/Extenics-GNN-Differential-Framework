@@ -1,0 +1,123 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Periodic Maintenance Mode",
+            "features": {
+                "Strategy": "Based on fixed time cycle",
+                "Predictability": "Cannot predict sudden failures"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "High-Load Equipment",
+            "features": {
+                "Status": "Prone to premature failure"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Low-Frequency Use Equipment",
+            "features": {
+                "Status": "Over-maintained"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Production Plan",
+            "features": {
+                "Status": "Interrupted"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Ensure Equipment Reliable Operation",
+            "features": {
+                "Objective": "Maximize equipment uptime, minimize cost and risk"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Sudden Failure",
+            "features": {
+                "Reason": "Insufficient maintenance cycle"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Resource Waste",
+            "features": {
+                "Reason": "Unnecessary maintenance"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Interrupt Production",
+            "features": {
+                "Reason": "Planned downtime maintenance"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Affects",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Affects",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Sudden failure conflicts with reliable operation objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Resource waste conflicts with minimizing cost objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Interrupting production conflicts with maximizing uptime objective"
+            }
+        }
+    ]
+}

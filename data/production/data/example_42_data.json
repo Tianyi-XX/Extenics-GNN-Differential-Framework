@@ -1,0 +1,138 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Connection Method",
+            "features": {
+                "Technology": [
+                    "Mortise and tenon structure",
+                    "Glue bonding"
+                ],
+                "Serviceability": "Cannot be disassembled",
+                "Environmental Friendliness": "Not eco-friendly"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Glue",
+            "features": {
+                "Attribute": "Long curing time",
+                "Component": "Contains formaldehyde"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Production Efficiency",
+            "features": {
+                "Status": "Low"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "User Experience",
+            "features": {
+                "Evaluation": "Inconvenient transport and handling"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Worker",
+            "features": {
+                "Skill Requirement": "High"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Assemble Bookshelf",
+            "features": {
+                "Objective": "Achieve efficient, eco-friendly, convenient assembly and use"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Low Production Efficiency",
+            "features": {
+                "Reason": [
+                    "High skill requirement",
+                    "Long curing time"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Transport/Handling Inconvenience",
+            "features": {
+                "Reason": "Cannot be disassembled"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Produce Environmental/Health Risk",
+            "features": {
+                "Reason": "Formaldehyde"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low production efficiency conflicts with efficient assembly objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Transport/handling inconvenience conflicts with convenient use objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Environmental/health risk conflicts with eco-friendly assembly objective"
+            }
+        }
+    ]
+}

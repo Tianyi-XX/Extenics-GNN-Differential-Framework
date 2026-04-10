@@ -1,0 +1,128 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Floor Marking System",
+            "features": {
+                "Format": "Painted lines",
+                "Flexibility": "Static, cannot change dynamically",
+                "Maintenance Cost": "High"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Painted Lines",
+            "features": {
+                "Durability": "Prone to wear",
+                "Warning Effect": "Poor under specific conditions"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Production Line Layout",
+            "features": {
+                "Status": "Will be adjusted"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Safety Status",
+            "features": {
+                "Evaluation": "Affected"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide On-site Guidance",
+            "features": {
+                "Objective": "Provide clear, reliable, flexible on-site guidance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Poor Warning Effect",
+            "features": {
+                "Reason": [
+                    "Poor lighting",
+                    "Floor oil stains"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Adapt to Layout Changes",
+            "features": {
+                "Reason": "Static markings"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate High Maintenance Costs",
+            "features": {
+                "Reason": "Paint prone to wear"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Poor warning effect conflicts with reliable guidance objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to adapt to changes conflicts with flexible guidance objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "High maintenance cost conflicts with efficient management objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Manual Hydraulic Pallet Jack",
+            "features": {
+                "Drive Method": "Purely manual",
+                "Turning Radius": "Large",
+                "Lifting Speed": "Slow",
+                "Braking System": "No brake device"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Forks",
+            "features": {
+                "Function": "Lift goods"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Handle Lever",
+            "features": {
+                "Function": "Manual pressurization"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Warehouse Environment",
+            "features": {
+                "Terrain": [
+                    "Long distance",
+                    "Slope",
+                    "Narrow aisle"
+                ]
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Operator",
+            "features": {
+                "Physiological State": "Prone to fatigue"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Safety Status",
+            "features": {
+                "Evaluation": "Hazards exist"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Transport Goods",
+            "features": {
+                "Tool": "M1",
+                "Objective": "Move goods efficiently, safely, flexibly"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Consume Physical Energy",
+            "features": {
+                "Executor": "M5",
+                "Reason": "Purely manual drive"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Operation Restricted",
+            "features": {
+                "Reason": "Large turning radius"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Safety Risk",
+            "features": {
+                "Reason": "No brake"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "M6"
+        },
+        {
+            "id": "R6",
+            "relation": "Acts on",
+            "source": "A1",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "High manual effort conflicts with efficient transport objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inflexible operation conflicts with flexible transport objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "M6",
+            "target": "A1",
+            "features": {
+                "Description": "Safety hazards conflict with safe transport objective"
+            }
+        }
+    ]
+}

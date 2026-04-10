@@ -1,0 +1,125 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Industrial Vision System",
+            "features": {
+                "Stability": "Sensitive to ambient light",
+                "Imaging Capability": "Difficult to image reflective/transparent products",
+                "Measurement Dimension": "2D only"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Software Algorithm",
+            "features": {
+                "Learning Capability": "Fixed, cannot learn adaptively"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Measurement Accuracy",
+            "features": {
+                "Status": "Prone to errors"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Product",
+            "features": {
+                "Attribute": [
+                    "Reflective",
+                    "Transparent"
+                ],
+                "Geometry": "Contains 3D features"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Dimensional Measurement",
+            "features": {
+                "Objective": "Accurate, reliable, full-dimensional, adaptive measurement"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Measurement Errors",
+            "features": {
+                "Reason": [
+                    "Light changes",
+                    "Imaging difficulty"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Measure 3D Dimensions",
+            "features": {
+                "Reason": "Supports 2D only"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Adapt to New Products",
+            "features": {
+                "Reason": "Fixed algorithm"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Measurement errors conflict with accurate reliable objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to measure 3D conflicts with full-dimensional objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to adapt conflicts with adaptive measurement objective"
+            }
+        }
+    ]
+}

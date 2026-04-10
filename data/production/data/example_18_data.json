@@ -1,0 +1,140 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Automatic Case Packer",
+            "features": {
+                "Flexibility": "Only compatible with single carton specification",
+                "Robustness": "Demanding requirements for incoming material position",
+                "Monitoring Capability": "No consumable status alarm"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Tape Roll",
+            "features": {
+                "Replacement Process": "Complex"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Production Flexibility",
+            "features": {
+                "Status": "Severely limited"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Equipment Uptime",
+            "features": {
+                "Status": "Prone to decrease due to jams and maintenance"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Automatic Case Packing and Sealing",
+            "features": {
+                "Objective": "Efficient, flexible, reliable automated packaging"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Accommodate Multiple Sizes",
+            "features": {
+                "Reason": "Design limitation"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Jams",
+            "features": {
+                "Reason": "Incoming material position deviation"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Production Interruption Without Notice",
+            "features": {
+                "Reason": "No alarm when tape runs out or breaks"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Long Maintenance Time",
+            "features": {
+                "Reason": "Complex tape roll replacement process"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Incompatibility conflicts with flexible packaging objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Frequent jams conflict with reliable packaging objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Interruption without notice conflicts with efficient packaging objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Long maintenance time conflicts with efficient packaging objective"
+            }
+        }
+    ]
+}

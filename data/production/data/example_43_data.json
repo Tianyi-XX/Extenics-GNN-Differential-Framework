@@ -1,0 +1,142 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Machine Tool Base",
+            "features": {
+                "Structure": "Monolithic solid",
+                "Weight": "Overweight",
+                "Material Utilization Rate": "Low"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Casting Defect",
+            "features": {
+                "Attribute": "Internal",
+                "Detectability": "Difficult to detect and repair"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Transportation and Installation",
+            "features": {
+                "Difficulty": "High",
+                "Cost": "High"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Internal Piping/Wiring",
+            "features": {
+                "Installation": "Inconvenient"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Stable Support",
+            "features": {
+                "Objective": "Provide stable, reliable, easy-to-maintain, cost-effective support"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Potential Quality Risk",
+            "features": {
+                "Reason": "Defects difficult to detect"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Logistics Cost",
+            "features": {
+                "Reason": "Excessively heavy"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Piping Installation",
+            "features": {
+                "Reason": "Solid structure"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Cause Material Waste",
+            "features": {
+                "Reason": "Low material utilization rate"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Potential quality risk conflicts with reliable support objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "High logistics cost conflicts with cost-effective objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering piping installation conflicts with easy-to-maintain objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Material waste conflicts with cost-effective objective"
+            }
+        }
+    ]
+}

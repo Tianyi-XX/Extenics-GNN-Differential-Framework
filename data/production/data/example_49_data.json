@@ -1,0 +1,145 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Integrated Ink Cartridge Design",
+            "features": {
+                "Structure": "Printhead integrated with ink tank",
+                "User Choice": "Cannot use third-party ink"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Ink",
+            "features": {
+                "Status": "Requires replacement when one color runs out"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "User Cost",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Resource",
+            "features": {
+                "Status": "Wasted"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Printhead",
+            "features": {
+                "Attribute": "Built into cartridge"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Printing",
+            "features": {
+                "Objective": "Achieve low-cost, eco-friendly, choice-free printing"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Resource Waste",
+            "features": {
+                "Reason": "Replacing entire cartridge"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Usage Cost",
+            "features": {
+                "Reason": [
+                    "Built-in printhead design",
+                    "Cannot use third-party ink"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Limit User Choice",
+            "features": {
+                "Reason": "Integrated design"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Resource waste conflicts with eco-friendly printing objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "High cost conflicts with low-cost printing objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Limiting choice conflicts with choice-free objective"
+            }
+        }
+    ]
+}

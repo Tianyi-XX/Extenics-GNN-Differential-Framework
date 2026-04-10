@@ -1,0 +1,125 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Scrap Recycling System",
+            "features": {
+                "Sorting Capability": "None, prone to mixing",
+                "Data Statistics Capability": "None"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Open-top Metal Drum",
+            "features": {
+                "Safety": "Low"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Metal Scrap Material",
+            "features": {
+                "Attribute": "Sharp",
+                "Recycling Value": "Affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Worker",
+            "features": {
+                "Safety Status": "Prone to scratches/cuts"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Cost Accounting",
+            "features": {
+                "Status": "Difficult to refine"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Scrap Management",
+            "features": {
+                "Objective": "Achieve safe, high-value, data-driven scrap recycling"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Safety Risk",
+            "features": {
+                "Reason": "Exposure of sharp scrap"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Recycling Value",
+            "features": {
+                "Reason": "Scrap mixing"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Manage with Data",
+            "features": {
+                "Reason": "Information cannot be statistically analyzed"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Safety risk conflicts with safe recycling objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Reduced recycling value conflicts with high-value recycling objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to use data conflicts with data-driven management objective"
+            }
+        }
+    ]
+}

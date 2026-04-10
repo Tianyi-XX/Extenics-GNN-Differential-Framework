@@ -1,0 +1,159 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Cooling Fan Design",
+            "features": {
+                "Material": "Plastic",
+                "Heat Dissipation Efficiency": "Fixed"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Plastic Blade",
+            "features": {
+                "Durability": "Prone to breakage",
+                "Surface": "Prone to dust accumulation"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Motor Reliability",
+            "features": {
+                "Status": "Threatened"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Work Environment",
+            "features": {
+                "Attribute": "Dusty"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Production Environment",
+            "features": {
+                "Status": "Noisy"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Motor Cooling",
+            "features": {
+                "Objective": "Achieve reliable, efficient, intelligent, quiet cooling"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Breakage Failure",
+            "features": {
+                "Reason": "Plastic material"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Heat Dissipation Performance",
+            "features": {
+                "Reason": "Dust accumulation on blades"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Adjust Intelligently",
+            "features": {
+                "Reason": "Fixed heat dissipation efficiency"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Produce Noise",
+            "features": {
+                "Reason": "Fan design"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Breakage failure conflicts with reliable cooling objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Performance degradation conflicts with efficient cooling objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to adjust intelligently conflicts with intelligent cooling objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Producing noise conflicts with quiet cooling objective"
+            }
+        }
+    ]
+}

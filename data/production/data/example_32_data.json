@@ -1,0 +1,149 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Air Purification System",
+            "features": {
+                "Principle": "Direct exhaust",
+                "Filtration Capability": "None",
+                "Energy Efficiency": "Low (Energy waste)",
+                "Effectiveness": "Uneven"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Harmful Fumes and Particles",
+            "features": {
+                "Status": "Unfiltered, dispersed in workshop"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker Health",
+            "features": {
+                "Status": "Threatened"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Energy",
+            "features": {
+                "Status": "Largely wasted"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Exhaust Fan",
+            "features": {
+                "Attribute": "High power",
+                "Drawback": "Extremely loud noise"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Purify Workshop Air",
+            "features": {
+                "Objective": "Provide healthy, energy-saving, efficient, comfortable work environment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Endanger Worker Health",
+            "features": {
+                "Reason": "Cannot filter harmful substances"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Energy Waste",
+            "features": {
+                "Reason": "Direct exhaust"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Poor Purification Effect",
+            "features": {
+                "Reason": "Uneven effect"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Produce Loud Noise",
+            "features": {
+                "Reason": "High-power fan"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Endangering health conflicts with providing healthy environment objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Energy waste conflicts with energy-saving objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Poor purification effect conflicts with efficient objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Loud noise conflicts with comfortable environment objective"
+            }
+        }
+    ]
+}

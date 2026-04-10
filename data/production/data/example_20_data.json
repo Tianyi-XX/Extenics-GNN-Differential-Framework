@@ -1,0 +1,140 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "UV Laser Marking Machine",
+            "features": {
+                "Flexibility": "Fixed marking position",
+                "Functional Capability": "Poor marking effect on curved/uneven surfaces"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Extraction System",
+            "features": {
+                "Attribute": "Loud noise",
+                "Maintenance": "Frequent filter replacement"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Dedicated Software",
+            "features": {
+                "Usability": "Complex operation"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Marking Quality",
+            "features": {
+                "Status": "Poor under specific conditions"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Production Process",
+            "features": {
+                "Requirement": "Requires precise product positioning"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Engrave Serial Number",
+            "features": {
+                "Objective": "Efficient, high-quality, flexible, eco-friendly, easy-to-use marking"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Poor Marking Effect",
+            "features": {
+                "Reason": "Curved or uneven surface"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Affect Production Efficiency",
+            "features": {
+                "Reason": [
+                    "Requires precise positioning",
+                    "Complex software operation"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Environmental/Maintenance Issues",
+            "features": {
+                "Reason": "Extraction system noise and filter replacement"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Poor marking effect conflicts with high-quality objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Affecting production efficiency conflicts with efficient objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Environmental/maintenance issues conflict with eco-friendly/efficient objectives"
+            }
+        }
+    ]
+}

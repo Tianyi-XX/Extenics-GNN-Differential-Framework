@@ -1,0 +1,127 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Safety Gate System",
+            "features": {
+                "Linkage Capability": "None (Gate status not linked with equipment)",
+                "Recognition Capability": "None (Cannot identify personnel identity)",
+                "Emergency Design": "Inconvenient for rescue personnel entry"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Hazardous Equipment",
+            "features": {
+                "Status": "Can still start after gate is opened"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker",
+            "features": {
+                "Behavior": "May not close the gate"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Safety Status",
+            "features": {
+                "Evaluation": "System prone to failure"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Safety Protection",
+            "features": {
+                "Objective": "Provide absolutely reliable, intelligent, emergency-friendly safety assurance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Safety System Failure",
+            "features": {
+                "Reason": [
+                    "Worker does not close gate",
+                    "Equipment can still start after gate opened"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Emergency Rescue",
+            "features": {
+                "Reason": "Entry inconvenient"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Prevent Unauthorized Entry",
+            "features": {
+                "Reason": "Cannot identify intelligently"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Related to",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "System failure conflicts with reliable assurance objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering rescue conflicts with emergency-friendly objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to prevent unauthorized entry conflicts with intelligent assurance objective"
+            }
+        }
+    ]
+}

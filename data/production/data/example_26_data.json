@@ -1,0 +1,128 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Paper SOP File",
+            "features": {
+                "Format": "Paper",
+                "Content Medium": "Text/images only",
+                "Status": "Prone to damage, dirt",
+                "Version Control": "Difficult to update, easy to miss"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Operational Compliance",
+            "features": {
+                "Status": "Cannot be effectively monitored"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker",
+            "features": {
+                "Status": "Reading difficulty"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Process Version",
+            "features": {
+                "Status": "Easily becomes outdated"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Guide Production Operation",
+            "features": {
+                "Objective": "Accurate, efficient, traceable guidance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Operational Errors",
+            "features": {
+                "Reason": "Using outdated or hard-to-understand SOP"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Information Communication Efficiency",
+            "features": {
+                "Reason": [
+                    "Reading difficulty",
+                    "Lack of multimedia information"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Trace/Monitor",
+            "features": {
+                "Reason": "Cannot record worker operations"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "A1",
+            "target": "M1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Operational errors conflict with accurate guidance objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Low communication efficiency conflicts with efficient guidance objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to trace/monitor conflicts with traceable guidance objective"
+            }
+        }
+    ]
+}

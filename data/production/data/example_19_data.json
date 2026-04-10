@@ -1,0 +1,140 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "AGV Cart",
+            "features": {
+                "Navigation Method": "Magnetic stripe navigation",
+                "Obstacle Avoidance": "Stops and waits, cannot detour",
+                "Performance": "Limited load capacity and battery life"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Dispatch System",
+            "features": {
+                "Intelligence Level": "Simple, cannot collaborate intelligently"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Magnetic Stripe",
+            "features": {
+                "Attribute": "Physical layout, fixed route"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Logistics Efficiency",
+            "features": {
+                "Status": "Low, prone to congestion"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Transport Material Racks",
+            "features": {
+                "Objective": "Efficient, flexible, intelligent autonomous transport"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Flexibly Adjust Route",
+            "features": {
+                "Reason": "Fixed route"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Traffic Congestion",
+            "features": {
+                "Reason": "Cannot detour around obstacles"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Low Collaboration Efficiency",
+            "features": {
+                "Reason": "Simple dispatch system"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Operation Interruption",
+            "features": {
+                "Reason": "Limited battery life"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inflexible route conflicts with flexible transport objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Traffic congestion conflicts with efficient transport objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low collaboration efficiency conflicts with intelligent transport objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Operation interruption conflicts with efficient transport objective"
+            }
+        }
+    ]
+}

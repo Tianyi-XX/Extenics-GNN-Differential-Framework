@@ -1,0 +1,124 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "SMT Placement Machine",
+            "features": {
+                "Material Verification": "Manual",
+                "Changeover Efficiency": "Switching programs and tracks is time-consuming"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Component Reel",
+            "features": {
+                "Status": "Prone to misuse"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Production Quality",
+            "features": {
+                "Risk": "Incorrect placement accident"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Production Flexibility",
+            "features": {
+                "Evaluation": "Low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Nozzle",
+            "features": {
+                "Maintenance Need": "Requires regular manual cleaning and replacement"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Place Components",
+            "features": {
+                "Objective": "Zero-defect, high-efficiency, high-flexibility automated production"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Incorrect Placement",
+            "features": {
+                "Reason": "Manual verification error"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Long Changeover Time",
+            "features": {
+                "Reason": "Complex program and track adjustment"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Perform Cumbersome Maintenance",
+            "features": {
+                "Reason": "Nozzle requires regular manual cleaning and replacement"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Incorrect placement conflicts with zero-defect production objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Long changeover time conflicts with high-efficiency, high-flexibility objectives"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Cumbersome maintenance conflicts with high-efficiency production objective"
+            }
+        }
+    ]
+}

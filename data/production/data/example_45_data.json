@@ -1,0 +1,130 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Wire Harness Design",
+            "features": {
+                "Structure": "Wrapped into a large bundle with tape",
+                "Physical Property": "Stiff",
+                "Expandability": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Reliability",
+            "features": {
+                "Status": "Low, prone to breakage due to stress concentration"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Serviceability",
+            "features": {
+                "Status": "Poor, repair time-consuming"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Tape",
+            "features": {
+                "Function": "Wrapping and securing"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Wiring and Maintenance",
+            "features": {
+                "Objective": "Achieve reliable, easy-to-maintain, expandable wiring"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Breakage Risk",
+            "features": {
+                "Reason": "Stress concentration"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Time-consuming Repair",
+            "features": {
+                "Reason": "Requires removing all tape"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Functional Expansion",
+            "features": {
+                "Reason": "Monolithic wrapping"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Breakage risk conflicts with reliable wiring objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Time-consuming repair conflicts with easy-to-maintain objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering expansion conflicts with expandable wiring objective"
+            }
+        }
+    ]
+}

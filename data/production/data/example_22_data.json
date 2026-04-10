@@ -1,0 +1,132 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Manual Inventory Count Process",
+            "features": {
+                "Mode": "Shutdown count",
+                "Tool": "Paper count sheet",
+                "Data Processing": "Manual entry into Excel"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Warehouse Operation",
+            "features": {
+                "Status": "Severely affected"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Inventory Data",
+            "features": {
+                "Accuracy": "Low (Error-prone)",
+                "Timeliness": "Severely delayed"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Count Discrepancy",
+            "features": {
+                "Traceability": "Difficult to trace"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Paper Count Sheet",
+            "features": {
+                "Attribute": "Physical medium"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Inventory Management",
+            "features": {
+                "Objective": "Efficient, accurate, real-time inventory control"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Stop Operation",
+            "features": {
+                "Reason": "Count process requirement"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Produce Data Errors",
+            "features": {
+                "Reason": "Manual counting and entry"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Delay Data Update",
+            "features": {
+                "Reason": "Delay in data entry and comparison"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Stopping operation conflicts with efficient management objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Data errors conflict with accurate control objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Data delay conflicts with real-time control objective"
+            }
+        }
+    ]
+}

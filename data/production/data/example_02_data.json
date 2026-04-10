@@ -1,0 +1,137 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Industrial Hot Air Gun",
+            "features": {
+                "Power": {
+                    "Value": 2000,
+                    "Unit": "W",
+                    "Evaluation": "High"
+                },
+                "Temperature Setting": {
+                    "Type": "Fixed two levels",
+                    "Drawback": "Cannot precisely adjust"
+                },
+                "Air Speed": {
+                    "Type": "Fixed",
+                    "Drawback": "Not adjustable"
+                },
+                "Heating Speed": {
+                    "Evaluation": "Slow"
+                }
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Precision Electronic Components",
+            "features": {
+                "Attribute": "Precision",
+                "Status": "Easily damaged"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Air Nozzle",
+            "features": {
+                "Attribute": "Single",
+                "Drawback": "Cannot form focused hot air"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Electrical Energy",
+            "features": {
+                "Consumption": "High"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Heating Element",
+            "features": {
+                "Function": "Generate heat"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Heat/Solder",
+            "features": {
+                "Objective": "Efficient, precise heating"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Damage Components",
+            "features": {
+                "Reason": "Temperature cannot be precisely adjusted"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Affect Efficiency",
+            "features": {
+                "Reason": "Slow heating speed"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Consume High Electrical Energy",
+            "features": {
+                "Reason": "High power"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging components fundamentally conflicts with precise heating objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Affecting efficiency conflicts with efficient heating objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Desktop Cleaning Tank",
+            "features": {
+                "Material": "Stainless steel"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Kerosene Cleaning Agent",
+            "features": {
+                "Attribute": "Volatile",
+                "Hazard": [
+                    "Air pollution",
+                    "Fire hazard",
+                    "Harmful skin contact"
+                ]
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker",
+            "features": {
+                "Health Status": "Threatened"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Mechanical Parts",
+            "features": {
+                "Structure": "Contains deep holes and crevices",
+                "Status": "Not thoroughly cleaned"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Brush",
+            "features": {
+                "Function": "Manual cleaning tool"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Manually Brush Clean",
+            "features": {
+                "Executor": "M3",
+                "Tool": "M5",
+                "Object": "M4",
+                "Objective": "Clean parts efficiently, safely, thoroughly"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Health Hazard",
+            "features": {
+                "Executor": "M3",
+                "Reason": "Skin contact with kerosene"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Produce Safety Hazard",
+            "features": {
+                "Reason": "Fire risk due to kerosene volatility"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Incomplete Cleaning",
+            "features": {
+                "Object": "M4",
+                "Reason": "Manual brushing cannot reach deep crevices"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Low Efficiency",
+            "features": {
+                "Process": "Manual brushing"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Health hazard conflicts with safe cleaning objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Fire hazard conflicts with safe cleaning objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Incomplete cleaning conflicts with thorough cleaning objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient cleaning objective"
+            }
+        }
+    ]
+}

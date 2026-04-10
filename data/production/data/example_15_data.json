@@ -1,0 +1,132 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "AOI Equipment",
+            "features": {
+                "Detection Capability": "Weak for 3D defects",
+                "Accuracy": "High false positive rate"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "3D Defects",
+            "features": {
+                "Type": [
+                    "Insufficient solder",
+                    "Tombstoning"
+                ],
+                "Status": "Easily missed"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Detection Result",
+            "features": {
+                "Contains": "Numerous false positives"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Engineer",
+            "features": {
+                "Work": [
+                    "Complex programming",
+                    "Manual review of false positives"
+                ]
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Detection Program",
+            "features": {
+                "Composition": "Standard templates and parameter settings",
+                "Evaluation": "Complex programming"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Defect Detection",
+            "features": {
+                "Objective": "Accurately, efficiently, reliably discover all defects"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Missed Detection",
+            "features": {
+                "Reason": "Weak 3D defect detection capability"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate False Positives",
+            "features": {
+                "Reason": "Non-intelligent algorithm"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Long Programming Time",
+            "features": {
+                "Reason": "Complex process"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Missed detection conflicts with reliable detection objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "False positives conflict with accurate detection objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Long programming time conflicts with efficient detection objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Horizontal Injection Molding Machine",
+            "features": {
+                "Heating System": "Electric heating coil",
+                "Mold System": "Complex structure"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Production Time",
+            "features": {
+                "Status": "Ineffectively occupied"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Workshop Environment",
+            "features": {
+                "Temperature": "Too high"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Production Cost",
+            "features": {
+                "Energy Cost": "Huge"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Mold",
+            "features": {
+                "Attribute": "Requires replacement"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Produce Plastic Casings",
+            "features": {
+                "Objective": "Efficient, flexible, low-cost, environmentally friendly production"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Long Preheat Time",
+            "features": {
+                "Duration": "Nearly 1 hour"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Long Mold Change Time",
+            "features": {
+                "Duration": "Over 2 hours"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Large Amount of Waste Heat",
+            "features": {}
+        },
+        {
+            "id": "A5",
+            "action": "Consume Huge Electrical Energy",
+            "features": {}
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Long preheat time conflicts with efficient production objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Long mold change time conflicts with efficient, flexible production objectives"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Generating waste heat conflicts with environmentally friendly objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Huge energy consumption conflicts with low-cost production objective"
+            }
+        }
+    ]
+}

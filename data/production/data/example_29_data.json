@@ -1,0 +1,122 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Supplier Management Process",
+            "features": {
+                "Evaluation Basis": "Price only",
+                "Communication Method": "Email/Phone",
+                "Collaboration Level": "Low"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Supplier Performance Indicators",
+            "features": {
+                "Type": [
+                    "Quality stability",
+                    "Delivery punctuality"
+                ],
+                "Status": "Ignored"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Communication Records",
+            "features": {
+                "Status": "Scattered, difficult to trace"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Supply Chain",
+            "features": {
+                "Status": "Not coordinated, information opaque"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Supplier Management",
+            "features": {
+                "Objective": "Establish a stable, high-quality, collaborative supply chain"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Supply Risk",
+            "features": {
+                "Reason": "Lack of systematic evaluation"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Difficulty in Tracing",
+            "features": {
+                "Reason": "Scattered communication records"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Respond Collaboratively to Changes",
+            "features": {
+                "Reason": "Lack of visibility into upstream situation"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Ignores",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Supply risk conflicts with establishing stable high-quality supply chain objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Tracing difficulty conflicts with efficient management objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to collaborate conflicts with establishing collaborative supply chain objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Quality Inspection Process",
+            "features": {
+                "Detection Mode": "Batch sampling",
+                "Data Recording": "Handwritten"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Product Quality",
+            "features": {
+                "Risk": "Defective product outflow"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Inspection Data",
+            "features": {
+                "Quality": "Error-prone",
+                "Usability": "Difficult for statistical analysis"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Production Process",
+            "features": {
+                "Status": "Cannot receive real-time feedback"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Quality Control",
+            "features": {
+                "Objective": "100% qualified, data-driven, real-time feedback quality assurance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Outflow of Defective Products",
+            "features": {
+                "Reason": "Cannot achieve 100% inspection"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Delayed Problem Discovery",
+            "features": {
+                "Reason": "Batch detection mode"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Provide Real-time Feedback",
+            "features": {
+                "Reason": "Outdated data recording and analysis methods"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Defective outflow conflicts with 100% qualification objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Delayed problem discovery conflicts with real-time feedback objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability for real-time feedback conflicts with data-driven objective"
+            }
+        }
+    ]
+}

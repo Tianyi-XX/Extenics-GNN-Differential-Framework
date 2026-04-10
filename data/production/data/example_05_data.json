@@ -1,0 +1,143 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Standard Safety Helmet",
+            "features": {
+                "Protection Capability": "Weak lateral protection",
+                "Comfort": "Poor breathability",
+                "Functionality": "No additional functions"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Plastic Headband",
+            "features": {
+                "Adjustability": "Inconvenient",
+                "Fit": "Low"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Nylon Strap",
+            "features": {
+                "Function": "Fastening"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Worker",
+            "features": {
+                "Physiological State": "Stuffy, uncomfortable"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Work Environment",
+            "features": {
+                "Potential Hazard": "Lateral impact"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Factory Management System",
+            "features": {
+                "Status": "Information silo"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Comprehensive Protection",
+            "features": {
+                "Objective": "Safe, comfortable, intelligent head protection"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Discomfort",
+            "features": {
+                "Executor": "M4",
+                "Reason": [
+                    "Poor breathability",
+                    "Low fit"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Insufficient Protection",
+            "features": {
+                "Reason": "Weak lateral protection"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Management Disconnection",
+            "features": {
+                "Reason": "Lack of联动 function"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Wearing discomfort conflicts with comfortable protection objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Insufficient protection conflicts with safe protection objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Management disconnection conflicts with intelligent protection objective"
+            }
+        }
+    ]
+}

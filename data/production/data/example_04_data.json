@@ -1,0 +1,165 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Laser Barcode Scanner",
+            "features": {
+                "Connection Method": "Wired",
+                "Reading Capability": "1D barcodes only",
+                "Recognition Performance": "Low recognition rate for poor quality barcodes"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Physical Button",
+            "features": {
+                "Lifespan": "Limited",
+                "Status": "Prone to damage"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Connection Cable",
+            "features": {
+                "Attribute": "Wired"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Poor Quality Barcode",
+            "features": {
+                "Status": [
+                    "Wrinkled",
+                    "Reflective"
+                ]
+            }
+        },
+        {
+            "id": "M5",
+            "name": "QR Code",
+            "features": {
+                "Attribute": "Commonly used today"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Scanner Operator",
+            "features": {
+                "Operating State": "Movement range limited"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Scan for Inventory",
+            "features": {
+                "Objective": "Fast, accurate, flexible data collection"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Scan Failure",
+            "features": {
+                "Reason": "Poor quality barcode"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Restrict Movement",
+            "features": {
+                "Executor": "M6",
+                "Reason": "Wired connection"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Hardware Failure",
+            "features": {
+                "Reason": "Physical button damage"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Unable to Collect Data",
+            "features": {
+                "Reason": "Object is a QR code"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Scan failure conflicts with accurate collection objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Restricted movement conflicts with flexible collection objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hardware failure conflicts with fast reliable collection objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to collect QR code conflicts with accurate collection objective"
+            }
+        }
+    ]
+}

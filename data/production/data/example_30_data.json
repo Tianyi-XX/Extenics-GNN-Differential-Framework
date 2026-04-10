@@ -1,0 +1,131 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "ECN Process",
+            "features": {
+                "Flow Method": "Email",
+                "Efficiency": "Low, long cycle",
+                "Traceability": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Change Information",
+            "features": {
+                "Status": "Prone to errors or omissions"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Execution Status",
+            "features": {
+                "Status": "Difficult to track"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Historical Records",
+            "features": {
+                "Status": "Inconvenient to search"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Email System",
+            "features": {
+                "Attribute": "Unstructured communication tool"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Engineering Change Management",
+            "features": {
+                "Objective": "Complete changes accurately, efficiently, traceably"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Information Errors",
+            "features": {
+                "Reason": "Email transfer"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Track Effectively",
+            "features": {
+                "Reason": "Process lacks system support"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Low Approval Efficiency",
+            "features": {
+                "Reason": "Email flow"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Uses",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Information errors conflict with accurate change objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to track conflicts with traceable management objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient change objective"
+            }
+        }
+    ]
+}

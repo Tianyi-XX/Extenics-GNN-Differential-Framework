@@ -1,0 +1,130 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Manual Material Delivery Process",
+            "features": {
+                "Mode": "Manual, passive response",
+                "Route": "Long, inefficient"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Workstation",
+            "features": {
+                "Status": "Often stops waiting"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Kanban Information",
+            "features": {
+                "Timeliness": "Updates not timely"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Material Cart",
+            "features": {
+                "Attribute": "Occupies aisle space"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Replenish Material",
+            "features": {
+                "Objective": "Timely, accurate, efficient, non-disruptive material supply"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Workstation Stoppage",
+            "features": {
+                "Reason": "Material replenishment not timely"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Incorrect/Missed Delivery",
+            "features": {
+                "Reason": "Kanban information not timely"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Affect Production Line Traffic",
+            "features": {
+                "Reason": "Material cart occupies space"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Reduce Delivery Efficiency",
+            "features": {
+                "Reason": "Long route"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Workstation stoppage conflicts with timely supply objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Incorrect/missed delivery conflicts with accurate supply objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Affecting traffic conflicts with non-disruptive supply objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Three-Axis CNC Milling Machine",
+            "features": {
+                "Maintenance Convenience": "Cutting fluid replacement/filtration inconvenient",
+                "Cleaning Method": "Manual cleaning after shutdown"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Machining Accuracy",
+            "features": {
+                "Status": "Prone to decrease"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Equipment Uptime",
+            "features": {
+                "Status": "Reduced due to manual maintenance"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Operator",
+            "features": {
+                "Operating Experience": "Not intuitive, efficiency affected"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Tool",
+            "features": {
+                "Status": "Wear relies on manual inspection"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "System Interface",
+            "features": {
+                "Status": "Old and not intuitive"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Metal Machining",
+            "features": {
+                "Objective": "High-precision, high-efficiency, highly automated unmanned machining"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Accuracy Decrease",
+            "features": {
+                "Reason": "Tool wear not detected timely"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Interrupt Production (Shutdown)",
+            "features": {
+                "Reason": [
+                    "Manual cleaning of metal chips",
+                    "Replacing cutting fluid"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Affect Operational Efficiency",
+            "features": {
+                "Reason": "System interface not intuitive"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M6"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Accuracy decrease conflicts with high-precision machining objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Production interruption conflicts with high-efficiency machining objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low operational efficiency conflicts with highly automated machining objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "ERP Scheduling System",
+            "features": {
+                "Flexibility": "Rigid, cannot handle exceptions",
+                "Completeness": "Does not consider multiple constraints",
+                "Intelligence": "Cannot simulate and optimize"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Production Plan",
+            "features": {
+                "Quality": "Suboptimal and inflexible"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Multiple Constraints",
+            "features": {
+                "Type": [
+                    "Material inventory",
+                    "Tool life",
+                    "Personnel skills"
+                ],
+                "Status": "Ignored"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Planner",
+            "features": {
+                "Role": "Relies on personal experience for decision-making"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Production Scheduling",
+            "features": {
+                "Objective": "Flexible, intelligent, optimal production plan"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Handle Exceptions",
+            "features": {
+                "Reason": "System rigidity"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Produce Suboptimal Plan",
+            "features": {
+                "Reason": "Incomplete constraints"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Rely on Manual Experience",
+            "features": {
+                "Reason": "Cannot simulate optimization"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Depends on",
+            "source": "A1",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to handle exceptions conflicts with flexible scheduling objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Producing suboptimal plan conflicts with optimal plan objective"
+            }
+        }
+    ]
+}

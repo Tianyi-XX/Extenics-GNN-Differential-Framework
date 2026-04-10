@@ -1,0 +1,130 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "External Driver Power Supply Design",
+            "features": {
+                "Structure": "Power supply separated from lamp body",
+                "Connection Point": "Increased"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "System Reliability",
+            "features": {
+                "Status": "Reduced"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Installation Experience",
+            "features": {
+                "Evaluation": "Inconvenient, affects aesthetics"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Intelligence Level",
+            "features": {
+                "Status": "Low, cannot coordinate control"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "LED Lamp Body",
+            "features": {
+                "Attribute": "Main light-emitting part"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Lighting",
+            "features": {
+                "Objective": "Provide reliable, aesthetic, easy-to-install, intelligent lighting"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reduce Reliability",
+            "features": {
+                "Reason": "Increased wiring points"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Installation Inconvenience / Affect Aesthetics",
+            "features": {
+                "Reason": "Need to hide external power box"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Intelligently Coordinate",
+            "features": {
+                "Reason": "Power supply and lamp body separated"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M5",
+            "target": "M1"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Reduced reliability conflicts with reliable lighting objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Installation inconvenience/aesthetics conflict with easy-install/aesthetic objectives"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to intelligently coordinate conflicts with intelligent lighting objective"
+            }
+        }
+    ]
+}

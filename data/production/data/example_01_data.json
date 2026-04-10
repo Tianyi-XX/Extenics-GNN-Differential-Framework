@@ -1,0 +1,141 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Handheld Electric Screwdriver",
+            "features": {
+                "Drive Method": "Corded power",
+                "Control": "No torque feedback",
+                "Speed": {
+                    "Type": "Fixed",
+                    "Value": 1500,
+                    "Unit": "RPM"
+                },
+                "Weight": {
+                    "Value": 1.5,
+                    "Unit": "kg",
+                    "Evaluation": "Heavy"
+                }
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Power Cord",
+            "features": {
+                "Attribute": "Corded"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Bit Head",
+            "features": {
+                "Attribute": "Magnetic"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Screw",
+            "features": {
+                "Status": "Often stripped or damaged"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Worker",
+            "features": {
+                "Physiological State": "Prone to fatigue",
+                "Operating State": "Range limited"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Operate/Fasten",
+            "features": {
+                "Objective": "High-quality, efficient, comfortable assembly"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Strip/Damage Screws",
+            "features": {
+                "Reason": "No torque feedback, fixed speed"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Limit Operating Range",
+            "features": {
+                "Reason": "Corded design"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Produce Fatigue",
+            "features": {
+                "Reason": "Heavy equipment"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Stripping screws conflicts with high-quality assembly objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Limited range conflicts with efficient assembly objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Producing fatigue conflicts with comfortable assembly objective"
+            }
+        }
+    ]
+}

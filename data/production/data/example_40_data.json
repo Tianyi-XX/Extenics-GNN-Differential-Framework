@@ -1,0 +1,138 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Assembly Workbench",
+            "features": {
+                "Ergonomic Design": "Fixed height, unreasonable layout",
+                "Auxiliary Facilities": "No anti-fatigue mat"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Worker",
+            "features": {
+                "Attribute": "Different heights"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker Health and Comfort",
+            "features": {
+                "Status": [
+                    "Prone to fatigue",
+                    "Poor posture"
+                ]
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Common Tools and Materials",
+            "features": {
+                "Position": "Placed too far"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Assembly Operation",
+            "features": {
+                "Objective": "Achieve healthy, comfortable, efficient work"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Lead to Poor Posture",
+            "features": {
+                "Reason": "Height not adjustable"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Unnecessary Limb Stretching",
+            "features": {
+                "Reason": "Unreasonable workbench layout"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Produce Fatigue",
+            "features": {
+                "Reason": "Prolonged standing without mat"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "User of",
+            "source": "M2",
+            "target": "M1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Poor posture conflicts with healthy work objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Unnecessary stretching conflicts with efficient work objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Producing fatigue conflicts with comfortable work objective"
+            }
+        }
+    ]
+}

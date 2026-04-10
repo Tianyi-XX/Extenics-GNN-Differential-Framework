@@ -1,0 +1,78 @@
+{
+    "description": "Problems with the quality inspection process",
+    "metadata": {
+        "example_name": "example_21",
+        "domain": "production"
+    },
+    "node_scores": {
+        "M1": {
+            "importance": 0.9,
+            "problem_relevance": 0.9
+        },
+        "M2": {
+            "importance": 0.9,
+            "problem_relevance": 1.0
+        },
+        "M3": {
+            "importance": 0.7,
+            "problem_relevance": 0.7
+        },
+        "M4": {
+            "importance": 0.8,
+            "problem_relevance": 0.8
+        },
+        "A1": {
+            "importance": 0.9,
+            "problem_relevance": 0.1
+        },
+        "A2": {
+            "importance": 0.9,
+            "problem_relevance": 1.0
+        },
+        "A3": {
+            "importance": 0.8,
+            "problem_relevance": 0.9
+        },
+        "A4": {
+            "importance": 0.8,
+            "problem_relevance": 0.85
+        }
+    },
+    "edge_scores": {
+        "R1": {
+            "is_problem": 1,
+            "severity": 0.95,
+            "is_conflict": 0
+        },
+        "R2": {
+            "is_problem": 1,
+            "severity": 0.9,
+            "is_conflict": 0
+        },
+        "R3": {
+            "is_problem": 1,
+            "severity": 0.85,
+            "is_conflict": 0
+        },
+        "R4": {
+            "is_problem": 0,
+            "severity": 0.0,
+            "is_conflict": 0
+        },
+        "R5": {
+            "is_problem": 1,
+            "severity": 1.0,
+            "is_conflict": 1
+        },
+        "R6": {
+            "is_problem": 1,
+            "severity": 0.9,
+            "is_conflict": 1
+        },
+        "R7": {
+            "is_problem": 1,
+            "severity": 0.85,
+            "is_conflict": 1
+        }
+    }
+}

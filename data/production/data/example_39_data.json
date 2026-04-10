@@ -1,0 +1,129 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Noise Protection Measures",
+            "features": {
+                "Format": "Provide earplugs",
+                "Protection Concept": "Passive protection"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Earplugs",
+            "features": {
+                "Side Effect": "Hinders normal hearing"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker",
+            "features": {
+                "Behavior": "Improper wearing or not wearing"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Worker Health and Safety",
+            "features": {
+                "Risk": [
+                    "Hearing damage",
+                    "Inability to perceive abnormalities"
+                ]
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Hearing Protection",
+            "features": {
+                "Objective": "Provide effective, safe, side-effect-free protection"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Poor Protection Effect",
+            "features": {
+                "Reason": "Worker wearing issues"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Auditory Perception",
+            "features": {
+                "Reason": "Earplugs physically block sound"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Does Not Reduce Noise at Source",
+            "features": {
+                "Reason": "Passive protection concept"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Executed on",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Poor protection effect conflicts with effective protection objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering perception conflicts with safe protection objective"
+            }
+        }
+    ]
+}

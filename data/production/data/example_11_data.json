@@ -1,0 +1,153 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Six-Axis Robot Arm",
+            "features": {
+                "Programming Method": "Teach pendant programming",
+                "Power System": "Pneumatic"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Pneumatic Gripper",
+            "features": {
+                "Flexibility": "Single model dedicated",
+                "Drawback": "Requires replacement during changeover"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Factory Space",
+            "features": {
+                "Status": "Largely occupied"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Programming Process",
+            "features": {
+                "Evaluation": "Complex, time-consuming"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Safety Fence",
+            "features": {
+                "Size": "Huge"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Automated Assembly",
+            "features": {
+                "Objective": "Efficient, flexible, reliable, space-saving automated production"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Low Changeover Efficiency",
+            "features": {
+                "Reason": "Requires gripper replacement"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Low Programming Efficiency",
+            "features": {
+                "Reason": "Complex process"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Occupy Space",
+            "features": {
+                "Reason": "Safety fence"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Generate Reliability Risk",
+            "features": {
+                "Reason": "Loud noise, prone to air leaks"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low changeover efficiency conflicts with flexible production objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Low programming efficiency conflicts with efficient production objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Large space occupation conflicts with space-saving objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Reliability risk conflicts with reliable production objective"
+            }
+        }
+    ]
+}

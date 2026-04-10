@@ -1,0 +1,147 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Fixed Belt Conveyor",
+            "features": {
+                "Intelligence Level": "Cannot automatically sort and plan paths",
+                "Speed Control": "Constant speed, not adjustable",
+                "Stability": "Items easily change position and orientation"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Material",
+            "features": {
+                "Status": "Position and orientation unstable"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Production Line",
+            "features": {
+                "Need": "Intelligent, flexible logistics"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Production Takt",
+            "features": {
+                "Attribute": "Dynamically changing"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Belt",
+            "features": {
+                "Cleanliness": "Difficult to clean when dirty"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Material Transfer",
+            "features": {
+                "Objective": "Efficient, intelligent, reliable, clean material flow"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Intelligently Sort",
+            "features": {
+                "Reason": "Functionality missing"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Incorrect Material Pose",
+            "features": {
+                "Reason": "Collision"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Match Production Takt",
+            "features": {
+                "Reason": "Constant speed"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Cause Contamination Risk",
+            "features": {
+                "Reason": "Cleaning difficulty"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to sort conflicts with intelligent flow objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Incorrect material pose conflicts with reliable flow objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to match takt conflicts with efficient flow objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Contamination risk conflicts with clean flow objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Shell Fastening Design",
+            "features": {
+                "Fasteners": [
+                    "Various screws",
+                    "Self-tapping screws"
+                ],
+                "Quantity": "Excessive"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Self-tapping Screw",
+            "features": {
+                "Characteristic": "Permanent damage to plastic boss"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Product Reliability",
+            "features": {
+                "Status": "Decreases after multiple disassemblies"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Assembly/Repair Efficiency",
+            "features": {
+                "Status": "Low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Plastic Boss",
+            "features": {
+                "Status": "Easily damaged"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Assembly and Repair",
+            "features": {
+                "Objective": "Achieve efficient, reliable, low-cost assembly and repair"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Fastening Failure",
+            "features": {
+                "Reason": "Self-tapping screw damages plastic boss"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Assembly/Repair Efficiency",
+            "features": {
+                "Reason": [
+                    "Requires multiple types of screwdrivers",
+                    "Excessive number of screws"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Cost",
+            "features": {
+                "Reason": "Excessive number of screws"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Affects",
+            "source": "M2",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Fastening failure conflicts with reliable repair objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient assembly/repair objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Increased cost conflicts with low-cost assembly objective"
+            }
+        }
+    ]
+}

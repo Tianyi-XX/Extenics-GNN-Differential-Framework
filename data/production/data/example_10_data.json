@@ -1,0 +1,139 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Wired Anti-static Wrist Strap",
+            "features": {
+                "Monitoring Capability": "No real-time monitoring, no alarm prompt",
+                "Material Performance": "Conductivity degrades over time"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Alligator Clip",
+            "features": {
+                "Connectivity": "Easily detached"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Connection Cable",
+            "features": {
+                "Attribute": "Wired design"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Grounding System",
+            "features": {
+                "Status": "Prone to failure without notice"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "ESD Sensitive Components",
+            "features": {
+                "Status": "Faces risk of damage"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Worker",
+            "features": {
+                "Operating State": "Flexibility hindered"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide ESD Protection",
+            "features": {
+                "Objective": "Reliable, effective, non-interfering ESD protection"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Grounding Failure",
+            "features": {
+                "Reason": [
+                    "Alligator clip detached",
+                    "Conductivity degradation",
+                    "Resistance out of spec"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Damage Electronic Components",
+            "features": {
+                "Reason": "Grounding failure"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Operation",
+            "features": {
+                "Executor": "M6",
+                "Reason": "Wired design"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Grounding failure conflicts with providing reliable protection objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering operation conflicts with providing non-interfering protection objective"
+            }
+        }
+    ]
+}

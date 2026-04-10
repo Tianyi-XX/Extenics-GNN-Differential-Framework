@@ -1,0 +1,127 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Battery Fixing Design",
+            "features": {
+                "Process": [
+                    "Welding",
+                    "Glue fixing"
+                ],
+                "Serviceability": "User cannot replace by themselves"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Product Lifespan",
+            "features": {
+                "Status": "Shortened"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Production Process",
+            "features": {
+                "Status": "Complexity increased"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Product Recyclability",
+            "features": {
+                "Status": "Poor, not eco-friendly"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Battery",
+            "features": {
+                "Characteristic": "Lifespan degradation"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Design and Manufacture Earphones",
+            "features": {
+                "Objective": "Achieve long-lifespan, easy-to-maintain, eco-friendly, efficient production"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Shorten Product Lifespan",
+            "features": {
+                "Reason": "Cannot replace battery"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Production Complexity",
+            "features": {
+                "Reason": "Welding and dispensing processes"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Eco-friendly Recycling",
+            "features": {
+                "Reason": "Difficult to disassemble"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Affects",
+            "source": "M5",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Shortened lifespan conflicts with long-lifespan, easy-to-maintain objectives"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Increased production complexity conflicts with efficient production objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering eco-friendly conflicts with eco-friendly objective"
+            }
+        }
+    ]
+}

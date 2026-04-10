@@ -1,0 +1,131 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Ultrasonic Welding Process",
+            "features": {
+                "Characteristic": "One-time welding",
+                "Design Requirement": "High",
+                "Production Environment Impact": "Produces harsh noise"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Medical Testing Equipment",
+            "features": {
+                "Serviceability": "Cannot be repaired non-destructively, must be scrapped"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Mold Cost",
+            "features": {
+                "Status": "Increased"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Production Environment",
+            "features": {
+                "Comfort": "Poor (Noise)"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Plastic Shell",
+            "features": {
+                "Attribute": "Object being welded"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Sealing",
+            "features": {
+                "Objective": "Achieve reliable, maintainable, low-cost, eco-friendly sealing"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Entire Unit Scrapping",
+            "features": {
+                "Reason": "Cannot be repaired non-destructively"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Manufacturing Cost",
+            "features": {
+                "Reason": "High mold cost"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Produce Noise Pollution",
+            "features": {
+                "Reason": "Ultrasonic welding process"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Acts on",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Affects",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Entire unit scrapping conflicts with maintainability objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Increased cost conflicts with low-cost objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Noise pollution conflicts with eco-friendly objective"
+            }
+        }
+    ]
+}

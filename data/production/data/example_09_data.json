@@ -1,0 +1,125 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Manual Bench Vise",
+            "features": {
+                "Clamping Method": "Rotating lead screw",
+                "Versatility": "Cannot clamp irregular parts"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Rigid Jaw",
+            "features": {
+                "Attribute": "Prone to leaving marks on workpiece surface"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Workpiece",
+            "features": {
+                "Surface Status": "Prone to clamping marks",
+                "Shape": "Includes irregular, non-parallel surfaces"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Clamping Quality",
+            "features": {
+                "Evaluation": "Surface damaged"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Adjustment Efficiency",
+            "features": {
+                "Evaluation": "Low"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Clamp Workpiece",
+            "features": {
+                "Objective": "Damage-free, efficient, versatile clamping"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Clamping Marks",
+            "features": {
+                "Reason": "Jaw rigidity"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Long Adjustment Time",
+            "features": {
+                "Reason": "Requires long time rotating lead screw"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Clamp",
+            "features": {
+                "Reason": "Cannot adapt to irregular workpieces"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Producing marks conflicts with damage-free clamping objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Long adjustment time conflicts with efficient clamping objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to clamp irregular parts conflicts with versatile clamping objective"
+            }
+        }
+    ]
+}

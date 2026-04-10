@@ -1,0 +1,133 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Fire Hydrant System",
+            "features": {
+                "Operation Method": "Manual, complex",
+                "Monitoring Capability": "No remote water pressure monitoring",
+                "Linkage Capability": "None"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "General Employee",
+            "features": {
+                "Skill": "Unfamiliar with usage method"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "System Reliability",
+            "features": {
+                "Status": "Unknown, risk of failure exists"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Fire Alarm System",
+            "features": {
+                "Status": "Not linked"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Fire Emergency Response",
+            "features": {
+                "Objective": "Rapid, reliable, automated emergency response"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Delay Fire Extinguishing Time",
+            "features": {
+                "Reason": [
+                    "Complex operation",
+                    "Employee unfamiliarity"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Possible Functional Failure",
+            "features": {
+                "Reason": "Unknown water pressure"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Respond Automatically",
+            "features": {
+                "Reason": "Not linked"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "User of",
+            "source": "M2",
+            "target": "A1"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Related to",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Delayed timing conflicts with rapid response objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Functional failure conflicts with reliable response objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to respond automatically conflicts with automated response objective"
+            }
+        }
+    ]
+}

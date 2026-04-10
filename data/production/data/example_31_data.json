@@ -1,0 +1,153 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Lighting System",
+            "features": {
+                "Control Method": "Centralized switch control",
+                "Energy Consumption": "High"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Fluorescent Tube",
+            "features": {
+                "Characteristic": "Has flicker",
+                "Maintenance": "Replacement inconvenient, requires working at height"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Light",
+            "features": {
+                "Quality": "Forms shadows around equipment"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Operator",
+            "features": {
+                "Physiological State": "Visual fatigue"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Precision Operation",
+            "features": {
+                "Requirement": "Clear line of sight"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Workshop Lighting",
+            "features": {
+                "Objective": "Provide safe, comfortable, efficient, energy-saving lighting environment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Affect Operational Line of Sight",
+            "features": {
+                "Reason": "Shadows"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Visual Fatigue",
+            "features": {
+                "Reason": "Flicker"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Energy Waste",
+            "features": {
+                "Reason": "Centralized control"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase Maintenance Risk",
+            "features": {
+                "Reason": "Working at height"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Produces",
+            "source": "M2",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Affecting line of sight conflicts with safe, efficient lighting objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Visual fatigue conflicts with comfortable lighting objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Energy waste conflicts with energy-saving lighting objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Maintenance risk conflicts with safe lighting objective"
+            }
+        }
+    ]
+}

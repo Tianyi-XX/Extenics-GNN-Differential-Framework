@@ -1,0 +1,147 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Traditional Training Process",
+            "features": {
+                "Mode": "One-on-one, oral instruction",
+                "Standardization": "Low",
+                "Traceability": "Difficult to record and evaluate",
+                "Efficiency": "Low"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Master Craftsman",
+            "features": {
+                "Knowledge": "Personal experience, may be insufficient for complex operations"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Training Quality",
+            "features": {
+                "Status": "Inconsistent, depends on individual"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "New Worker",
+            "features": {
+                "Status": "Receiving training"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Skill Training",
+            "features": {
+                "Objective": "Standardized, efficient, evaluable skill transfer"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Inconsistent Training Quality",
+            "features": {
+                "Reason": "Depends on master craftsman's individual ability"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Evaluate and Trace",
+            "features": {
+                "Reason": "Process difficult to record"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Guide Complex Operations",
+            "features": {
+                "Reason": "Master craftsman's knowledge limited"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Low Training Efficiency",
+            "features": {
+                "Reason": "Cannot train multiple people simultaneously"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Implementer",
+            "source": "M2",
+            "target": "A1"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inconsistent quality conflicts with standardization objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to evaluate conflicts with evaluable objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to guide complex operations conflicts with effective skill transfer objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient training objective"
+            }
+        }
+    ]
+}

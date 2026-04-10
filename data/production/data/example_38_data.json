@@ -1,0 +1,124 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Emergency Stop Button",
+            "features": {
+                "Scope of Action": "Regional",
+                "Data Recording Capability": "None",
+                "Reset Method": "Manual rotation"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Related Production Line",
+            "features": {
+                "Status": "Cannot be stopped with one button"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Emergency Stop Event Data",
+            "features": {
+                "Status": "Missing, cannot analyze"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Equipment Safety Status",
+            "features": {
+                "Risk": "Accidental restart risk exists"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Emergency Braking",
+            "features": {
+                "Objective": "Provide global, traceable, absolutely safe emergency braking"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Insufficient Safety Scope",
+            "features": {
+                "Reason": "Cannot stop related production line"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Analyze Post-event",
+            "features": {
+                "Reason": "Event data not recorded"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Produce Accidental Restart Risk",
+            "features": {
+                "Reason": "Improper reset operation"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Acts on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Insufficient safety scope conflicts with global safety objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to analyze conflicts with traceable safety objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Accidental restart risk conflicts with absolute safety objective"
+            }
+        }
+    ]
+}

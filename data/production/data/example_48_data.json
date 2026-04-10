@@ -1,0 +1,147 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Pressure Sensor",
+            "features": {
+                "Installation Location": "Outdoor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "ABS Engineering Plastic Housing",
+            "features": {
+                "UV Resistance": "Not resistant",
+                "Weather Resistance": "Poor",
+                "Mechanical Strength": "Insufficient"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Sensor Reliability",
+            "features": {
+                "Status": "Severely threatened"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Outdoor Environment",
+            "features": {
+                "Factors": [
+                    "Ultraviolet radiation",
+                    "High temperature",
+                    "High humidity",
+                    "Accidental impact"
+                ]
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Reliable Measurement",
+            "features": {
+                "Objective": "Operate long-term and reliably in outdoor environments"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Aging and Brittleness",
+            "features": {
+                "Reason": "Not UV resistant"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Seal Failure",
+            "features": {
+                "Reason": "Poor weather resistance"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Physical Damage",
+            "features": {
+                "Reason": "Insufficient strength"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Acts on",
+            "source": "M4",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Aging risk conflicts with long-term reliability objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Seal failure conflicts with reliable operation objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Physical damage conflicts with reliable operation objective"
+            }
+        }
+    ]
+}

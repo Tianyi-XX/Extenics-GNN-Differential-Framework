@@ -1,0 +1,147 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Ordinary Metal Cabinet",
+            "features": {
+                "Anti-corrosion Capability": "None",
+                "Ventilation Design": "None",
+                "Leak Collection": "None",
+                "Intelligent Monitoring": "None"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Corrosive Chemicals",
+            "features": {
+                "Attribute": [
+                    "Corrosive",
+                    "Volatile"
+                ]
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker Health and Safety",
+            "features": {
+                "Status": "Faces inhalation and contact risks"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Workshop Environment",
+            "features": {
+                "Status": "Faces leak contamination risk"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Safely Store Chemicals",
+            "features": {
+                "Objective": "Achieve controlled, safe, intelligent chemical storage"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Leak Contamination",
+            "features": {
+                "Reason": "No leak collection tray"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Inhalation Hazard",
+            "features": {
+                "Reason": "No ventilation design"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Cabinet Corrosion Failure",
+            "features": {
+                "Reason": "Lacks anti-corrosion capability"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lack of Risk Early Warning",
+            "features": {
+                "Reason": "No intelligent monitoring"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Leak contamination conflicts with safe storage objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inhalation hazard conflicts with safe storage objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Cabinet failure conflicts with safe storage objective"
+            }
+        }
+    ]
+}

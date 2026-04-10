@@ -1,0 +1,128 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Manual Strapping Machine",
+            "features": {
+                "Principle": "Mechanical lever",
+                "Operation Method": [
+                    "Relies on manual force for tightening",
+                    "Manual placement of buckle"
+                ]
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Strapping Quality",
+            "features": {
+                "Tightening Force": "Inconsistent tightness"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Worker",
+            "features": {
+                "Physiological State": "Heavy hand load"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Operating Procedure",
+            "features": {
+                "Evaluation": "Cumbersome",
+                "Efficiency": "Extremely low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Lever System",
+            "features": {
+                "Function": "Provide tension"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Package Sealing",
+            "features": {
+                "Objective": "Complete packaging efficiently, with high quality, low load"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Quality Issues",
+            "features": {
+                "Reason": "Inconsistent tightening force"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Produce Ergonomic Issues",
+            "features": {
+                "Reason": "Heavy hand load"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to Low Efficiency",
+            "features": {
+                "Reason": "Cumbersome operation"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Unstable quality conflicts with high-quality packaging objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Heavy hand load conflicts with low-load packaging objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient packaging objective"
+            }
+        }
+    ]
+}

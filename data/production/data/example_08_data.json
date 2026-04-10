@@ -1,0 +1,139 @@
+{
+    "domain": "production",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Direct Heat Soldering Iron",
+            "features": {
+                "Temperature Control": "No adjustment function",
+                "ESD Protection": "None",
+                "Heating Method": "Continuous heating",
+                "Placement Method": "Inconvenient"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Soldering Tip",
+            "features": {
+                "Status": "Easily oxidized"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "ESD Sensitive Components",
+            "features": {
+                "Status": "Easily damaged by static electricity"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Soldering Quality",
+            "features": {
+                "Evaluation": "Unstable"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Operational Safety",
+            "features": {
+                "Evaluation": "Burn risk exists"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Soldering",
+            "features": {
+                "Objective": "High-quality, high-reliability, safe soldering"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Damage Components",
+            "features": {
+                "Reason": "Electrostatic discharge"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Poor Soldering",
+            "features": {
+                "Reason": "Temperature mismatch"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Shorten Tool Lifespan",
+            "features": {
+                "Reason": "Soldering tip oxidation"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Produce Safety Accident",
+            "features": {
+                "Reason": "Burn due to improper placement"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging components conflicts with high-reliability soldering objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Poor soldering conflicts with high-quality soldering objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Safety accident conflicts with safe soldering objective"
+            }
+        }
+    ]
+}
