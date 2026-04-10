@@ -1,0 +1,172 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Laboratory Information Management System (LIS)",
+            "features": {
+                "Interface Stability": "Unstable",
+                "Intelligence": "Cannot perform trend analysis",
+                "Control Capability": "One-way communication with devices"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "HIS System",
+            "features": {
+                "Attribute": "Source of medical order information"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Specimen Barcode Printer",
+            "features": {
+                "Reliability": "Prone to malfunction"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Medical Order Information",
+            "features": {
+                "Status": "Occasionally lost"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Data Integrity",
+            "features": {
+                "Status": "Threatened"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Testing Equipment",
+            "features": {
+                "Attribute": "Performs tests"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Manage Laboratory Processes",
+            "features": {
+                "Objective": "Achieve reliable, intelligent, bidirectional control laboratory management"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Loss of Medical Order Information",
+            "features": {
+                "Reason": "Unstable interface with HIS system"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Lead to Unidentifiable Specimens",
+            "features": {
+                "Reason": "Barcode printer malfunction or damaged barcode"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Perform Trend Analysis",
+            "features": {
+                "Reason": "Lack of intelligent functions"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Unable to Control Testing Equipment",
+            "features": {
+                "Reason": "One-way communication"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Interacts with",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Interacts with",
+            "source": "M1",
+            "target": "M6"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R7",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Information loss conflicts with reliable management objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Unidentifiable specimens conflict with reliable management objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability for trend analysis conflicts with intelligent management objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to control devices conflicts with bidirectional control management objective"
+            }
+        }
+    ]
+}

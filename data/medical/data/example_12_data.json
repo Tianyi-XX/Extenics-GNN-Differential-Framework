@@ -1,0 +1,143 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Bedside Monitor",
+            "features": {
+                "Alarm Threshold": "Overly sensitive",
+                "Data Interface": "Not unified",
+                "Battery Life": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Nurse",
+            "features": {
+                "Status": "Experiences alarm fatigue"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Patient Safety",
+            "features": {
+                "Status": "Faces risk"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Central Monitoring Station",
+            "features": {
+                "Status": "Cannot access data"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Battery",
+            "features": {
+                "Attribute": "Poor endurance"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Vital Sign Monitoring",
+            "features": {
+                "Objective": "Provide reliable, accurate, non-disruptive, continuous monitoring"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Trigger Invalid Alarms",
+            "features": {
+                "Reason": "Threshold overly sensitive"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Centralize Monitoring",
+            "features": {
+                "Reason": "Data interfaces not unified"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Power Outage Risk",
+            "features": {
+                "Reason": "Poor battery life"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Related to",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Invalid alarms conflict with non-disruptive monitoring objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to centralize monitoring conflicts with efficient monitoring objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Power outage risk conflicts with continuous reliable monitoring objective"
+            }
+        }
+    ]
+}

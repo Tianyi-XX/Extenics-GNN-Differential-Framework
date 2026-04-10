@@ -1,0 +1,159 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Hospital Information System (HIS)",
+            "features": {
+                "Architecture": "Old, modules highly coupled",
+                "Functionality": "Does not support mobile payment",
+                "Reporting Capability": "Rigid"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Drug Inventory Data",
+            "features": {
+                "Timeliness": "Updates not real-time"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Hospital Core Processes",
+            "features": {
+                "Status": "Prone to interruption (e.g., registration)"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Patient",
+            "features": {
+                "Experience": "Poor (inconvenient payment, waiting, possible drug shortage)"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Hospital Administrator",
+            "features": {
+                "Status": "Unable to obtain effective data analysis"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Support Hospital Operations",
+            "features": {
+                "Objective": "Provide reliable, efficient, convenient, data-driven operational support"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Service Interruption",
+            "features": {
+                "Reason": "Payment system failure also prevents registration"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger Drug Shortage Events",
+            "features": {
+                "Reason": "Drug inventory updates not real-time"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Management Decisions",
+            "features": {
+                "Reason": "Rigid reporting function"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Cause Payment Inconvenience",
+            "features": {
+                "Reason": "Does not support mobile payment"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Service interruption conflicts with reliable operation objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Drug shortage events conflict with reliable operation objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering decisions conflicts with data-driven objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Payment inconvenience conflicts with convenient service objective"
+            }
+        }
+    ]
+}

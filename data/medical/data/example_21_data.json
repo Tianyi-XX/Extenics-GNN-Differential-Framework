@@ -1,0 +1,164 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Admission Process",
+            "features": {
+                "Design": "Cumbersome",
+                "Coordination Method": "High reliance on manual work"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Experience": "Poor",
+                "Status": "Needs to run between multiple points",
+                "Time Cost": "High"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Multiple Windows in Admission Department",
+            "features": {
+                "Layout": "Scattered",
+                "Functionality": "Independent"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Bed Coordination Mechanism",
+            "features": {
+                "Method": "Manual",
+                "Efficiency": "Low",
+                "Result": "Uncertain waiting time"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Outpatient and Inpatient Examinations",
+            "features": {
+                "Continuity": "Disconnected",
+                "Requirement": "Requires rescheduling"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Medical Insurance / Commercial Insurance Settlement Process",
+            "features": {
+                "Complexity": "High"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Handle Admission",
+            "features": {
+                "Objective": "Provide smooth, convenient, integrated admission service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Consume Patient Energy and Time",
+            "features": {
+                "Reason": [
+                    "Running between multiple windows",
+                    "Uncertain waiting"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Delay Diagnosis and Treatment Process",
+            "features": {
+                "Reason": "Examinations cannot seamlessly connect"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Procedure Complexity",
+            "features": {
+                "Reason": "Complex insurance settlement process"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Composed of",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Composed of",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R3",
+            "relation": "Composed of",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A2"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A3"
+        },
+        {
+            "id": "R7",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A4"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Consuming patient energy fundamentally conflicts with convenient service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Delaying treatment conflicts with smooth service objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Procedure complexity conflicts with convenient service objective"
+            }
+        }
+    ]
+}

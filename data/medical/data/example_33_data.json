@@ -1,0 +1,151 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Targeted Drug",
+            "features": {
+                "Price": "Extremely expensive",
+                "Applicable Population": "Very narrow",
+                "Resistance": "Inevitably develops"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Economic Capacity": "Most families cannot afford",
+                "Genetic Requirement": "Must carry specific mutation"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Genetic Testing",
+            "features": {
+                "Requirement": "Must be performed before use",
+                "Impact": "Increases treatment cost and time"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Treatment Efficacy",
+            "features": {
+                "Status": "Fails due to resistance"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Targeted Therapy",
+            "features": {
+                "Objective": "Achieve precise, affordable, accessible cancer treatment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Huge Economic Burden",
+            "features": {
+                "Reason": "Expensive drug price"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Limit Treatment Accessibility",
+            "features": {
+                "Reason": "Very narrow applicable population"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to Ultimate Treatment Failure",
+            "features": {
+                "Reason": "Resistance develops"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase Upfront Cost and Delay",
+            "features": {
+                "Reason": "Mandatory genetic testing"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Huge economic burden conflicts with affordable treatment objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Narrow population fundamentally conflicts with accessible treatment objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Ultimate failure fundamentally conflicts with precise effective treatment objective"
+            }
+        }
+    ]
+}

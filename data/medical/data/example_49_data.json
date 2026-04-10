@@ -1,0 +1,160 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Pre-hospital Emergency System (120)",
+            "features": {
+                "Continuity": "Poor connection with in-hospital emergency"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Emergency Stations",
+            "features": {
+                "Layout": "Uneven"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Public",
+            "features": {
+                "First Aid Knowledge and Skills普及率": "Extremely low"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Urban Traffic",
+            "features": {
+                "Status": "Congested"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "'Golden Rescue Time'",
+            "features": {
+                "Status": "Missed"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Information Transmission",
+            "features": {
+                "Status": "Delayed"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Implement Pre-hospital Emergency Care",
+            "features": {
+                "Objective": "Achieve rapid, effective, seamless emergency care"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Extend Emergency Response Time",
+            "features": {
+                "Reason": [
+                    "Uneven station layout",
+                    "Urban traffic congestion"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Delay Optimal Rescue Time",
+            "features": {
+                "Reason": [
+                    "Low public first aid skills",
+                    "Long emergency response time"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Information Continuity",
+            "features": {
+                "Reason": "Poor pre-hospital and in-hospital connection"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Long response time fundamentally conflicts with rapid emergency care objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Delaying rescue time fundamentally conflicts with effective emergency care objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Poor information continuity conflicts with seamless connection objective"
+            }
+        }
+    ]
+}

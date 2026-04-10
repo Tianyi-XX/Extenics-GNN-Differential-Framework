@@ -1,0 +1,166 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Infusion Pump",
+            "features": {
+                "Operating Interface": "Complex design, error-prone parameter setting",
+                "Consumable Requirement": "Special, not universal",
+                "Bubble Detection": "Insufficiently sensitive"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient Safety",
+            "features": {
+                "Status": "Faces medication error and air embolism risks"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Nurse",
+            "features": {
+                "Status": "Prone to operational errors"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Battery",
+            "features": {
+                "Performance": "Degrades over time",
+                "Alert": "No clear replacement alert"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Microbubbles",
+            "features": {
+                "Status": "May not be detected"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Precise Infusion",
+            "features": {
+                "Objective": "Achieve safe, accurate, reliable, economical infusion"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Medication Errors",
+            "features": {
+                "Reason": "Parameter setting prone to errors"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Air Embolism Risk",
+            "features": {
+                "Reason": "Insensitive bubble detection"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Risk of Treatment Interruption",
+            "features": {
+                "Reason": "No alert for battery performance degradation"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase Consumable Cost",
+            "features": {
+                "Reason": "Consumables not universal"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "User of",
+            "source": "M3",
+            "target": "M1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Medication errors conflict with safe and accurate objectives"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Air embolism risk conflicts with safe infusion objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Treatment interruption risk conflicts with reliable infusion objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "High consumable cost conflicts with economical infusion objective"
+            }
+        }
+    ]
+}

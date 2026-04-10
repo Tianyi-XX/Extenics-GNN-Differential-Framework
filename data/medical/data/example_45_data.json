@@ -1,0 +1,149 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "National Health Checkup Model",
+            "features": {
+                "Characteristic": "Focuses on examination, neglects management"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Checkup Packages",
+            "features": {
+                "Homogenization Level": "Severe",
+                "Personalization": "Not customized based on individual differences"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Abnormal Indicators",
+            "features": {
+                "Follow-up Handling": "Lacks systematic follow-up and intervention guidance"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Some Examination Items",
+            "features": {
+                "Clinical Significance": "Limited",
+                "Negative Impact": "Increases unnecessary anxiety"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Examinee",
+            "features": {
+                "Status": "Cannot obtain effective health management, may increase anxiety"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Health Checkup and Management",
+            "features": {
+                "Objective": "Achieve personalized, management-focused effective health screening and management"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Neglect Post-checkup Management",
+            "features": {
+                "Reason": "Model focuses on examination, neglects management"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Achieve Personalized Screening",
+            "features": {
+                "Reason": "Severe homogenization of checkup packages"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Trigger Unnecessary Anxiety",
+            "features": {
+                "Reason": "Limited clinical significance of some items"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Neglecting post-checkup management fundamentally conflicts with effective health management objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to personalize conflicts with personalized screening objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering anxiety conflicts with effective health screening objective"
+            }
+        }
+    ]
+}

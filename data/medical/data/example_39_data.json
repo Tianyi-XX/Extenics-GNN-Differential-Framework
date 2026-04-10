@@ -1,0 +1,114 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Vaccine",
+            "features": {
+                "Protection Duration": "Short (some require annual vaccination)",
+                "Effect on Rapidly Mutating Viruses": "Decreases"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Public",
+            "features": {
+                "Attitude": "Vaccine hesitancy exists",
+                "Cognition": "Misunderstandings and distrust regarding safety"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Immunity Barrier",
+            "features": {
+                "Status": "Establishment affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Rapidly Mutating Viruses",
+            "features": {
+                "Impact": "Reduce vaccine protection effect"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Vaccination",
+            "features": {
+                "Objective": "Establish effective, durable, trustworthy immunity barrier"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reduce Vaccine Protection Effect",
+            "features": {
+                "Reason": [
+                    "Short protection duration",
+                    "Rapid virus mutation"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Immunity Barrier Establishment",
+            "features": {
+                "Reason": [
+                    "Vaccine hesitancy",
+                    "Misunderstandings and distrust"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Affects",
+            "source": "M4",
+            "target": "M1"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Decreased protection conflicts with establishing effective, durable barrier objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Public hesitancy fundamentally conflicts with establishing immunity barrier objective"
+            }
+        }
+    ]
+}

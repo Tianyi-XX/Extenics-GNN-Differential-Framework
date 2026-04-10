@@ -1,0 +1,146 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Telemedicine Platform",
+            "features": {
+                "Technical Reliability": "Unstable video call quality",
+                "Functional Completeness": "Cannot transmit critical vital signs",
+                "Data Security": "Insufficient privacy protection measures"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Online Prescription",
+            "features": {
+                "System Compatibility": "Not recognized by medical insurance system"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Diagnosis and Treatment Loop",
+            "features": {
+                "Status": "Broken"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Data Privacy",
+            "features": {
+                "Risk": "Leakage risk exists"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Diagnostic Quality",
+            "features": {
+                "Status": "Affected"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Remote Diagnosis and Treatment Service",
+            "features": {
+                "Objective": "Provide reliable, secure, effective, closed-loop diagnosis and treatment service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Hinder Diagnosis and Treatment Loop",
+            "features": {
+                "Reason": "Online prescription not recognized by medical insurance"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Data Leakage Risk",
+            "features": {
+                "Reason": "Insufficient data security measures"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce Diagnostic Quality/Efficiency",
+            "features": {
+                "Reason": [
+                    "Unstable video quality",
+                    "Cannot transmit critical vital signs"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Outputs",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Broken diagnosis loop conflicts with closed-loop service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Data leakage risk conflicts with secure service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Reduced diagnostic quality conflicts with effective service objective"
+            }
+        }
+    ]
+}

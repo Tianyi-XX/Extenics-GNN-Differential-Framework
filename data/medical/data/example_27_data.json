@@ -1,0 +1,143 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Clinical Pathway Management Model",
+            "features": {
+                "Process": "Overly rigid",
+                "Objective": "Control costs",
+                "Requirement": "Extensive documentation"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Characteristic": "Has individual differences and condition changes"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Medical Quality",
+            "features": {
+                "Status": "Affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Doctor",
+            "features": {
+                "Status": "Spends much time on documentation, cannot focus on patient"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Diagnosis and Treatment Behavior",
+            "features": {
+                "Risk": "Insufficient examination or downgraded medication"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Clinical Pathway Management",
+            "features": {
+                "Objective": "Achieve individualized, high-quality, efficient diagnosis and treatment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Adapt to Individual Patient Needs",
+            "features": {
+                "Reason": "Rigid process"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Potentially Lower Diagnosis and Treatment Level",
+            "features": {
+                "Reason": "To control costs"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Doctor's Documentation Burden",
+            "features": {
+                "Reason": "Pathway requirements"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Rigid process conflicts with individualized treatment objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Lower treatment level fundamentally conflicts with high-quality treatment objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Heavy documentation burden conflicts with efficient treatment objective"
+            }
+        }
+    ]
+}

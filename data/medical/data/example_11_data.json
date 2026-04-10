@@ -1,0 +1,153 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "High Field Strength Magnetic Resonance Imaging (MRI) Equipment",
+            "features": {
+                "Noise": "Loud",
+                "Scan Time": "Long",
+                "Operational Cost": "Extremely high"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Status": "Anxious, uncomfortable",
+                "Requirement": "Must remain still for a long time"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Patient (with metal implants)",
+            "features": {
+                "Attribute": "Absolute contraindication"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Hospital Operational Cost",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Patient Safety",
+            "features": {
+                "Status": "Faces risk"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Imaging Examination",
+            "features": {
+                "Objective": "Provide safe, comfortable, efficient, economical imaging service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Patient Discomfort",
+            "features": {
+                "Reason": [
+                    "Loud noise",
+                    "Long scan time"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Constitute Absolute Contraindication (Safety Risk)",
+            "features": {
+                "Reason": "Effect on metal implants"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Operational Cost",
+            "features": {
+                "Reason": "High equipment operation and maintenance costs"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "User of",
+            "source": "M2",
+            "target": "M1"
+        },
+        {
+            "id": "R2",
+            "relation": "Acts on",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Patient discomfort conflicts with comfortable service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Absolute contraindication conflicts with safe service objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "High cost conflicts with economical service objective"
+            }
+        }
+    ]
+}

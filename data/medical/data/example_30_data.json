@@ -1,0 +1,140 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Emergency Triage Process",
+            "features": {
+                "Method": "Mainly relies on nurse's personal experience",
+                "Standardization Level": "Insufficient"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Critically Ill Patient",
+            "features": {
+                "Chief Complaint": "Atypical",
+                "Risk": "Misjudged as low priority"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Patient and Family",
+            "features": {
+                "Status": "Do not understand triage result"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Waiting Area",
+            "features": {
+                "Monitoring Mechanism": "Lacks dynamic monitoring of vital signs"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Patient Safety",
+            "features": {
+                "Status": "Risk of delayed treatment exists"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Emergency Triage",
+            "features": {
+                "Objective": "Achieve accurate, efficient, safe patient prioritization"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Misjudge Condition",
+            "features": {
+                "Reason": [
+                    "Reliance on personal experience",
+                    "Atypical patient complaint"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger Conflicts",
+            "features": {
+                "Reason": "Patient and family do not understand"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Timely Detect Deterioration",
+            "features": {
+                "Reason": "Lack of dynamic monitoring mechanism"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Condition misjudgment fundamentally conflicts with accurate triage objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering conflicts conflicts with efficient and orderly objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to monitor changes fundamentally conflicts with ensuring safety objective"
+            }
+        }
+    ]
+}

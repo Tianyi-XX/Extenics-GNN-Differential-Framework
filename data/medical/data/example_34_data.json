@@ -1,0 +1,127 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Traditional Chinese Medicine (TCM) Injection",
+            "features": {
+                "Composition": "Complex",
+                "Mechanism of Action": "Unclear",
+                "Quality Control": "Difficult",
+                "Batch Difference": "Potentially large"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Adverse Drug Reaction",
+            "features": {
+                "Risk Level": "High risk",
+                "Typical Manifestation": "Severe allergic reaction"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Clinical Application",
+            "features": {
+                "Compatibility Evidence": "Insufficient",
+                "Efficacy Evaluation Evidence": "Insufficient"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Patient Safety",
+            "features": {
+                "Status": "Severely threatened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Injection Therapy",
+            "features": {
+                "Objective": "Achieve safe, effective, quality-controlled therapy"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Trigger Severe Adverse Reactions",
+            "features": {
+                "Reason": "Complex composition, unclear mechanism"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Lead to Uncontrollable Quality",
+            "features": {
+                "Reason": "Complex composition, difficult standardization"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Clinical Application Risk",
+            "features": {
+                "Reason": "Insufficient evidence on compatibility and efficacy"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Severe adverse reactions fundamentally conflict with safe therapy objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Uncontrollable quality fundamentally conflicts with quality-controlled therapy objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Clinical application risk conflicts with effective therapy objective"
+            }
+        }
+    ]
+}

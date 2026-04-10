@@ -1,0 +1,181 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Drug Supply Chain Management Process",
+            "features": {
+                "Distribution Efficiency": "Low 'last mile' efficiency"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Procurement Plan",
+            "features": {
+                "Basis": "Relies on historical data"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "In-hospital Drug Inventory",
+            "features": {
+                "Status": "Numerous types, chaotic management"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Storage Space",
+            "features": {
+                "Status": "Insufficient"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "High-Risk Drug Storage",
+            "features": {
+                "Method": "No differentiation from regular drugs"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Public Health Emergencies",
+            "features": {
+                "Characteristic": "Cause surge in drug demand"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Drug Safety",
+            "features": {
+                "Status": "Hidden dangers exist"
+            }
+        },
+        {
+            "id": "M8",
+            "name": "Timeliness of Drug Supply",
+            "features": {
+                "Status": "Affected"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Drug Supply Chain Management",
+            "features": {
+                "Objective": "Achieve safe, efficient, responsive drug supply"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Cope with Demand Surge",
+            "features": {
+                "Reason": "Procurement plan relies on historical data"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Safety Hazards",
+            "features": {
+                "Reason": "Undifferentiated storage of high-risk drugs"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce Supply Efficiency",
+            "features": {
+                "Reason": [
+                    "Chaotic storage",
+                    "Distribution problems"
+                ]
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Cause Chaotic Warehouse Management",
+            "features": {
+                "Reason": [
+                    "Numerous inventory types",
+                    "Insufficient storage space"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A5"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A5",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M7"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M8"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to cope with surge conflicts with responsive objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Safety hazards fundamentally conflict with ensuring safety objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low supply efficiency conflicts with efficient objective"
+            }
+        }
+    ]
+}

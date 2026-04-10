@@ -1,0 +1,143 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Psychotropic Drugs",
+            "features": {
+                "Onset Speed": "Very slow",
+                "Side Effects": "Significant",
+                "Discontinuation Reaction": "May cause withdrawal symptoms"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Medication Compliance": "Severely affected",
+                "Psychological State": "Suffers from stigma"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Social Conception",
+            "features": {
+                "Attitude": "Serious stigma exists"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Efficacy",
+            "features": {
+                "Onset Time": "Requires several weeks"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Psychiatric Treatment",
+            "features": {
+                "Objective": "Achieve rapid, effective, tolerable, dignified treatment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reduce Medication Compliance",
+            "features": {
+                "Reason": [
+                    "Significant side effects (drowsiness, weight gain, slow reaction)",
+                    "Slow onset"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Produce Withdrawal Symptoms",
+            "features": {
+                "Timing": "Upon discontinuation"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Psychological Burden",
+            "features": {
+                "Reason": "Social stigma"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low compliance fundamentally conflicts with effective treatment objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "M1",
+            "target": "A1",
+            "features": {
+                "Description": "Slow onset conflicts with rapid treatment objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Withdrawal symptoms conflict with tolerable treatment objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Stigma conflicts with dignified treatment objective"
+            }
+        }
+    ]
+}

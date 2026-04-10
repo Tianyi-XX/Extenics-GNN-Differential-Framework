@@ -1,0 +1,118 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Placebo",
+            "features": {
+                "Active Ingredient": "None",
+                "Effect": "May make patients feel symptom improvement"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "New Drug Efficacy Evaluation",
+            "features": {
+                "Status": "Difficult to evaluate true efficacy"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Clinical Practice",
+            "features": {
+                "Ethical Dilemma": "Doctors cannot actively use placebos to deceive patients",
+                "Difficulty": "How to utilize and guide the placebo effect"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Patient",
+            "features": {
+                "Feeling": "Symptom improvement"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Clinical Treatment and Evaluation",
+            "features": {
+                "Objective": "Achieve true efficacy, adhere to ethics, scientific evaluation"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Interfere with Efficacy Evaluation",
+            "features": {
+                "Reason": "Placebo effect"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger Ethical Dilemma",
+            "features": {
+                "Reason": "Using placebos involves deception"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Utilize and Guide Positive Effect",
+            "features": {
+                "Status": "Is a clinical difficulty"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Interfering with evaluation fundamentally conflicts with scientific evaluation objective"
+            }
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Ethical dilemma fundamentally conflicts with adhering to ethics objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Difficulty in utilizing effect conflicts with achieving true efficacy objective"
+            }
+        }
+    ]
+}

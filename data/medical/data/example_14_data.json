@@ -1,0 +1,164 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Portable Ultrasound Scanner",
+            "features": {
+                "Image Quality": "Low",
+                "Data Management": "Export and storage inconvenient"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Probe",
+            "features": {
+                "Variety": "Few"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Battery",
+            "features": {
+                "Life": "Short"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Diagnostic Capability",
+            "features": {
+                "Status": "Limited, especially for small lesions"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Clinical Application",
+            "features": {
+                "Status": "Restricted"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Ultrasound Screening",
+            "features": {
+                "Objective": "Provide accurate, versatile, reliable, convenient diagnosis"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Limit Diagnostic Capability",
+            "features": {
+                "Reason": "Low image quality"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Meet Examination Needs",
+            "features": {
+                "Reason": "Few probe types"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Usage Interruption",
+            "features": {
+                "Reason": "Short battery life"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Hinder Data Flow",
+            "features": {
+                "Reason": "Export and storage inconvenient"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Limited capability conflicts with accurate diagnosis objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to meet needs conflicts with versatile diagnosis objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Usage interruption conflicts with reliable diagnosis objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Data flow hindrance conflicts with convenient diagnosis objective"
+            }
+        }
+    ]
+}

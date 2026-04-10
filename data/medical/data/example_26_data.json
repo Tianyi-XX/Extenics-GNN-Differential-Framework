@@ -1,0 +1,158 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Medical Complaint Handling Process",
+            "features": {
+                "Transparency": "Low",
+                "Cycle": "Long",
+                "Supervision": "Lacks third-party"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Complaint Channel",
+            "features": {
+                "Status": "Not smooth"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Reception Department",
+            "features": {
+                "Attitude": "Perfunctory"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Handling Result",
+            "features": {
+                "Method": "Mostly internal mediation",
+                "Effect": "Fails to fundamentally improve the problem"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Patient",
+            "features": {
+                "Experience": "Poor",
+                "Trust Level": "Low"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Similar Complaint Issues",
+            "features": {
+                "Status": "Recurring"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Handle Medical Complaints",
+            "features": {
+                "Objective": "Achieve fair, transparent, efficient problem solving and continuous quality improvement"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Hinder Effective Patient Complaints",
+            "features": {
+                "Reason": [
+                    "Channels not smooth",
+                    "Perfunctory attitude"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Handling Credibility",
+            "features": {
+                "Reason": [
+                    "Process not transparent",
+                    "Lack of third-party supervision"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to Recurrence of Similar Problems",
+            "features": {
+                "Reason": "Handling result fails to make fundamental improvements"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering complaints conflicts with efficient problem solving objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Lack of credibility conflicts with fair, transparent objectives"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Recurring problems fundamentally conflict with continuous quality improvement objective"
+            }
+        }
+    ]
+}

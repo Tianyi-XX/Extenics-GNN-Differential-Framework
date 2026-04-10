@@ -1,0 +1,154 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "PASS System",
+            "features": {
+                "Alert Method": "Excessively frequent pop-ups",
+                "Intelligence": "Insufficient alerts for special patients"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Rule Base",
+            "features": {
+                "Timeliness": "Updates not timely"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Doctor",
+            "features": {
+                "Status": "Work severely disrupted, alert fatigue generated"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Patient Safety",
+            "features": {
+                "Risk": "High, medication error risk exists"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Special Patients",
+            "features": {
+                "Attribute": [
+                    "Hepatic/renal insufficiency",
+                    "Children"
+                ]
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Prescription Review",
+            "features": {
+                "Objective": "Provide accurate, efficient, non-disruptive medication safety assurance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Risk of Missed Alerts (False Negative)",
+            "features": {
+                "Reason": [
+                    "Rule base updates not timely",
+                    "Insufficient alerts for special patients"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Alert Fatigue",
+            "features": {
+                "Reason": "Excessively frequent alert pop-ups"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Disrupt Doctor's Work",
+            "features": {
+                "Reason": "Excessively frequent alert pop-ups"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "User of",
+            "source": "M3",
+            "target": "M1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Related to",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Missed alert risk conflicts with accurate safety assurance objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Alert fatigue conflicts with providing effective assurance objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Disrupting work conflicts with efficient assurance objective"
+            }
+        }
+    ]
+}

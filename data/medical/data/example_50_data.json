@@ -1,0 +1,145 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Occupational Disease Prevention System",
+            "features": {
+                "Adaptability": "Fails to keep pace with social development",
+                "Coverage": "Does not include new occupations"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Some Enterprises",
+            "features": {
+                "Behavior": "Unwilling to invest in improving working conditions to reduce costs"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Diagnosis and Identification Procedures",
+            "features": {
+                "Characteristic": "Complex, long cycle"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Laborers",
+            "features": {
+                "Rights Protection Capability": "Weak awareness, insufficient capability"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "New Occupations (Delivery drivers, ride-hailing drivers, etc.)",
+            "features": {
+                "Status": "Occupational health issues not included in prevention system"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Occupational Disease Prevention",
+            "features": {
+                "Objective": "Achieve comprehensive, efficient, fair worker health protection"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Evade Prevention Responsibilities",
+            "features": {
+                "Reason": "Enterprises seek to reduce costs"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Difficulty for Laborers' Rights Protection",
+            "features": {
+                "Reason": [
+                    "Complex diagnosis/identification procedures",
+                    "Laborers' own weak capability"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Create Gaps in Prevention System Coverage",
+            "features": {
+                "Reason": "System fails to keep pace with social development"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Enterprise evasion fundamentally conflicts with health protection objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Difficulty in rights protection conflicts with fair protection objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Gaps in system coverage fundamentally conflict with comprehensive protection objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Mobile Follow-up Management App",
+            "features": {
+                "UI/UX": "Not friendly for the elderly, complex operation",
+                "Data Reporting": "Manual entry, cumbersome process"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Health Education Content",
+            "features": {
+                "Personalization": "Lacking",
+                "Status": "Homogenized"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Doctor",
+            "features": {
+                "Response": "Not timely"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Patient Compliance",
+            "features": {
+                "Status": "Poor"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Doctor-Patient Communication",
+            "features": {
+                "Status": "Obstructed"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Post-Discharge Rehabilitation Support",
+            "features": {
+                "Objective": "Provide convenient, personalized, timely rehabilitation support"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reduce Data Reporting Compliance",
+            "features": {
+                "Reason": "Complex operation, cumbersome process"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Doctor-Patient Communication",
+            "features": {
+                "Reason": "Doctor's response not timely"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Provide Ineffective Information",
+            "features": {
+                "Reason": "Homogenized health education content"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Service provider for",
+            "source": "M3",
+            "target": "A1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Poor compliance conflicts with providing effective support objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Obstructed communication conflicts with providing timely support objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Ineffective information conflicts with providing personalized support objective"
+            }
+        }
+    ]
+}

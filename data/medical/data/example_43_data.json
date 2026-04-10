@@ -1,0 +1,153 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Infectious Disease Direct Reporting System",
+            "features": {
+                "Design": "Not user-friendly, time-consuming entry",
+                "Mechanism": "Relies on passive reporting",
+                "Capability": "Lacks proactive monitoring and early warning",
+                "Sensitivity": "Insufficient for novel infectious diseases"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Primary Care Doctors",
+            "features": {
+                "Familiarity": "Unfamiliar with reporting standards and procedures"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Reporting Behavior",
+            "features": {
+                "Status": "Prone to underreporting, delayed reporting"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Public Health Security",
+            "features": {
+                "Status": "Faces risk"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Infectious Disease Surveillance and Early Warning",
+            "features": {
+                "Objective": "Achieve timely, accurate, proactive, comprehensive surveillance and early warning"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Underreporting, Delayed Reporting",
+            "features": {
+                "Reason": "Doctors unfamiliar with standards and procedures"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Reporting Efficiency",
+            "features": {
+                "Reason": "System design not user-friendly"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Weaken Early Warning Capability",
+            "features": {
+                "Reason": "Lack of proactive monitoring mechanism"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Unable to Effectively Respond to Emerging Diseases",
+            "features": {
+                "Reason": "Insufficient sensitivity to novel infectious diseases"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A5",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Underreporting/delay fundamentally conflicts with timely, accurate objectives"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Weakened warning capability fundamentally conflicts with proactive, comprehensive monitoring objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to respond to emerging diseases fundamentally conflicts with comprehensive monitoring objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Low reporting efficiency conflicts with timely objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Childhood Immunization Process",
+            "features": {
+                "Management": "Chaotic",
+                "Information System": "Category 1 and Category 2 vaccines not unified"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Vaccine Traceability System",
+            "features": {
+                "Completeness": "Incomplete"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Vaccination Site Environment",
+            "features": {
+                "Status": "Overcrowded",
+                "Waiting Time": "Long"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Adverse Reaction Handling Process",
+            "features": {
+                "Standardization Level": "Lacking"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Children and Families",
+            "features": {
+                "Risk": "Increased cross-infection",
+                "Sense of Security": "Low"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Vaccine Safety",
+            "features": {
+                "Status": "Hidden dangers exist"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Planned Immunization",
+            "features": {
+                "Objective": "Achieve safe, efficient, traceable, standardized immunization service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Safety Hazards",
+            "features": {
+                "Reason": "Incomplete traceability system"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Cross-infection Risk",
+            "features": {
+                "Reason": "Overcrowded vaccination site"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Handle Adverse Reactions Standardly",
+            "features": {
+                "Reason": "Lack of standardized process"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Exacerbate Management Chaos",
+            "features": {
+                "Reason": "Non-unified information system"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M6"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Safety hazards fundamentally conflict with safe service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Cross-infection risk conflicts with safe, efficient service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to handle reactions standardly fundamentally conflicts with safe, standardized objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Management chaos conflicts with efficient, traceable service objective"
+            }
+        }
+    ]
+}

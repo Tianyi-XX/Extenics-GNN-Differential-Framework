@@ -1,0 +1,154 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "AI-Assisted Diagnostic Software",
+            "features": {
+                "Recognition Capability": "Poor for rare/atypical lesions",
+                "Interpretability": "Low (Black box)",
+                "Integration": "Poor integration with PACS system",
+                "Maintenance Cost": "High"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Rare/Atypical Lesions",
+            "features": {
+                "Status": "Prone to missed diagnosis"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Doctor/Patient",
+            "features": {
+                "Status": "Unable to understand diagnostic logic"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Clinical Diagnostic Accuracy",
+            "features": {
+                "Status": "Affected, high missed diagnosis rate"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "PACS System",
+            "features": {
+                "Attribute": "Existing hospital system"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform AI-Assisted Diagnosis",
+            "features": {
+                "Objective": "Provide accurate, interpretable, efficient, easily integrated diagnostic assistance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Missed Diagnosis",
+            "features": {
+                "Reason": "Poor recognition capability"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Explain Diagnostic Logic",
+            "features": {
+                "Reason": "Black box model"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Clinical Workflow",
+            "features": {
+                "Reason": "Poor integration with PACS"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Generate High Maintenance Costs",
+            "features": {
+                "Reason": "Requires continuous retraining"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Interacts with",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Missed diagnosis conflicts with accurate diagnosis objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to explain conflicts with interpretable diagnosis objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering workflow conflicts with efficient integration objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "High cost conflicts with cost-effective objective"
+            }
+        }
+    ]
+}

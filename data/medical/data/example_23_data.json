@@ -1,0 +1,149 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Hospital Consultation Process",
+            "features": {
+                "Standardization": "Lacking",
+                "Communication Method": "Informal",
+                "Mechanism": "Lacks effective MDT"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Consultation Invitation and Feedback",
+            "features": {
+                "Method": "Phone or verbal",
+                "Record": "Lacks formal record"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Invited Expert",
+            "features": {
+                "Status": "Busy"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Consultation Opinions",
+            "features": {
+                "Status": "Scattered",
+                "Synergy": "Poor"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Unified, Executable Treatment Plan",
+            "features": {
+                "Formation Difficulty": "High"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Complex Case",
+            "features": {
+                "Status": "Requires multidisciplinary support"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Consultation for Complex Cases",
+            "features": {
+                "Objective": "Form timely, standardized, unified, effective treatment plan"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Untimely Response",
+            "features": {
+                "Reason": "Expert busy"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Formation of Unified Plan",
+            "features": {
+                "Reason": [
+                    "Scattered consultation opinions",
+                    "Lack of MDT mechanism"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Difficulty in Information Traceability",
+            "features": {
+                "Reason": "Lack of formal record"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Adopts",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Acts on",
+            "source": "M1",
+            "target": "M6"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Untimely response conflicts with timely consultation objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to form unified plan fundamentally conflicts with effective consultation objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Difficulty in traceability conflicts with standardized consultation objective"
+            }
+        }
+    ]
+}

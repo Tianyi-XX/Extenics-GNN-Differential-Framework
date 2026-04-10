@@ -1,0 +1,179 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Flexible Electronic Endoscope",
+            "features": {
+                "Scope Body Status": "Prone to aging and damage after repeated use and disinfection",
+                "Repair Cost": "High"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Scope Body",
+            "features": {
+                "Attribute": "Requires repeated use and disinfection"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Image Processing System",
+            "features": {
+                "Recognition Capability": "Limited for early small lesions"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Cleaning and Disinfection Process",
+            "features": {
+                "Complexity": "Complex",
+                "Efficiency": "Low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Patient",
+            "features": {
+                "Physiological State": "Experiences significant discomfort during examination"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Early Small Lesions",
+            "features": {
+                "Status": "Difficult to effectively identify"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Doctor",
+            "features": {
+                "Operation Method": "Relies on tactile feedback"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Endoscopic Examination",
+            "features": {
+                "Objective": "Achieve efficient, accurate, comfortable, economical examination"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Miss Lesions",
+            "features": {
+                "Reason": "Limited recognition capability of image processing system"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Patient Discomfort",
+            "features": {
+                "Reason": "Reliance on doctor's tactile feedback"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce Turnover Efficiency",
+            "features": {
+                "Reason": "Complex cleaning and disinfection process"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Generate High Repair Costs",
+            "features": {
+                "Reason": "Scope body prone to aging and damage"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M7",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Missing lesions fundamentally conflicts with accurate examination objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Patient discomfort conflicts with comfortable examination objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low turnover efficiency conflicts with efficient examination objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "High repair cost conflicts with economical examination objective"
+            }
+        }
+    ]
+}

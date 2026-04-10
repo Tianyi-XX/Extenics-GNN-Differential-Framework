@@ -1,0 +1,164 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Mobile Nursing Workstation",
+            "features": {
+                "Human-Computer Interaction": "Small screen, inconvenient for entry/viewing",
+                "Interoperability": "Cannot link with bedside equipment"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Battery",
+            "features": {
+                "Life": "Short"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Wi-Fi Signal",
+            "features": {
+                "Coverage": "Has dead spots"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Clinical Data",
+            "features": {
+                "Status": "Cannot be uploaded in real-time"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Nursing Workflow",
+            "features": {
+                "Status": "Interrupted, inconvenient"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Mobile Nursing",
+            "features": {
+                "Objective": "Achieve reliable, real-time, efficient, interconnected nursing work"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Work Interruption",
+            "features": {
+                "Reason": "Short battery life"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Data Upload Delay",
+            "features": {
+                "Reason": "Wi-Fi dead spots"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce Operational Efficiency",
+            "features": {
+                "Reason": "Small screen"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Unable to Achieve Equipment Linkage",
+            "features": {
+                "Reason": "Lack of system functionality"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Work interruption conflicts with reliable work objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Data delay conflicts with real-time work objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient work objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to link conflicts with interconnected work objective"
+            }
+        }
+    ]
+}

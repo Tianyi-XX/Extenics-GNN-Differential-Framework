@@ -1,0 +1,156 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Pathology Specimen Workflow",
+            "features": {
+                "Information Entry": "Manual filling, error-prone",
+                "Transport Link": "Lacks real-time tracking",
+                "Diagnosis Link": "Time-consuming"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Specimen Information",
+            "features": {
+                "Status": "Potential mismatch"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Pathology Specimen",
+            "features": {
+                "Status": "Prone to loss"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Subsequent Treatment Decision",
+            "features": {
+                "Efficiency": "Affected"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Pathology Diagnosis",
+            "features": {
+                "Cycle": "Several days"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Patient Safety",
+            "features": {
+                "Status": "Faces serious threat"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Specimen Workflow and Diagnosis",
+            "features": {
+                "Objective": "Achieve accurate, safe, timely pathology diagnosis"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Information Errors",
+            "features": {
+                "Reason": "Manual filling and entry"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Risk of Specimen Loss",
+            "features": {
+                "Reason": "Lack of real-time tracking"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Delay Diagnostic Report",
+            "features": {
+                "Reason": "Pathology diagnosis is time-consuming"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Information errors fundamentally conflict with accurate diagnosis objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Risk of specimen loss fundamentally conflicts with safe workflow objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Diagnostic delay conflicts with timely diagnosis objective"
+            }
+        }
+    ]
+}

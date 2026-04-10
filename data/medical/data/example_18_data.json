@@ -1,0 +1,177 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Medical Ventilator",
+            "features": {
+                "Ventilation Mode Setting": "Complex"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Status": "Respiratory insufficiency",
+                "Complication": "Prone to ventilator-associated pneumonia (VAP)"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Patient-Ventilator Asynchrony",
+            "features": {
+                "Status": "Common"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "General Doctors and Nurses",
+            "features": {
+                "Operational Skill": "Difficult to master"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Respiratory Therapist",
+            "features": {
+                "Professionalism": "High requirement"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Tubing and Humidifier Canister",
+            "features": {
+                "Cleaning Work": "Tedious"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Mechanical Ventilation",
+            "features": {
+                "Objective": "Provide safe, effective, easy-to-use, comfortable respiratory support"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Trigger Patient-Ventilator Asynchrony",
+            "features": {
+                "Reason": "Patient difficulty coordinating with machine rhythm"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Ventilator-Associated Pneumonia (VAP)",
+            "features": {
+                "Reason": "Prolonged use"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Operational Barrier",
+            "features": {
+                "Reason": "Complex ventilation mode setting"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase Cleaning Burden",
+            "features": {
+                "Reason": "Tubing and humidifier canister need frequent disinfection"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M6"
+        },
+        {
+            "id": "R2",
+            "relation": "Acts on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R9",
+            "relation": "Requires",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Asynchrony fundamentally conflicts with effective, comfortable ventilation objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "VAP fundamentally conflicts with safe ventilation objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "High operational barrier conflicts with easy-to-use ventilation objective"
+            }
+        },
+        {
+            "id": "R13",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Heavy cleaning burden affects efficiency, indirectly conflicts with objectives"
+            }
+        }
+    ]
+}

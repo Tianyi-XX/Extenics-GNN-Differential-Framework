@@ -1,0 +1,129 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Antibiotics",
+            "features": {
+                "Usage Issue": "Serious misuse"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Bacterial Resistance",
+            "features": {
+                "Status": "Increasingly severe"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Superbugs",
+            "features": {
+                "Treatment Difficulty": "Difficult to treat"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Patient",
+            "features": {
+                "Behavior": "Does not follow prescribed dosage and duration"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Ineffective Scenarios",
+            "features": {
+                "Example": "Viral cold"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Treat Bacterial Infection",
+            "features": {
+                "Objective": "Effectively control or eliminate pathogenic bacteria"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Misuse Antibiotics",
+            "features": {
+                "Specific Behavior": [
+                    "Use in ineffective scenarios",
+                    "Not completing the full course"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Increased Resistance",
+            "features": {
+                "Reason": "Antibiotic misuse"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Make Treatment Ineffective",
+            "features": {
+                "Reason": "Bacteria develop resistance"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R2",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "M3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Reflected in",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Reflected in",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Treatment failure fundamentally conflicts with effective treatment objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "M3",
+            "target": "A1",
+            "features": {
+                "Description": "Existence of superbugs fundamentally conflicts with effective treatment objective"
+            }
+        }
+    ]
+}

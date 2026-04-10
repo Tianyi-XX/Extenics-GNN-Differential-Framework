@@ -1,0 +1,152 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "PACS System",
+            "features": {
+                "Performance": "Loading takes too long",
+                "Compatibility": "DICOM format compatibility issues exist",
+                "Intelligence": "Lacks AI-assisted diagnosis function"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Measurement and Annotation Tools",
+            "features": {
+                "Functionality": "Singular"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Diagnostic Efficiency",
+            "features": {
+                "Status": "Severely affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Doctor",
+            "features": {
+                "Status": "Detailed needs unmet, heavy reading burden"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Imaging Diagnosis",
+            "features": {
+                "Objective": "Achieve efficient, compatible, accurate, intelligent diagnosis"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Affect Diagnostic Efficiency",
+            "features": {
+                "Reason": "Loading takes too long"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Information Sharing/Retrieval",
+            "features": {
+                "Reason": "DICOM compatibility issues"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Meet Detailed Needs",
+            "features": {
+                "Reason": "Singular tool functionality"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase Manual Reading Burden",
+            "features": {
+                "Reason": "Lack of AI assistance"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "User of",
+            "source": "M4",
+            "target": "M1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low diagnostic efficiency conflicts with efficient diagnosis objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Information incompatibility conflicts with compatible interconnection objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to meet needs conflicts with accurate diagnosis objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Heavy manual burden conflicts with intelligent diagnosis objective"
+            }
+        }
+    ]
+}

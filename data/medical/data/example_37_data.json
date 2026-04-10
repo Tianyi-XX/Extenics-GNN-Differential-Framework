@@ -1,0 +1,130 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Immune Checkpoint Inhibitors (PD-1/PD-L1)",
+            "features": {
+                "Efficacy Rate": "Limited (approx. 20-30%)",
+                "Side Effects": "May trigger excessive immune reactions"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Benefit Status": "Only a few respond effectively",
+                "Risk": "May suffer severe side effects"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Severe Side Effects",
+            "features": {
+                "Type": "Immune-related pneumonitis, colitis, etc."
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Biomarkers",
+            "features": {
+                "Status": "Clinically lacks reliable biomarkers to predict efficacy"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Tumor Immunotherapy",
+            "features": {
+                "Objective": "Achieve efficient, safe, predictable therapy"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Lead to Low Treatment Efficacy",
+            "features": {
+                "Reason": "Limitations of the drug's mechanism of action"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger Severe Immune Side Effects",
+            "features": {
+                "Reason": "Drug may trigger excessive immune reactions"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Predict Responders",
+            "features": {
+                "Reason": "Lack of reliable biomarkers"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficacy conflicts with efficient therapy objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Severe side effects fundamentally conflict with safe therapy objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to predict fundamentally conflicts with predictable therapy objective"
+            }
+        }
+    ]
+}

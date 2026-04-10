@@ -1,0 +1,106 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Official Health Education Promotion",
+            "features": {
+                "Content": "Dull, disconnected from life",
+                "Format": "Monotonous, preachy",
+                "Dissemination": "Lacks precision targeting",
+                "Attractiveness": "Insufficient"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Online 'Wellness' Pseudoscience Information",
+            "features": {
+                "Characteristic": "False, exaggerated"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Public",
+            "features": {
+                "Cognition": "Misled",
+                "Health Literacy": "Difficult to improve"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct Effective Health Education",
+            "features": {
+                "Objective": "Achieve effective, precise, attractive health communication"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reduce Effectiveness of Official Promotion",
+            "features": {
+                "Reason": "Dull content, monotonous format, lack of precision"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Mislead Public Cognition and Behavior",
+            "features": {
+                "Reason": "Proliferation of online pseudoscience"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Competes with",
+            "source": "M2",
+            "target": "M1",
+            "features": {
+                "Description": "Pseudoscience info competes with official promotion for public attention"
+            }
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low promotion effectiveness conflicts with effective communication objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Misleading the public fundamentally conflicts with effective communication objective"
+            }
+        }
+    ]
+}

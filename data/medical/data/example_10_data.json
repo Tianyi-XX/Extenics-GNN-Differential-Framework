@@ -1,0 +1,146 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Clinical Decision Support System (CDSS)",
+            "features": {
+                "Suggestion Quality": "Too broad, lacks specificity",
+                "Data Understanding Capability": "Cannot understand natural language",
+                "Performance": "Slows down EHR system"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Knowledge Base",
+            "features": {
+                "Timeliness": "Updates slow, disconnected from guidelines"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Doctor",
+            "features": {
+                "Status": "Work efficiency affected, cannot get effective suggestions"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Electronic Health Record (EHR) System",
+            "features": {
+                "Status": "Operating speed slowed down"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Diagnosis and Treatment Quality",
+            "features": {
+                "Status": "Affected"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Clinical Decision Support",
+            "features": {
+                "Objective": "Provide accurate, real-time, efficient, intelligent decision support"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Provide Low-Quality Suggestions",
+            "features": {
+                "Reason": [
+                    "Broad suggestions",
+                    "Disconnected knowledge base"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Process Complete Information",
+            "features": {
+                "Reason": "Cannot understand natural language descriptions"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce Clinical Work Efficiency",
+            "features": {
+                "Reason": "Slows down EHR system"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Embedded in",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low-quality suggestions conflict with accurate support objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to process complete info conflicts with accurate support objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Reducing efficiency conflicts with efficient support objective"
+            }
+        }
+    ]
+}

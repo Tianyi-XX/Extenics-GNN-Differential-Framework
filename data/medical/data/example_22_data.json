@@ -1,0 +1,151 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Surgical Scheduling Process",
+            "features": {
+                "Coordination Method": "Highly dependent on manual communication",
+                "Information Synchronization": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Elective Surgery",
+            "features": {
+                "Status": "Often passively delayed"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Emergency Surgery",
+            "features": {
+                "Characteristic": "Sudden, needs bumping"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Surgical Instruments / Consumables",
+            "features": {
+                "Preparation Status": "Not fully linked with schedule",
+                "Risk": "Possible shortage during surgery"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Information Transmission",
+            "features": {
+                "Method": "Manual",
+                "Accuracy": "Error-prone"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Surgical Safety and Efficiency",
+            "features": {
+                "Status": "Threatened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Surgical Scheduling",
+            "features": {
+                "Objective": "Achieve efficient, orderly, reliable, flexible resource allocation"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Delay Elective Surgery",
+            "features": {
+                "Reason": "Emergency surgery bumping"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Information Errors",
+            "features": {
+                "Reason": "Reliance on manual communication"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Trigger Risk of Intraoperative Instrument Shortage",
+            "features": {
+                "Reason": "Schedule does not consider instrument preparation status"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Affects",
+            "source": "M3",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Surgical delay conflicts with efficient scheduling objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Information errors conflict with reliable scheduling objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Intraoperative shortage risk fundamentally conflicts with reliable scheduling objective"
+            }
+        }
+    ]
+}

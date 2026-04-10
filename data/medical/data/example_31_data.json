@@ -1,0 +1,137 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Chemotherapy Drugs",
+            "features": {
+                "Targeting": "Lacking",
+                "Resistance": "Easily developed",
+                "Administration Method": "Mostly intravenous infusion"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Physiological State": "Suffers severe side effects",
+                "Quality of Life": "Poor"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Treatment Efficacy",
+            "features": {
+                "Status": "Fails due to resistance"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Normal Cells",
+            "features": {
+                "Status": "Severely damaged"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Chemotherapy Treatment",
+            "features": {
+                "Objective": "Achieve efficient, low-toxicity, convenient cancer treatment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Produce Severe Side Effects",
+            "features": {
+                "Reason": "Lack of targeting, damages normal cells"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Lead to Treatment Failure",
+            "features": {
+                "Reason": "Resistance develops"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Require Long-term Hospitalization",
+            "features": {
+                "Reason": "Requires intravenous infusion"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M2"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Severe side effects fundamentally conflict with low-toxicity treatment objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Treatment failure fundamentally conflicts with efficient treatment objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Long-term hospitalization conflicts with convenient treatment, improving quality of life objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Patient Transfer Process",
+            "features": {
+                "Information Transparency": "Low",
+                "Responsibility Definition": "Unclear",
+                "Procedures": "Complex"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Inter-departmental Bed Information",
+            "features": {
+                "Status": "Opaque"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Medical Record and Order Information",
+            "features": {
+                "Transmission Status": "Prone to omission or interruption"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Responsible Entity During Handover",
+            "features": {
+                "Status": "Unclear, prone to management vacuum"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Patient and Family",
+            "features": {
+                "Status": "Needs long waiting, may need repeat procedures"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Continuity and Safety of Diagnosis and Treatment",
+            "features": {
+                "Status": "Threatened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Execute Transfer",
+            "features": {
+                "Objective": "Achieve safe, efficient, continuous patient transport"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Extend Waiting Time",
+            "features": {
+                "Reason": "Opaque bed information"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Interrupt Diagnostic and Treatment Information",
+            "features": {
+                "Reason": "Inadequate information transmission mechanism"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Management Vacuum",
+            "features": {
+                "Reason": "Unclear responsible entity"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase Patient Burden",
+            "features": {
+                "Reason": "Needs repeat admission/discharge procedures"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M6"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Extended waiting conflicts with efficient transport objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Information interruption fundamentally conflicts with safe, continuous transport objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Management vacuum fundamentally conflicts with safe transport objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Increasing burden conflicts with efficient, convenient transport objective"
+            }
+        }
+    ]
+}

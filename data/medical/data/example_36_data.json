@@ -1,0 +1,160 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Insulin",
+            "features": {
+                "Administration Method": "Subcutaneous injection",
+                "Dosage Control": "High requirement, difficult to be precise",
+                "Most Dangerous Side Effect": "Hypoglycemia",
+                "Storage Condition": "Requires refrigeration"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Feeling": "Painful",
+                "Life Convenience": "Affected"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Hypoglycemic State",
+            "features": {
+                "Danger Level": "High"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Blood Glucose Control",
+            "features": {
+                "Status": "Difficult to be precise"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Diabetes Treatment",
+            "features": {
+                "Objective": "Achieve convenient, safe, precise blood glucose control"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Bring Inconvenience and Pain",
+            "features": {
+                "Reason": "Requires subcutaneous injection"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger Hypoglycemia Risk",
+            "features": {
+                "Reason": "Inherent side effect of the drug"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to Imprecise Blood Glucose Control",
+            "features": {
+                "Reason": "High requirement for dosage calculation and coordination with meals"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Cause Storage and Carrying Inconvenience",
+            "features": {
+                "Reason": "Requires refrigeration"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A5",
+            "target": "M2"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inconvenience and pain conflict with convenient treatment objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Hypoglycemia risk fundamentally conflicts with safe treatment objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Imprecise control fundamentally conflicts with precise treatment objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Carrying inconvenience conflicts with convenient treatment objective"
+            }
+        }
+    ]
+}

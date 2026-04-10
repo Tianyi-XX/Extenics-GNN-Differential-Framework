@@ -1,0 +1,159 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Defibrillator (AED)",
+            "features": {
+                "Preparation Time": "Power-on and charging takes time",
+                "Maintenance Requirement": "Requires regular checks"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Disposable Electrode Pads",
+            "features": {
+                "Status": "Have expiration date, easily invalidated if improperly managed"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Maintenance Process",
+            "features": {
+                "Execution Status": "Easily overlooked"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "General Public",
+            "features": {
+                "Usage Skill": "Untrained",
+                "Psychological State": "Afraid to use"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Cardiac Arrest Patient",
+            "features": {
+                "Rescue Window": "Extremely short"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Optimal Rescue Time",
+            "features": {
+                "Status": "May be delayed"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Rescue",
+            "features": {
+                "Objective": "Perform timely, effective, reliable defibrillation"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Delay Rescue Time",
+            "features": {
+                "Reason": "Power-on, charging takes time"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Device Failure",
+            "features": {
+                "Reason": [
+                    "Expired electrode pads",
+                    "Insufficient charge due to overlooked maintenance"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Public Rescue",
+            "features": {
+                "Reason": "General public afraid or unable to use"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Requires",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Acts on",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R7",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Delaying time fundamentally conflicts with timely rescue objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Device failure fundamentally conflicts with reliable rescue objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Public usage barrier conflicts with effective rescue objective"
+            }
+        }
+    ]
+}

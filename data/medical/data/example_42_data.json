@@ -1,0 +1,165 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Community Chronic Disease Management Model",
+            "features": {
+                "Management Method": "Superficial (phone inquiries)",
+                "Intervention Means": "Lacks effectiveness"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Patient",
+            "features": {
+                "Compliance": "Poor (doesn't take medication/monitor on time)"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Lifestyle Intervention",
+            "features": {
+                "Integration Status": "Not integrated"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Data System",
+            "features": {
+                "Connectivity with Higher-level Hospitals": "Not connected"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Two-way Referral",
+            "features": {
+                "Effectiveness": "Cannot be realized"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Chronic Disease Control Effect",
+            "features": {
+                "Status": "Poor"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Chronic Disease Management",
+            "features": {
+                "Objective": "Achieve effective, continuous, comprehensive, coordinated chronic disease management"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Lead to Poor Management Effect",
+            "features": {
+                "Reason": "Superficial management, lacks effective intervention"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Difficulty of Condition Control",
+            "features": {
+                "Reason": "Poor patient compliance"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Comprehensive Management",
+            "features": {
+                "Reason": "Not integrated with lifestyle intervention"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Hinder Hierarchical Diagnosis and Treatment",
+            "features": {
+                "Reason": "Data not connected"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M6"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M6"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Poor management effect fundamentally conflicts with effective management objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "High difficulty in condition control fundamentally conflicts with effective management objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Lack of comprehensive management conflicts with comprehensive management objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering hierarchical treatment conflicts with coordinated management objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "domain": "medical",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Electronic Health Record (EHR) System",
+            "features": {
+                "Interaction Design": "Inconsistent, logically chaotic",
+                "Performance": "Slow response, frequent freezes",
+                "Interoperability": "Incompatible interfaces, forming information silos",
+                "Printing Function": "Cumbersome"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Doctor",
+            "features": {
+                "Status": "Operational efficiency affected"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Patient Information",
+            "features": {
+                "Status": "Flow obstructed"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Clinical Workflow",
+            "features": {
+                "Status": "Not smooth"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "System Modules",
+            "features": {
+                "Attribute": "Modules for different departments"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Manage Clinical Information",
+            "features": {
+                "Objective": "Achieve efficient, easy-to-use, interconnected clinical information management"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reduce Clinical Efficiency",
+            "features": {
+                "Reason": [
+                    "Chaotic operational logic",
+                    "System freezes"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Information Sharing",
+            "features": {
+                "Reason": "Incompatible data interfaces"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Affect Paperless Experience",
+            "features": {
+                "Reason": "Cumbersome printing function"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "User of",
+            "source": "M2",
+            "target": "M1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low clinical efficiency conflicts with efficient management objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Information silos conflict with interconnected objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Cumbersome printing conflicts with easy-to-use management objective"
+            }
+        }
+    ]
+}
