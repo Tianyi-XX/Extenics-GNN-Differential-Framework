@@ -20,23 +20,28 @@ EGDF/
 pip install torch torch-geometric scikit-learn numpy
 ```
 
-## Requirements
-
-```bash
-pip install torch torch-geometric scikit-learn numpy
-```
-
 ## Training & Reproducibility
-
-This module implements the **multi-task structural analysis engine** described in Section 3.2 of the paper. To reproduce the training process and validate structural identification performance:
+This module implements the **GNN-based structural analysis** described in Section 3.2 of the paper.
 
 ```bash
 python train.py
 ```
 
 - **Multi-Task Optimization**: Implements the composite loss function from Equation (15), coordinating node importance, relevance, edge conflict probability, severity, and problem identification.
-- **Statistical Robustness**: Includes 5-fold cross-validation to ensure model stability across different data partitions.
-- **Outputs**: Generates `best_model_structural.pt` (model weights) and `cv_results_structural.json` (performance metrics).
+- **Statistical Robustness**: Includes 5-fold cross-validation to ensure model performance is insensitive to specific data splits across the four domains.
+- **Outputs**: Generates `best_model_structural.pt` (trained weights) and `cv_results_structural.json` (MAE and validation loss metrics).
+
+## Inference
+The inference module loads the trained multi-task GNN model to perform quantitative structural analysis on new basic-element graphs.
+
+```bash
+python inference.py
+```
+
+It automates the Extenics analytical process by outputting:
+- **Ranked Key Nodes**: Identifies nodes with high structural centrality based on importance and relevance scores.
+- **Quantified Conflicts**: Detects conflict edges with predicted probability and severity scores.
+- **Structured Guiding Signals**: Encodes the analysis results into a formatted prompt (as detailed in Appendix A of the paper) to steer the LLM toward targeted transformation strategies.
 
 ## Dataset Highlights
 The dataset consists of **200 problem-description graphs** modeled using Extenics basic-element theory, with 50 samples drawn from each of the four domains.
