@@ -5,9 +5,9 @@ This repository provides the GNN-based conflict analysis engine and annotated tr
 ## Repository Structure
 ```text
 EGDF/
-├── train.py          # GNN training script with 5-fold Cross-Validation logic
-├── inference.py      # GNN inference module for generating structural guiding signals
-├── data/             # Annotated training dataset (200 total samples)
+├── train.py          
+├── inference.py     
+├── data/             
 │   ├── ecological/   
 │   ├── financial/    
 │   ├── medical/      
