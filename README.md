@@ -46,7 +46,7 @@ It automates the Extenics analytical process by outputting:
 ## Dataset Highlights
 The dataset consists of **200 problem-description graphs** modeled using Extenics basic-element theory, with 50 samples drawn from each of the four domains.
 - **Formal Modeling**: Each sample follows the matter-element, affair-element, and relation-element ordered triple format (O, c, v).
-- **Annotation**: Ground-truth labels were established through the consensus of three doctoral researchers specializing in Extenics theory to ensure high-quality supervisory signals.
+- **Annotation**: Ground-truth labels were established through the consensus of three doctoral researchers specializing in computer science with experience in Extenics to ensure high-quality supervisory signals.
 - **Graph Structure**: Data is stored in structured JSON format, mapping natural language descriptions to computable formal graph representations.
 
 ## Citation
