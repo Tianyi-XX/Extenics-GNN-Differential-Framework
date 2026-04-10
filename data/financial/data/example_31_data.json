@@ -1,0 +1,131 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Disaster Recovery Architecture",
+            "features": {
+                "Data Synchronization": "Minute-level latency"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Critical Transaction Data",
+            "features": {
+                "Risk": "Potential loss"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Disaster Recovery Switchover Process",
+            "features": {
+                "Attribute": "Complex, time-consuming",
+                "Dependency": "Manual operation"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Backup Data Center",
+            "features": {
+                "Resource Utilization Rate": "Low",
+                "Status": "Idle most of the time"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Operational Costs",
+            "features": {
+                "Status": "Significant waste"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Business Continuity Assurance",
+            "features": {
+                "Objective": "Achieve zero data loss, fast automated, low-cost disaster recovery"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Data Loss Risk",
+            "features": {
+                "Reason": "Data synchronization latency"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Operational Risk",
+            "features": {
+                "Reason": "Switchover process relies on manual operation"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause Cost Waste",
+            "features": {
+                "Reason": "Low resource utilization in backup center"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Data loss risk conflicts with zero data loss objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Operational risk conflicts with fast automated switchover objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Cost waste conflicts with low-cost disaster recovery objective"
+            }
+        }
+    ]
+}

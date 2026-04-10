@@ -1,0 +1,125 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "P2P Online Lending Platform",
+            "features": {
+                "Risk Control Capability": "Uneven, lax review",
+                "Fund Custody": "No effective bank custody",
+                "Product Liquidity": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Investor Funds",
+            "features": {
+                "Risk": "High",
+                "Status": "Difficult to exit"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Bad Debt Rate",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Fund Pooling Risk",
+            "features": {
+                "Status": "High, prone to misappropriation"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Online Lending",
+            "features": {
+                "Objective": "Provide safe, transparent, liquid investment channels"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate High Bad Debt Rate",
+            "features": {
+                "Reason": "Lax review"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Form Fund Pooling/Misappropriation Risk",
+            "features": {
+                "Reason": "No bank custody"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Restrict Fund Liquidity",
+            "features": {
+                "Reason": "Product design"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "High bad debt rate conflicts with safe investment objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Fund pooling risk conflicts with safe and transparent objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Restricting liquidity conflicts with liquid investment objective"
+            }
+        }
+    ]
+}

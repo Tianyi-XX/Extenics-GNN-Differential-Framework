@@ -1,0 +1,146 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Trader Workflow",
+            "features": {
+                "Efficiency": "Low",
+                "Data Processing": "Manual entry and checking" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Multiple Independent Systems",
+            "features": {
+                "Attribute": "Requires frequent switching"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Communication Method",
+            "features": {
+                "Form": "Phone/Instant Messaging",
+                "Drawbacks": "Difficult record keeping" 
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Compliance Risk",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Data Accuracy",
+            "features": {
+                "Risk": "High" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Execute Trading Orders",
+            "features": {
+                "Objective": "Achieve efficient, compliant, accurate trade execution"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Compliance Risk",
+            "features": {
+                "Reason": "Difficult communication record keeping"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Operational Efficiency",
+            "features": {
+                "Reason": [
+                    "Frequent switching between systems",
+                    "Manual data checking"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Data Errors",
+            "features": {
+                "Reason": "Manual entry"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Uses", 
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1", 
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Compliance risk conflicts with compliant execution objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient execution objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Data errors conflict with accurate execution objective"
+            }
+        }
+    ]
+}

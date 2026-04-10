@@ -1,0 +1,143 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Due Diligence Process",
+            "features": {
+                "Working Method": "Traditional, relies on manual work", 
+                "Collaboration": "Poor, teams are dispersed" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Data Analysis Tools",
+            "features": {
+                "Type": "Excel",
+                "Capability": "Poor" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Risk Identification Capability",
+            "features": {
+                "Status": "Low, prone to missing key information"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Unified Risk View",
+            "features": {
+                "Status": "Difficult to form"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Paper Documents / On-site Interviews",
+            "features": {
+                "Attribute": "Information carrier"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Due Diligence",
+            "features": {
+                "Objective": "Achieve comprehensive, in-depth, efficient risk assessment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Miss Key Information",
+            "features": {
+                "Reason": "Extensive manual review"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Perform In-depth Analysis",
+            "features": {
+                "Reason": "Poor data analysis capability"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Form Dispersed Work Products",
+            "features": {
+                "Reason": "Dispersed teamwork"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Uses",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1", 
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1", 
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Missing info conflicts with comprehensive assessment objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability for in-depth analysis conflicts with in-depth assessment objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Dispersed results conflict with unified risk view objective"
+            }
+        }
+    ]
+}

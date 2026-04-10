@@ -1,0 +1,142 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Compliance Reporting Process",
+            "features": {
+                "Data Processing": "Extensive manual extraction, cleaning, integration",
+                "Adjustment Method": "Manual" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Data Sources",
+            "features": {
+                "Attribute": "Dispersed data silos"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Regulatory Requirements",
+            "features": {
+                "Attribute": "Frequently changing"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Report Accuracy",
+            "features": {
+                "Status": "Low, prone to errors"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Compliance Department Resources",
+            "features": {
+                "Status": "Heavily occupied"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Generate and Submit Compliance Reports",
+            "features": {
+                "Objective": "Achieve accurate, efficient, agile compliance reporting"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Data Errors",
+            "features": {
+                "Reason": "Manual extraction and integration"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Respond Quickly to Changes",
+            "features": {
+                "Reason": "Requires manual adjustments"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Consume Significant Resources",
+            "features": {
+                "Reason": "Heavy workload"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Subject to", 
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2", 
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes", 
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes", 
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Data errors conflict with accurate reporting objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to respond quickly conflicts with agile reporting objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Consuming significant resources conflicts with efficient reporting objective"
+            }
+        }
+    ]
+}

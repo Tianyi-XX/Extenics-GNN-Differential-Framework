@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Installment Payment Product",
+            "features": {
+                "Promotion": "First month 0 interest",
+                "True Cost": "High comprehensive annualized interest rate",
+                "Early Repayment Clause": "High penalty fees"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Consumer",
+            "features": {
+                "Behavior": "Induced to overspend"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Consumer Rights",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Comprehensive Annualized Interest Rate (IRR)",
+            "features": {
+                "Attribute": "High, but hidden"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Consumer Credit",
+            "features": {
+                "Objective": "Provide transparent, fair, responsible financial services"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Conceal True Cost",
+            "features": {
+                "Reason": "Promoted as '0 interest', but actual cost is high"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Penalize Early Repayment",
+            "features": {
+                "Reason": "Charges high penalty fees"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Induce Overspending",
+            "features": {
+                "Reason": "Lure of '0 interest'"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Concealing cost conflicts with transparent and fair service objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Penalizing early repayment conflicts with fair service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inducing overspending conflicts with responsible finance objective"
+            }
+        }
+    ]
+}

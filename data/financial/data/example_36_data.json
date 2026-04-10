@@ -1,0 +1,136 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Open API Platform",
+            "features": {
+                "Access Control": "Policies too simple",
+                "Third-Party Review": "Insufficient",
+                "Audit Capability": "Lacks granular auditing"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Third-Party Application",
+            "features": {
+                "Security": "Not fully reviewed"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Data Security",
+            "features": {
+                "Status": "Faces leakage and attack risks"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "API Call Log",
+            "features": {
+                "Granularity": "Low"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Open Banking Service",
+            "features": {
+                "Objective": "Provide a secure, controllable, auditable open platform"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Vulnerable to Malicious Attacks",
+            "features": {
+                "Reason": "Simple access control and traffic limiting policies"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Introduce Third-Party Security Risks",
+            "features": {
+                "Reason": "Insufficient security review"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Trace Leak Source",
+            "features": {
+                "Reason": "Lacks granular auditing"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Interacts with",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Vulnerability to attacks conflicts with secure platform objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Third-party risk conflicts with controllable platform objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to trace conflicts with auditable platform objective"
+            }
+        }
+    ]
+}

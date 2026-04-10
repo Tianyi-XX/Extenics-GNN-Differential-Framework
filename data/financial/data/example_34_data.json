@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Data Privacy Compliance Strategy",
+            "features": {
+                "Mode": "Passive response",
+                "Agility": "Low (High cost, long cycle)"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Data Privacy Regulations",
+            "features": {
+                "Attribute": "Constantly emerging, varying requirements"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Business Development Goals",
+            "features": {
+                "Example": "Precision marketing",
+                "Status": "Affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Unified Compliance Framework",
+            "features": {
+                "Status": "Difficult to establish"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Data Privacy Compliance",
+            "features": {
+                "Objective": "Achieve proactive, agile, unified, business-supporting compliance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Hinder Business Development",
+            "features": {
+                "Reason": "Strict compliance requirements"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Undertake High-Cost/Long-Cycle Modifications",
+            "features": {
+                "Reason": "Passive response strategy"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Establish Unified Framework",
+            "features": {
+                "Reason": "Varying regulatory requirements"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Subject to",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering business conflicts with business-supporting compliance objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "High cost/long cycle conflicts with agile compliance objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to unify framework conflicts with unified compliance objective"
+            }
+        }
+    ]
+}

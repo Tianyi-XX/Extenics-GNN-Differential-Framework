@@ -1,0 +1,142 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "SDLC Security Process",
+            "features": {
+                "Security Testing Intervention Timing": "Late in the cycle",
+                "Open Source Component Management": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Developers",
+            "features": {
+                "Security Capability": "Lack secure coding training"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Open Source Components",
+            "features": {
+                "Risk": "Introduce numerous unknown external risks"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Vulnerability Remediation Cost",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Software Security",
+            "features": {
+                "Status": "Low"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Develop Secure Software",
+            "features": {
+                "Objective": "Achieve shift-left security, risk control, efficient software development"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Introduce External Risks",
+            "features": {
+                "Reason": "Poor open source component vulnerability management"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Native Security Vulnerabilities",
+            "features": {
+                "Reason": "Developers lack secure coding training"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Delay Vulnerability Discovery",
+            "features": {
+                "Reason": "Late security testing intervention"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Implementer",
+            "source": "M2",
+            "target": "A1"
+        },
+        {
+            "id": "R2",
+            "relation": "Uses",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Introducing external risks conflicts with risk control objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Generating native vulnerabilities conflicts with developing secure software objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Delayed discovery conflicts with shift-left, efficient development objectives"
+            }
+        }
+    ]
+}

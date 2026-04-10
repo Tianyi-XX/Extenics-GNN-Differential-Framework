@@ -1,0 +1,136 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Network Architecture Design",
+            "features": {
+                "Performance": "High network latency jitter",
+                "Reliability": "Single point of failure risk exists",
+                "Security": "Lacks DDoS protection capability"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Core Switch",
+            "features": {
+                "Risk": "Single point of failure"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Trading Fairness",
+            "features": {
+                "Status": "Affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "System Availability",
+            "features": {
+                "Status": "Low, prone to crashes"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Trading Network Support",
+            "features": {
+                "Objective": "Provide low-latency, high-availability, secure network"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Affect Trading Fairness",
+            "features": {
+                "Reason": "High network latency jitter"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Single Point of Failure Risk",
+            "features": {
+                "Reason": "Core switch design"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause System Crashes",
+            "features": {
+                "Reason": "Lack of DDoS protection"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Trading unfairness conflicts with low-latency fair network objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Single point of failure risk conflicts with high-availability network objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "System crash proneness conflicts with secure high-availability objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,153 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Cross-Border Remittance Process",
+            "features": {
+                "Technical Basis": "SWIFT network", 
+                "Cost Structure": "Intermediary banks charge high, unpredictable fees", 
+                "Cycle": "3-5 business days",
+                "Traceability": "Cannot track real-time status" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "SWIFT Wire Transfer Form",
+            "features": {
+                "Attribute": "Lengthy, complex, prone to errors"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "User Funds",
+            "features": {
+                "Status": "Low utilization efficiency, actual received amount reduced"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Intermediary Bank",
+            "features": {
+                "Role": "Charges 'toll fees'" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Cross-Border Remittance",
+            "features": {
+                "Objective": "Achieve low-cost, fast, transparent, reliable remittance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Remittance Failure",
+            "features": {
+                "Reason": "Errors in wire transfer form information"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Transaction Cost",
+            "features": {
+                "Reason": "Intermediary bank fees"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Extend Fund Arrival Time",
+            "features": {
+                "Reason": "Long settlement cycle"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Unable to Track Status",
+            "features": {
+                "Reason": "Lack of system capability"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Remittance failure conflicts with reliable remittance objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "High cost conflicts with low-cost remittance objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Slow arrival conflicts with fast remittance objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to track conflicts with transparent remittance objective"
+            }
+        }
+    ]
+}

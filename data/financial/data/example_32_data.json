@@ -1,0 +1,124 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Permission Management System",
+            "features": {
+                "Permission Assignment": "Based on broad roles",
+                "Permission Revocation": "Not timely",
+                "Monitoring Capability": "Lacks real-time monitoring and auditing"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Employee Permissions",
+            "features": {
+                "Status": "Exceeds required scope (Principle of Least Privilege violated)"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Departed/Transferred Employees",
+            "features": {
+                "Risk": "Permissions not revoked"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Internal Security Risks",
+            "features": {
+                "Status": "Severe"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Permission Management",
+            "features": {
+                "Objective": "Achieve least privilege, timely revocation, real-time monitoring security management"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Grant Excessive Permissions",
+            "features": {
+                "Reason": "Broad role definitions"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Permission Revocation Delay",
+            "features": {
+                "Reason": "Untimely process"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Detect Abnormal Operations",
+            "features": {
+                "Reason": "Lack of real-time monitoring"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Affects",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Excessive permissions conflict with Principle of Least Privilege"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Revocation delay conflicts with timely security management objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to monitor conflicts with real-time monitoring objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Online Robo-Advisor Service",
+            "features": {
+                "Personalization Capability": "Low", 
+                "Transparency": "Low (Rebalancing logic is opaque)", 
+                "Support System": "Lacks human consultation entry point" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "User Profile Model",
+            "features": {
+                "Complexity": "Overly simplistic" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Investment Portfolio Recommendation",
+            "features": {
+                "Status": "Highly homogenized"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "User",
+            "features": {
+                "Status": "Risk appetite and financial goals not understood",
+                "Emotion": "Needs reassurance during market volatility" 
+            }
+        },
+        {
+            "id": "M5",
+            "name": "User Trust",
+            "features": {
+                "Status": "Damaged"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Personalized Investment Advice",
+            "features": {
+                "Objective": "Provide personalized, transparent, trustworthy investment advice"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Recommend Homogenized Portfolios",
+            "features": {
+                "Reason": "Simplistic user profile model"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Distrust",
+            "features": {
+                "Reason": "Opaque rebalancing logic"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Reassure User Emotions",
+            "features": {
+                "Reason": "Lack of human consultation entry point"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Homogenized recommendations conflict with personalized advice objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Distrust conflicts with trustworthy objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to reassure emotions conflicts with core goal of providing effective service"
+            }
+        }
+    ]
+}

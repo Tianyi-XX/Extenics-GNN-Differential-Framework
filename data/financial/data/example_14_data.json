@@ -1,0 +1,131 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Automated Underwriting Engine",
+            "features": {
+                "Intelligence Level": "Low, one-size-fits-all",
+                "Data Processing Capability": "Cannot understand unstructured text"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Underwriting Rules",
+            "features": {
+                "Configurability": "Limited",
+                "Update Process": "Long cycle, low efficiency"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Complex Cases",
+            "features": {
+                "Status": "Directly rejected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Manual Review Process",
+            "features": {
+                "Status": "Cannot be triggered"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Business Growth",
+            "features": {
+                "Status": "Obstructed"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Risk Assessment",
+            "features": {
+                "Objective": "Achieve accurate, efficient, flexible automated underwriting"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Incorrectly Reject Customers",
+            "features": {
+                "Reason": "One-size-fits-all rules"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Process Key Information",
+            "features": {
+                "Reason": "Cannot understand unstructured text"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Slow Rule Updates",
+            "features": {
+                "Reason": "Process depends on IT department"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Incorrect rejection conflicts with accurate assessment objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to process key info conflicts with accurate assessment objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Slow rule updates conflict with flexible and efficient objectives"
+            }
+        }
+    ]
+}

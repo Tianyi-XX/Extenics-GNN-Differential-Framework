@@ -1,0 +1,158 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "ATM (Automated Teller Machine)",
+            "features": {
+                "Functionality": "Limited to basic transactions", 
+                "Hardware": "Old resistive screen, poorly designed cash dispenser" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "User Experience",
+            "features": {
+                "Status": "Extremely poor, slow response"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Device Reliability",
+            "features": {
+                "Status": "Low, prone to cash jams"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Transaction Receipt",
+            "features": {
+                "Status": "Often unavailable"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Cash Dispenser",
+            "features": {
+                "Design": "Poorly designed" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Self-Service Financial Services",
+            "features": {
+                "Objective": "Provide reliable, convenient, comprehensive self-service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Cash Jams",
+            "features": {
+                "Reason": "Poorly designed cash dispenser"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Handle Modern Transactions",
+            "features": {
+                "Reason": "Limited functionality"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to Poor Operational Experience",
+            "features": {
+                "Reason": "Slow screen response"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Unable to Obtain Receipt",
+            "features": {
+                "Reason": "No reminder when paper runs out"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Cash jams conflict with reliable service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Limited functionality conflicts with comprehensive service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Poor experience conflicts with convenient service objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to get receipt conflicts with reliable service objective"
+            }
+        }
+    ]
+}

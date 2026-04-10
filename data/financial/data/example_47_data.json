@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Universal Life Insurance Product",
+            "features": {
+                "Coverage Amount": "Low",
+                "Investment Return": "Uncertain and opaque",
+                "Fees": "High initial and management fees"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Insurance Agent",
+            "features": {
+                "Behavior": "Exaggerates return prospects"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Consumer",
+            "features": {
+                "Status": "Misled"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Policy Cash Value",
+            "features": {
+                "Status": "Severely eroded"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Protection and Investment",
+            "features": {
+                "Objective": "Provide valuable, transparent, fair financial products"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Mislead Consumer Decision",
+            "features": {
+                "Reason": "Agent exaggerates returns"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Erode Policy Value",
+            "features": {
+                "Reason": "High fees"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Provide Insufficient Protection",
+            "features": {
+                "Reason": "Low coverage amount"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Seller of",
+            "source": "M2",
+            "target": "M1"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Sales misrepresentation conflicts with fair service objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Eroding value conflicts with providing valuable products objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Insufficient protection conflicts with providing effective protection objective"
+            }
+        }
+    ]
+}

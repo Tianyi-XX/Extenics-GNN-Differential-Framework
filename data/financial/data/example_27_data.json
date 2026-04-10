@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Product Launch Process",
+            "features": {
+                "Collaboration Method": "Multi-departmental approval", 
+                "Efficiency": "Long decision-making process" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "System Development Process",
+            "features": {
+                "Cycle": "Long"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Product Documents",
+            "features": {
+                "Language": "Filled with legal jargon", 
+                "Readability": "Poor" 
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Market Window",
+            "features": {
+                "Status": "Missed"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Customer",
+            "features": {
+                "Status": "Difficult to understand product"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Rapidly Launch New Product",
+            "features": {
+                "Objective": "Achieve agile, efficient, customer-friendly product innovation"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Launch Delay",
+            "features": {
+                "Reason": [
+                    "Multiple approval steps",
+                    "Long system development cycle"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Customer Understanding Difficulty",
+            "features": {
+                "Reason": "Complex document terminology"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Outputs", 
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Launch delay conflicts with rapid launch objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Customer difficulty conflicts with customer-friendly objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Student Loan Product",
+            "features": {
+                "Interest Rate": "Exorbitantly high",
+                "Value-added Services": "Lacking",
+                "Repayment Method": "Inflexible"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Student",
+            "features": {
+                "Repayment Capacity": "Limited in the future",
+                "Income": "Unstable in early graduation"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Personal Credit Report",
+            "features": {
+                "Status": "Easily negatively affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Repayment Method",
+            "features": {
+                "Design": "Inflexible"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Product Value",
+            "features": {
+                "Status": "Singular, lacks long-term value"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Student Loans",
+            "features": {
+                "Objective": "Provide responsible, flexible, long-term value financial support"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause High Repayment Burden",
+            "features": {
+                "Reason": "Exorbitantly high interest rate"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger Delinquency and Credit Issues",
+            "features": {
+                "Reason": "Inflexible repayment method"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lack Long-term Support for Students",
+            "features": {
+                "Reason": "Not combined with value-added services"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Targets",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "High burden conflicts with responsible finance objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering delinquency conflicts with responsible finance objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Lack of long-term support conflicts with providing valuable support objective"
+            }
+        }
+    ]
+}

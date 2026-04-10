@@ -1,0 +1,148 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Desktop POS Terminal",
+            "features": {
+                "Performance": "Slow boot/load times", 
+                "Functionality": "Does not support new payment methods",
+                "Reliability": "Low card swipe/insert recognition rate" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Customer",
+            "features": {
+                "Status": "Long waiting time",
+                "Experience": "Needs repeated attempts" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Receipt Printer",
+            "features": {
+                "Reliability": "Prone to paper jams",
+                "Maintenance": "Complex consumable replacement" 
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Transaction Reliability",
+            "features": {
+                "Status": "Low"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Process Payment Transactions",
+            "features": {
+                "Objective": "Provide fast, reliable, versatile, easy-to-maintain payment services"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Extend Customer Waiting Time",
+            "features": {
+                "Reason": "Slow boot/load times"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Transaction Failure/Retry",
+            "features": {
+                "Reason": "Low recognition rate"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Support New Payment Methods",
+            "features": {
+                "Reason": "Outdated functionality"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Interrupt Transaction Flow",
+            "features": {
+                "Reason": "Printer paper jam"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Long customer waiting time conflicts with fast service objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Transaction failure/retry conflicts with reliable service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to support new payments conflicts with versatile service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Transaction flow interruption conflicts with reliable service objective"
+            }
+        }
+    ]
+}

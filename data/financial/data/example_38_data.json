@@ -1,0 +1,124 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Key Management System",
+            "features": {
+                "Storage Method": "Insecure (config files/code)",
+                "Lifecycle Management": "Non-standardized, relies on manual work",
+                "Audit Capability": "Lacking"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Encryption Keys",
+            "features": {
+                "Risk": "Highly prone to leakage"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Configuration Files / Code",
+            "features": {
+                "Attribute": "Non-secure storage medium"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Data Security",
+            "features": {
+                "Status": "Faces serious threats"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Key Security Management",
+            "features": {
+                "Objective": "Achieve secure key storage, standardized rotation, and comprehensive auditing"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Key Leakage Risk",
+            "features": {
+                "Reason": "Keys stored directly in config files or code"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Execute Non-Standardized Lifecycle Operations",
+            "features": {
+                "Reason": "Process relies on manual work"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Track Key Usage",
+            "features": {
+                "Reason": "Lack of strict audit records"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Uses",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Key leakage risk conflicts with secure storage objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Non-standardized operations conflict with standardized rotation objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to track conflicts with comprehensive auditing objective"
+            }
+        }
+    ]
+}

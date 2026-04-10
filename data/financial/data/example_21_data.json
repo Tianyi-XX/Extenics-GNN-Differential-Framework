@@ -1,0 +1,135 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "KYC Process",
+            "features": {
+                "Requirements": [ 
+                    "Numerous paper originals",
+                    "Multiple in-person visits by legal representative"
+                ],
+                "Internal Process": "Opaque, takes weeks" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Corporate Customer",
+            "features": {
+                "Experience": "Cumbersome, heavily criticized"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Bank Internal Efficiency",
+            "features": {
+                "Status": "Extremely low"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Information Transfer Method",
+            "features": {
+                "Form": "Paper work orders" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Open Corporate Account",
+            "features": {
+                "Objective": "Provide efficient, convenient, secure account opening experience"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Increase Customer Burden",
+            "features": {
+                "Reason": [
+                    "Requires paper originals",
+                    "Requires in-person visits"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Extend Processing Time",
+            "features": {
+                "Reason": "Opaque internal review, paper work order transfer"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce Internal Operational Efficiency",
+            "features": {
+                "Reason": "Reliance on paper work orders"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Increased customer burden conflicts with convenient experience objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Long processing time conflicts with efficient experience objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Low internal efficiency conflicts with efficient service objective"
+            }
+        }
+    ]
+}

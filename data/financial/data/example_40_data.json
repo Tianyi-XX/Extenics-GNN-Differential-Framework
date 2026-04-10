@@ -1,0 +1,137 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Security Training System",
+            "features": {
+                "Content": "Boring, monotonous format",
+                "Effectiveness Verification": "Lacks phishing drills",
+                "Incident Response": "No rapid response process"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Employees",
+            "features": {
+                "Participation Rate": "Low",
+                "Security Awareness": "Weak"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Internal Security Defense Line",
+            "features": {
+                "Status": "Fragile, effectiveness unknown"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Suspicious Emails",
+            "features": {
+                "Status": "Not handled quickly"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Build Employee Security Defense Line",
+            "features": {
+                "Objective": "Build a proactive, verifiable, rapid-response security culture"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Lead to Poor Training Effectiveness",
+            "features": {
+                "Reason": "Boring content, low participation"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Verify Defense Capability",
+            "features": {
+                "Reason": "Lacks phishing drills"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Quickly Handle Discovered Threats",
+            "features": {
+                "Reason": "No response process"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Targets",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Poor training effectiveness conflicts with building an effective defense line objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to verify conflicts with verifiable defense line objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to quickly handle conflicts with rapid response objective"
+            }
+        }
+    ]
+}

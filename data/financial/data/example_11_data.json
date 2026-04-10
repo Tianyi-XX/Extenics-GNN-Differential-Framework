@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Anti-Fraud System",
+            "features": {
+                "Alert Volume": "Massive"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Risk Control Model",
+            "features": {
+                "Strategy": "One-size-fits-all",
+                "Update Cycle": "Long"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Legitimate Transactions",
+            "features": {
+                "Status": "Incorrectly blocked"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "New Types of Fraud",
+            "features": {
+                "Status": "Missed (not blocked)"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "User",
+            "features": {
+                "Status": "Causes significant inconvenience"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Transaction Anti-Fraud",
+            "features": {
+                "Objective": "Provide accurate, real-time, efficient fraud interception"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Incorrectly Block Legitimate Transactions (False Positive)",
+            "features": {
+                "Reason": "One-size-fits-all model"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Miss New Types of Fraud (False Negative)",
+            "features": {
+                "Reason": "Slow model updates"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Manual Review Burden",
+            "features": {
+                "Reason": "Massive alerts"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Incorrect blocking conflicts with accurate interception objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Missing fraud conflicts with reliable interception objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "High review burden conflicts with efficient interception objective"
+            }
+        }
+    ]
+}

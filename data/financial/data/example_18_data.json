@@ -1,0 +1,137 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Automated Approval System",
+            "features": {
+                "Verification Capability": "None, relies on manual check",
+                "Feedback Mechanism": "Templated"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Approval Rules",
+            "features": {
+                "Design": "Rigid",
+                "Basis": "Only a few key fields" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "High-Quality Customers",
+            "features": {
+                "Status": "Incorrectly rejected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Business Growth",
+            "features": {
+                "Status": "Obstructed"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Application Materials",
+            "features": {
+                "Authenticity": "Cannot be automatically verified"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Credit Card Approval",
+            "features": {
+                "Objective": "Achieve accurate customer acquisition, risk control, good experience approval"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Incorrectly Reject Customers",
+            "features": {
+                "Reason": "Rigid approval rules"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Generate Potential Risks",
+            "features": {
+                "Reason": "Unable to verify material authenticity"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Provide Ineffective Feedback",
+            "features": {
+                "Reason": "Templated rejection reasons"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Processes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Incorrect rejection conflicts with accurate acquisition objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Potential risks conflict with risk control objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Ineffective feedback conflicts with good experience objective"
+            }
+        }
+    ]
+}

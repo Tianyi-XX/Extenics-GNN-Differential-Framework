@@ -1,0 +1,139 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Corporate E-Banking System",
+            "features": {
+                "Technology Stack": "Outdated", 
+                "Compatibility": "Only supports IE browser", 
+                "UI/UX": "Stuck at a decade-old level"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "USB Key (U-Shield) Driver",
+            "features": {
+                "Installation": "Complex", 
+                "Updates": "Frequent" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Core Functions",
+            "features": {
+                "Operation": "Cumbersome", 
+                "Data Import": "Does not support Excel"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "System Availability",
+            "features": {
+                "Status": "Low, frequent login failures"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Finance Staff",
+            "features": {
+                "Status": "Low operational efficiency"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Handle Corporate Financial Transactions",
+            "features": {
+                "Objective": "Provide reliable, efficient, convenient corporate financial services"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Login Failures",
+            "features": {
+                "Reason": "USB key driver or browser compatibility issues"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Low Operational Efficiency",
+            "features": {
+                "Reason": "Cumbersome core functions, no batch import support"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Force Use of Specific Browser",
+            "features": {
+                "Reason": "Extremely poor compatibility"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Login failures conflict with reliable service objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with efficient service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Forcing specific browser use conflicts with convenient service objective"
+            }
+        }
+    ]
+}

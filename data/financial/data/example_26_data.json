@@ -1,0 +1,136 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Debt Collection Business Process",
+            "features": {
+                "Methods": "Over-reliance on harassing methods like calls, texts", 
+                "Strategy": "Non-personalized" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Collection Data",
+            "features": {
+                "Status": "Internal/external silos, inconsistent information"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Customer",
+            "features": {
+                "Status": "Harassed, prone to complain"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Legal and Reputational Risk",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Collection Staff",
+            "features": {
+                "Tools": "Lack effective analysis tools" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Debt Collection",
+            "features": {
+                "Objective": "Achieve efficient, compliant, personalized collection"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Trigger Complaints and Risks",
+            "features": {
+                "Reason": "Harassing methods"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Execute Ineffective Strategies",
+            "features": {
+                "Reason": "Lack of analysis tools"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to Repeated Collections",
+            "features": {
+                "Reason": "Data silos"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Implementer",
+            "source": "M5",
+            "target": "A1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M5", 
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Harassing methods conflict with compliant collection objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Ineffective strategies conflict with efficient, personalized collection objectives"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Repeated collections conflict with efficient collection objective"
+            }
+        }
+    ]
+}

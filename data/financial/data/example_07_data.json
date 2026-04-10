@@ -1,0 +1,158 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Online Comparison Website",
+            "features": {
+                "Information Collection": "Requires excessive private info", 
+                "Information Display": "Complex and hard-to-understand terms", 
+                "Quote Update": "Not timely" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Recommendation Algorithm",
+            "features": {
+                "Bias": "Favors high-commission products" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "User Trust",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Quote",
+            "features": {
+                "Accuracy": "Low, differs from actual price"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Insurance Comparison Service",
+            "features": {
+                "Objective": "Provide transparent, fair, reliable, privacy-protecting comparison service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause User Privacy Concerns",
+            "features": {
+                "Reason": "Requires excessive private info"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Effective Comparison",
+            "features": {
+                "Reason": "Complex display of terms"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Unfair Recommendations",
+            "features": {
+                "Reason": "Algorithm bias"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Provide Inaccurate Quotes",
+            "features": {
+                "Reason": "Untimely quote updates"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A5",
+            "target": "M3"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Privacy concerns conflict with trustworthy service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering comparison conflicts with transparent service objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Unfair recommendations conflict with fair service objective"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Inaccurate quotes conflict with reliable service objective"
+            }
+        }
+    ]
+}

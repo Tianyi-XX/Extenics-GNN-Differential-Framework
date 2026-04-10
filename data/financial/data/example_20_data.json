@@ -1,0 +1,131 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Intelligent Chatbot Customer Service",
+            "features": {
+                "NLU Capability": "Poor",
+                "Emotional Capability": "Lacking",
+                "Context Understanding": "Unable to understand"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "'Transfer to Human' Service",
+            "features": {
+                "Entry Point": "Deeply hidden",
+                "Waiting Time": "Long"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "User Experience",
+            "features": {
+                "Status": "Poor, conflicts easily escalate"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Customer Issue",
+            "features": {
+                "Status": "Unresolved"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Customer Service",
+            "features": {
+                "Objective": "Provide efficient, accurate, empathetic solutions"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Give Irrelevant Answers",
+            "features": {
+                "Reason": "Poor NLU capability"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Escalate Conflicts",
+            "features": {
+                "Reason": "Lack of emotion"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder User from Getting Help",
+            "features": {
+                "Reason": "'Transfer to Human' entry point is hard to find"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Irrelevant answers conflict with accurate problem solving objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Escalating conflicts conflicts with providing good service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering user from getting final help conflicts with problem solving objective"
+            }
+        }
+    ]
+}

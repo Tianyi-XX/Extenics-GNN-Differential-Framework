@@ -1,0 +1,132 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Scorecard Model",
+            "features": {
+                "Data Source": "Over-reliance on central bank credit reports",
+                "Algorithm": "Potentially discriminatory",
+                "Timeliness": "Slow updates"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Target Customer Group",
+            "features": {
+                "Type": [
+                    "Young population",
+                    "Freelancers"
+                ],
+                "Status": "Excluded or underestimated"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Alternative Data",
+            "features": {
+                "Type": [
+                    "Consumption",
+                    "Social"
+                ],
+                "Status": "Not incorporated"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Risk Assessment Accuracy",
+            "features": {
+                "Status": "Low, not adaptive to economic cycles"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Credit Assessment",
+            "features": {
+                "Objective": "Achieve fair, accurate, dynamic, comprehensive risk assessment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Cover/Fairly Assess Specific Customer Groups",
+            "features": {
+                "Reason": [
+                    "Reliance on single data source",
+                    "Model discrimination"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Limited Profiling Dimensions",
+            "features": {
+                "Reason": "Failure to incorporate alternative data"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Adapt to Market Changes",
+            "features": {
+                "Reason": "Slow model updates"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Ignores",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to cover/fairly assess conflicts with fair, comprehensive objectives"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to adapt conflicts with dynamic assessment objective"
+            }
+        }
+    ]
+}

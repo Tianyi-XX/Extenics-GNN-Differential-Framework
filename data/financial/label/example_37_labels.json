@@ -1,0 +1,93 @@
+{
+    "description": "Network architecture design issues",
+    "metadata": {
+        "example_name": "example_37",
+        "domain": "financial"
+    },
+    "node_scores": {
+        "M1": {
+            "importance": 0.9,
+            "problem_relevance": 0.9
+        },
+        "M2": {
+            "importance": 0.9,
+            "problem_relevance": 1.0
+        },
+        "M3": {
+            "importance": 0.8,
+            "problem_relevance": 0.85
+        },
+        "M4": {
+            "importance": 0.9,
+            "problem_relevance": 1.0
+        },
+        "A1": {
+            "importance": 0.9,
+            "problem_relevance": 0.1
+        },
+        "A2": {
+            "importance": 0.8,
+            "problem_relevance": 0.9
+        },
+        "A3": {
+            "importance": 0.9,
+            "problem_relevance": 1.0
+        },
+        "A4": {
+            "importance": 0.9,
+            "problem_relevance": 1.0
+        }
+    },
+    "edge_scores": {
+        "R1": {
+            "is_problem": 0,
+            "severity": 0.0,
+            "is_conflict": 0
+        },
+        "R2": {
+            "is_problem": 1,
+            "severity": 0.9,
+            "is_conflict": 0
+        },
+        "R3": {
+            "is_problem": 1,
+            "severity": 0.95,
+            "is_conflict": 0
+        },
+        "R4": {
+            "is_problem": 1,
+            "severity": 0.95,
+            "is_conflict": 0
+        },
+        "R5": {
+            "is_problem": 1,
+            "severity": 0.5,
+            "is_conflict": 0
+        },
+        "R6": {
+            "is_problem": 1,
+            "severity": 0.5,
+            "is_conflict": 0
+        },
+        "R7": {
+            "is_problem": 1,
+            "severity": 0.5,
+            "is_conflict": 0
+        },
+        "R8": {
+            "is_problem": 1,
+            "severity": 0.9,
+            "is_conflict": 1
+        },
+        "R9": {
+            "is_problem": 1,
+            "severity": 1.0,
+            "is_conflict": 1
+        },
+        "R10": {
+            "is_problem": 1,
+            "severity": 1.0,
+            "is_conflict": 1
+        }
+    }
+}

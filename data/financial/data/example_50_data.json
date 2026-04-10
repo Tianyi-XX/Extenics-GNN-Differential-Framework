@@ -1,0 +1,129 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Perpetual Contract Product",
+            "features": {
+                "Leverage Ratio": "Extremely high (100x+)"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Digital Currency Exchange",
+            "features": {
+                "Reliability": "Low (downtime/'pin' manipulation)",
+                "Transparency": "Low (rules opaque, suspicion of manipulation)"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Investor",
+            "features": {
+                "Risk": "Extremely prone to liquidation"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Market Price",
+            "features": {
+                "Risk": "Manipulated by backend"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Derivatives Trading",
+            "features": {
+                "Objective": "Provide fair, transparent, reliable trading environment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Magnify Investment Risk",
+            "features": {
+                "Reason": "Extremely high leverage ratio"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Normal Trading",
+            "features": {
+                "Reason": "Exchange downtime or 'pin' manipulation"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Unfair Trading",
+            "features": {
+                "Reason": "Backend manipulation of market price"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Provided by",
+            "source": "M2",
+            "target": "M1"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Extremely high risk conflicts with providing a reliable environment objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering trading conflicts with providing a reliable environment objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Unfair trading conflicts with providing a fair environment objective"
+            }
+        }
+    ]
+}

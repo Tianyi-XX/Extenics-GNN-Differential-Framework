@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "High-Frequency Trading Algorithm",
+            "features": {
+                "Logic": "Highly complex, black box",
+                "Optimization Basis": "Over-optimized on historical data"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Extreme Market Conditions",
+            "features": {
+                "Attribute": "Black swan event"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Algorithmic Risk",
+            "features": {
+                "Status": "May trigger huge losses"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Algorithm Interpretability",
+            "features": {
+                "Status": "Low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Algorithm Adaptability",
+            "features": {
+                "Status": "Poor"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Execute Programmatic Trading",
+            "features": {
+                "Objective": "Achieve stable profit, risk-controlled, market-adaptive trading"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Trigger Huge Losses",
+            "features": {
+                "Reason": "Preset strategy fails under extreme conditions"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Explain Trading Behavior",
+            "features": {
+                "Reason": "Algorithm black box"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Adapt to Market Changes",
+            "features": {
+                "Reason": "Over-optimization on historical data"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Affects",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Huge losses conflict with risk-controlled objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to explain conflicts with risk-controlled objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to adapt conflicts with market-adaptive objective"
+            }
+        }
+    ]
+}

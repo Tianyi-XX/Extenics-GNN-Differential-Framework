@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Rebalancing Module",
+            "features": {
+                "Strategy": "Based on rigid thresholds",
+                "Cost Consideration": "Does not fully consider transaction costs and taxes",
+                "Risk Model": "Does not consider asset correlation"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Transaction Costs",
+            "features": {
+                "Status": "Unnecessarily increased"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Portfolio Risk",
+            "features": {
+                "Status": "Not effectively managed"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Asset Correlation",
+            "features": {
+                "Status": "Ignored"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Automatically Adjust Investment Portfolio",
+            "features": {
+                "Objective": "Achieve low-cost, risk-controlled, optimal rebalancing"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Excessively Frequent Trades",
+            "features": {
+                "Reason": "Rigid thresholds"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Execute Suboptimal Trades",
+            "features": {
+                "Reason": "Does not consider transaction costs and taxes"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Fail to Manage Dynamic Risk",
+            "features": {
+                "Reason": "Does not consider correlation changes"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Ignores",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Frequent trading conflicts with low-cost objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Suboptimal trades conflict with optimal rebalancing objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Failure to manage dynamic risk conflicts with risk-controlled objective"
+            }
+        }
+    ]
+}

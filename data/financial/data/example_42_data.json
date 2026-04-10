@@ -1,0 +1,144 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "VIP Account Opening Process",
+            "features": {
+                "Core Behavior": "Bundled selling"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Bundled Product",
+            "features": {
+                "Attribute": [
+                    "Higher fees",
+                    "Poor market performance"
+                ]
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Promised VIP Service",
+            "features": {
+                "Attribute": "Does not match advertisement"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Consumer Choice",
+            "features": {
+                "Status": "Deprived"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Customer Economic Interest",
+            "features": {
+                "Status": "Damaged"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide VIP Service",
+            "features": {
+                "Objective": "Provide fair, valuable, genuine VIP service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Deprive Customer Choice",
+            "features": {
+                "Reason": "Bundled selling"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Damage Customer Economic Interest",
+            "features": {
+                "Reason": "Poor quality of bundled product"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Provide Non-Genuine Service",
+            "features": {
+                "Reason": "Actual experience does not match advertisement"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Depriving choice conflicts with fair service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging economic interest conflicts with valuable service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Non-genuine service conflicts with genuine service objective"
+            }
+        }
+    ]
+}

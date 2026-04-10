@@ -1,0 +1,142 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Credit Line Loan Product",
+            "features": {
+                "Annual Review Process": "Cumbersome",
+                "Credit Limit Model": "Weak correlation with dynamic business data"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Bank Risk Control Strategy",
+            "features": {
+                "Behavior": "Tendency to immediately withdraw credit"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Small and Micro Enterprises (SMEs)",
+            "features": {
+                "Status": "Crisis exacerbated during temporary difficulties"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Business Owner",
+            "features": {
+                "Status": "Significant energy occupied"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Dynamic Business Data",
+            "features": {
+                "Status": "Not fully utilized"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Revolving Credit",
+            "features": {
+                "Objective": "Provide stable, flexible, supportive financing services"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Exacerbate Business Crisis",
+            "features": {
+                "Reason": "Bank withdraws credit"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase Business Owner Burden",
+            "features": {
+                "Reason": "Cumbersome annual review process"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Accurately Assess Credit",
+            "features": {
+                "Reason": "Weak correlation between limit model and dynamic data"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Ignores",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Exacerbating crisis conflicts with providing supportive financing objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Increasing owner burden conflicts with providing flexible financing objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inaccurate assessment conflicts with providing stable financing objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Physical Security System",
+            "features": {
+                "Technology": "Outdated"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Video Surveillance",
+            "features": {
+                "Mode": "Passive recording",
+                "Capability": "Lacks intelligent recognition and real-time alerts"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Alarm System",
+            "features": {
+                "Linkage Efficiency": "Low"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Branch Staff",
+            "features": {
+                "Readiness": "Insufficient practical drills"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Security Risk",
+            "features": {
+                "Status": "High"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Physical Security",
+            "features": {
+                "Objective": "Provide proactive, intelligent, efficient security assurance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unable to Provide Real-time Alerts",
+            "features": {
+                "Reason": "Lacks intelligent recognition capability"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Delay Alarm Response",
+            "features": {
+                "Reason": "Low linkage efficiency"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Insufficient Emergency Response Capability",
+            "features": {
+                "Reason": "Insufficient staff drills"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inability for real-time alerts conflicts with proactive security objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Response delay conflicts with efficient security objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Insufficient response capability conflicts with providing effective assurance objective"
+            }
+        }
+    ]
+}

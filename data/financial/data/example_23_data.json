@@ -1,0 +1,147 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Mortgage Approval Process",
+            "features": {
+                "Collaborating Parties": "Multiple agencies, complex coordination", 
+                "Material Requirements": "Strict", 
+                "Cycle": "Takes months"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Approval Authority",
+            "features": {
+                "Attribute": "Highly centralized, relies on subjective judgment"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Non-Standard Employment Population",
+            "features": {
+                "Status": "Treated unfavorably"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Approval Result",
+            "features": {
+                "Fairness": "Affected by subjective judgment" 
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Multiple Agencies",
+            "features": {
+                "Type": [
+                    "Bank",
+                    "Appraisal company",
+                    "Housing authority"
+                ]
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Apply for Housing Loan",
+            "features": {
+                "Objective": "Provide efficient, fair, transparent loan approval service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Extend Approval Cycle",
+            "features": {
+                "Reason": "Complex multi-agency coordination"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Exclude Potential Customers",
+            "features": {
+                "Reason": "Strict material requirements"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Unfair Decisions",
+            "features": {
+                "Reason": "Reliance on subjective judgment"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Long approval cycle conflicts with efficient service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Excluding customers conflicts with fair service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Unfair decisions conflict with fair and transparent objectives"
+            }
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Claims Process",
+            "features": {
+                "Information Carrier": "Paper documents", 
+                "Transparency": "Low, cannot query online",
+                "Cycle": "Lengthy" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Customer",
+            "features": {
+                "Experience": "Poor, requires repeated follow-ups"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Claim Status",
+            "features": {
+                "Status": "Opaque"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Insurance Company Staff",
+            "features": {
+                "Response Speed": "Slow" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Apply for Claim",
+            "features": {
+                "Objective": "Provide fast, transparent, convenient claims service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Increase Customer Burden",
+            "features": {
+                "Reason": "Filling complex paper forms and mailing originals"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Extend Processing Cycle",
+            "features": {
+                "Reason": [
+                    "Slow staff response",
+                    "Lengthy handling of disputed cases"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Hinder Information Access",
+            "features": {
+                "Reason": "Cannot query online"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Increasing customer burden conflicts with convenient service objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Long processing cycle conflicts with fast service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Information opacity conflicts with transparent service objective"
+            }
+        }
+    ]
+}

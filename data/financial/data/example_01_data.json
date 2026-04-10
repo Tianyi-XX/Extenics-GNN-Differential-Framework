@@ -1,0 +1,164 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Mobile Banking App",
+            "features": {
+                "UI/UX Design": "Outdated",
+                "Function Entry": "Deep",
+                "Information Architecture": "Filled with marketing info",
+                "Security Mechanism": "Cumbersome",
+                "Compatibility": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "User Experience",
+            "features": {
+                "Status": "Poor, not smooth"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "App Reliability",
+            "features": {
+                "Status": "Low, frequent crashes"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Common Functions",
+            "features": {
+                "Attribute": "e.g., Transfer"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "User",
+            "features": {
+                "Status": "Disturbed by marketing info"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Financial Services",
+            "features": {
+                "Objective": "Provide convenient, secure, reliable, efficient mobile financial services"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reduce Operational Efficiency",
+            "features": {
+                "Reason": "Deep function entry"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Interfere with Core Tasks",
+            "features": {
+                "Reason": "Excessive marketing info"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Operational Burden",
+            "features": {
+                "Reason": "Cumbersome security mechanism"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Cause Crashes",
+            "features": {
+                "Reason": "Poor compatibility"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M2"
+        },
+        {
+            "id": "R9",
+            "relation": "Affects",
+            "source": "A5",
+            "target": "M3"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low efficiency conflicts with convenient and efficient objectives"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Increased burden conflicts with convenient and secure objectives"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Crashes conflict with reliable service objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Aging Core System",
+            "features": {
+                "Technology Stack": "Mainframe/COBOL",
+                "Performance": "Cannot support high-frequency trading",
+                "Agility": "Cannot support rapid product iteration",
+                "Openness": "Weak API interface capability"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Business Development",
+            "features": {
+                "Status": "Obstructed"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Operational Costs",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Technical Talent",
+            "features": {
+                "Status": "Becoming increasingly scarce" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Support Modern Banking Operations",
+            "features": {
+                "Objective": "Achieve agile, open, efficient, sustainable financial services"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Hinder Product Innovation",
+            "features": {
+                "Reason": "Cannot support rapid iteration"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Limit Ecosystem Collaboration",
+            "features": {
+                "Reason": "Weak API capability"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Meet Performance Needs",
+            "features": {
+                "Reason": "Does not support high-frequency trading"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase Maintenance Difficulty and Cost",
+            "features": {
+                "Reason": [
+                    "Aging system",
+                    "Talent scarcity"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "A1",
+            "target": "M1"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering innovation conflicts with agile service objective"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Limiting collaboration conflicts with open service objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Insufficient performance conflicts with efficient service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "High maintenance cost conflicts with sustainable service objective"
+            }
+        }
+    ]
+}

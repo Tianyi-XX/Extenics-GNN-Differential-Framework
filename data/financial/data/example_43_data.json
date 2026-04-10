@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Structured Financial Product",
+            "features": {
+                "Structure": "Extremely complex",
+                "Terms": "Obscure and hard to understand",
+                "Liquidity": "Poor, long lock-up period"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Sales Promotion",
+            "features": {
+                "Orientation": "Overemphasizes maximum potential return, insufficient risk disclosure"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Ordinary Investor",
+            "features": {
+                "Status": "Difficult to understand risks, misled"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Product Risk",
+            "features": {
+                "Status": "Embedded and not fully disclosed"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Make Investment",
+            "features": {
+                "Objective": "Achieve risk-controlled, transparent, reasonably liquid investment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Mislead Investment Decision",
+            "features": {
+                "Reason": "Sales promotion"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Information Asymmetry",
+            "features": {
+                "Reason": "Complex product structure, obscure terms"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Restrict Fund Liquidity",
+            "features": {
+                "Reason": "Long lock-up period"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Related to",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Misleading decisions conflict with fair and transparent investment objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Information asymmetry conflicts with information transparency objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Restricting liquidity conflicts with reasonable liquidity objective"
+            }
+        }
+    ]
+}

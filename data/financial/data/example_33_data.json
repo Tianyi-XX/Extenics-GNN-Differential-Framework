@@ -1,0 +1,130 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Data Protection Mechanism",
+            "features": {
+                "Encryption Level": "Plaintext or weak encryption",
+                "Control Capability": "Unable to unify desensitization and access control",
+                "Third-Party Management": "Lacks effective auditing and control"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Customer Data (PII)",
+            "features": {
+                "Status": "High-risk exposure"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Internal Systems",
+            "features": {
+                "Architecture": "Data silos"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Third-Party Partners",
+            "features": {
+                "Security Capability": "Unknown and uncontrolled"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Protect Data Security",
+            "features": {
+                "Objective": "Achieve end-to-end, unified, controllable data security"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Transfer Data Insecurely",
+            "features": {
+                "Reason": "Plaintext or weak encryption"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Unable to Unify Control",
+            "features": {
+                "Reason": "Data silos"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Generate Third-Party Risk",
+            "features": {
+                "Reason": "Lack of auditing and control"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Affects",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Insecure transfer conflicts with end-to-end security objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to unify control conflicts with unified security policy objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Third-party risk conflicts with controllable security objective"
+            }
+        }
+    ]
+}

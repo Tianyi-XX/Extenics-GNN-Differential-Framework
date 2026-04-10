@@ -1,0 +1,129 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Points and Benefits System",
+            "features": {
+                "Rules": "Extremely complex",
+                "Benefit Usage": "High threshold, requires booking"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Points",
+            "features": {
+                "Attribute": "Expire"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "User",
+            "features": {
+                "Status": "Difficult to calculate optimal strategy, poor experience"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "User Benefits",
+            "features": {
+                "Status": "Infringed upon indirectly"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Member Rewards",
+            "features": {
+                "Objective": "Provide clear, valuable, easy-to-use rewards"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Increase User Cognitive Load",
+            "features": {
+                "Reason": "Extremely complex rules"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Hinder Benefit Usage",
+            "features": {
+                "Reason": "High usage threshold"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Damage User Benefits",
+            "features": {
+                "Reason": "Points expire"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Complex rules conflict with clear and easy-to-use objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "High usage threshold conflicts with easy-to-use objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging benefits conflicts with providing valuable rewards objective"
+            }
+        }
+    ]
+}

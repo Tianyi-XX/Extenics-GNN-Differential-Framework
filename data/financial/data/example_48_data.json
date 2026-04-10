@@ -1,0 +1,129 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Overdraft Fee Design",
+            "features": {
+                "Fee": "Extremely high, disproportionate to amount",
+                "Notification Mechanism": "Lacking"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Fee Trap",
+            "features": {
+                "Formation Reason": "Multiple small debits trigger multiple high fees"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "User",
+            "features": {
+                "Status": "Not timely notified, suffers disproportionate losses"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "User Funds",
+            "features": {
+                "Status": "Damaged"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Provide Account Services",
+            "features": {
+                "Objective": "Provide fair, transparent, proactively notified account services"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Charge Disproportionate Fees",
+            "features": {
+                "Reason": "Overdraft fee design"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Fail to Notify User Timely",
+            "features": {
+                "Reason": "Lack of notification mechanism"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Form Fee Trap",
+            "features": {
+                "Reason": "Multiple debits trigger multiple fees"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Disproportionate fees conflict with fair service objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Lack of notification conflicts with proactive service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Fee trap conflicts with fair and transparent service objective"
+            }
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Video Teller Machine (VTM)",
+            "features": {
+                "Interaction Methods": [ 
+                    "Video connection",
+                    "Voice recognition",
+                    "Document scanning"
+                ]
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Video Connection",
+            "features": {
+                "Stability": "Unstable, often lags or disconnects" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Remote Teller",
+            "features": {
+                "Proficiency": "Insufficient" 
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Service Reliability and Efficiency",
+            "features": {
+                "Status": "Low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "User Experience",
+            "features": {
+                "Rating": "Not smooth" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Handle Banking Transactions",
+            "features": {
+                "Objective": "Provide reliable, efficient, smooth remote transaction handling"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause Connection Interruptions",
+            "features": {
+                "Reason": "Unstable video connection"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce Problem-Solving Efficiency",
+            "features": {
+                "Reason": "Insufficient remote teller proficiency"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to Interaction Failures",
+            "features": {
+                "Reason": [
+                    "Poor voice recognition performance",
+                    "Clunky signature scanning process"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Service provider for", 
+            "source": "M3",
+            "target": "A1"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Connection interruptions conflict with reliable handling objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Low problem-solving efficiency conflicts with efficient handling objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Interaction failures conflict with smooth handling objective"
+            }
+        }
+    ]
+}

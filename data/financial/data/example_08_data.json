@@ -1,0 +1,159 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Self-Service Forex Exchange Machine",
+            "features": {
+                "Pricing": "High exchange rate spread, high fees", 
+                "Functionality": "Limited currencies supported",
+                "Reliability": "Strict requirements for banknotes" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Human Support Channel",
+            "features": {
+                "Status": "Lacking"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "User Cost",
+            "features": {
+                "Status": "High"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Transaction Success Rate",
+            "features": {
+                "Status": "Low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Banknote Recognition Module",
+            "features": {
+                "Attribute": "Strict requirements" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Forex Exchange",
+            "features": {
+                "Objective": "Provide fair, reliable, convenient, versatile exchange service"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Increase User Cost",
+            "features": {
+                "Reason": "High spread and fees"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Exchange Failure / Note Swallowing",
+            "features": {
+                "Reason": "Strict banknote requirements"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Unable to Get Timely Help",
+            "features": {
+                "Reason": "Lack of human support"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Limit Exchange Capability",
+            "features": {
+                "Reason": "Limited currencies supported"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "High cost conflicts with fair service objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Exchange failure conflicts with reliable service objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inability to get help conflicts with reliable service objective"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Limited capability conflicts with versatile service objective"
+            }
+        }
+    ]
+}

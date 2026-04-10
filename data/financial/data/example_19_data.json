@@ -1,0 +1,143 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Securities Clearing and Settlement System",
+            "features": {
+                "Settlement Cycle": "T+1 or T+2",
+                "Processing Capacity": "Limited",
+                "Cross-Market Process": "Complex and opaque"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Investor Capital Efficiency",
+            "features": {
+                "Status": "Affected"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "System Reliability",
+            "features": {
+                "Status": "Low, prone to failure during volume surges"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Cross-Market Trading",
+            "features": {
+                "Attribute": "e.g., Stock Connect"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Market Trading Volume",
+            "features": {
+                "Status": "Surging"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Perform Clearing and Settlement",
+            "features": {
+                "Objective": "Achieve real-time, reliable, transparent clearing and settlement"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Affect Capital Efficiency",
+            "features": {
+                "Reason": "Long settlement cycle"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause Delays or Failures",
+            "features": {
+                "Reason": "Limited processing capacity"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce Process Transparency",
+            "features": {
+                "Reason": "Complex cross-market process"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Affects",
+            "source": "M5",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Low capital efficiency conflicts with real-time settlement objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "System delays/failures conflict with reliable settlement objective"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Opaque process conflicts with transparent settlement objective"
+            }
+        }
+    ]
+}

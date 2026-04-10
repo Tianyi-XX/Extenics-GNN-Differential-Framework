@@ -1,0 +1,139 @@
+{
+    "domain": "financial",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Anti-Money Laundering (AML) System",
+            "features": {
+                "Accuracy": "Very high false positive rate"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Data Sources",
+            "features": {
+                "Type": "Sanctions lists / PEP databases",
+                "Timeliness": "Updates not timely"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Complex Money Laundering Patterns",
+            "features": {
+                "Status": "Cannot be effectively identified"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Compliance Staff",
+            "features": {
+                "Status": "Spend significant effort on ineffective investigations"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "System Alerts",
+            "features": {
+                "Quantity": "Massive" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Screen Suspicious Transactions",
+            "features": {
+                "Objective": "Achieve accurate, efficient, real-time risk identification"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Generate Numerous False Positives",
+            "features": {
+                "Reason": [
+                    "One-size-fits-all rules",
+                    "Inaccurate data sources"
+                ]
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Miss New Types of Risk (False Negatives)",
+            "features": {
+                "Reason": "Cannot identify complex patterns"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase Ineffective Review Work",
+            "features": {
+                "Reason": "Numerous false positives"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Numerous false positives conflict with accurate identification objective"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Missing risks conflicts with reliable identification objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Ineffective review conflicts with efficient identification objective"
+            }
+        }
+    ]
+}
