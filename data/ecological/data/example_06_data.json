@@ -1,0 +1,179 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Red imported fire ant (Solenopsis invicta)",
+            "features": {
+                "Behavior": "Stings humans and livestock, damages facilities"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Ant nest",
+            "features": {
+                "Structure": "Deep underground, difficult to eradicate"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Humans and livestock",
+            "features": {
+                "Status": "Severe pain or even shock after being stung"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Crop root systems and irrigation systems",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Electrical wires and other facilities",
+            "features": {
+                "Status": "Gnawed on, causing short circuits"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Ground insecticide",
+            "features": {
+                "Effectiveness": "Difficult to eradicate them"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct invasive species control",
+            "features": {
+                "Objective": "Effectively eradicate fire ants, ensure personal, agricultural, and facility safety"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Sting humans and livestock",
+            "features": {
+                "Executor": "Red imported fire ant"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Damage crops and irrigation systems",
+            "features": {
+                "Executor": "Red imported fire ant"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Gnaw on electrical wires and facilities",
+            "features": {
+                "Executor": "Red imported fire ant"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lead to control difficulties",
+            "features": {
+                "Reason": "Nests are deep underground, standard insecticides are ineffective"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Builds",
+            "source": "M1",
+            "target": "M2",
+            "features": {
+                "Description": "Red fire ants build nests deep underground"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Endangers",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Stinging humans and livestock fundamentally conflicts with the objective of ensuring personal safety"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging agriculture conflicts with the objective of ensuring agricultural safety"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging facilities conflicts with the objective of ensuring facility safety"
+            }
+        },
+        {
+            "id": "R13",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Control difficulties fundamentally conflict with the objective of effective eradication"
+            }
+        }
+    ]
+}

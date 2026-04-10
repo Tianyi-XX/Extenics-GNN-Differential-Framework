@@ -1,0 +1,178 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Natural meandering river channel",
+            "features": {
+                "Status": "Channelized/Modified"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Straight concrete-lined channel (three-sided)",
+            "features": {
+                "Attribute": "Result of modification"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "River's natural self-purification capacity",
+            "features": {
+                "Status": "Completely destroyed"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Habitat and spawning grounds for aquatic life",
+            "features": {
+                "Status": "Destroyed"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Hydraulic connection between river and groundwater",
+            "features": {
+                "Status": "Severed"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Natural landscape value and ecological functions",
+            "features": {
+                "Status": "Lost"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct river ecological protection and restoration",
+            "features": {
+                "Objective": "Protect the integrity and function of the river ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Channelize river",
+            "features": {
+                "Reason": "For flood control and drainage",
+                "Result": "Formation of concrete-lined channel"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Destroy natural purification capacity",
+            "features": {
+                "Reason": "Channelization"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Destroy aquatic habitat",
+            "features": {
+                "Reason": "Channelization"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Sever hydraulic connection",
+            "features": {
+                "Reason": "Channelization"
+            }
+        },
+        {
+            "id": "A6",
+            "action": "Lose ecological functions and value",
+            "features": {
+                "Reason": "Channelization"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A6"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A6",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying purification capacity fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying habitat fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Severing hydraulic connection conflicts with protecting ecosystem integrity"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A6",
+            "target": "A1",
+            "features": {
+                "Description": "Losing ecological functions conflicts with protecting ecological functions"
+            }
+        }
+    ]
+}

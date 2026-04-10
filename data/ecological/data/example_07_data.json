@@ -1,0 +1,134 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Tilapia",
+            "features": {
+                "Reproduction Rate": "Extremely high",
+                "Environmental Adaptability": "Extremely high",
+                "Habit": "Digs pits for nesting"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Multiple native fish species",
+            "features": {
+                "Status": "Completely suppressed in competition for food and habitat"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Submerged vegetation",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Catch species",
+            "features": {
+                "Status": "Homogenized"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Economic value of local fisheries",
+            "features": {
+                "Status": "Reduced"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological protection and fishery maintenance",
+            "features": {
+                "Objective": "Protect native fish species, maintain economic value of fisheries"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Suppress native fish species",
+            "features": {
+                "Method": "Competition for food and habitat"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Damage submerged vegetation",
+            "features": {
+                "Reason": "Nesting habit of digging pits"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause homogenization of catch species",
+            "features": {
+                "Reason": "Suppression of multiple native fish species"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Reduces",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Suppressing native fish fundamentally conflicts with the objective of protecting native species"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Catch homogenization fundamentally conflicts with the objective of maintaining the economic value of fisheries"
+            }
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Lost or abandoned fishing gear ('ghost gear', e.g., nets, crab pots)",
+            "features": {
+                "Property": "Made of plastic, difficult to degrade"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Marine ecosystem",
+            "features": {
+                "Status": "Suffers continuous, invisible harm"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Large numbers of fish, sea turtles, marine mammals, and seabirds",
+            "features": {
+                "Status": "Continuously entangled and killed"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Microplastic pollution",
+            "features": {
+                "Attribute": "End product"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct marine ecological protection",
+            "features": {
+                "Objective": "Protect marine life, reduce plastic pollution"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Continuously 'fish' (entangle and kill)",
+            "features": {
+                "Executor": "Ghost fishing gear"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Become a source of microplastic pollution",
+            "features": {
+                "Reason": "Plastic fishing gear is difficult to degrade"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R4",
+            "relation": "Endangers",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R5",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Continuously killing marine life fundamentally conflicts with protecting marine life"
+            }
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Becoming a source of microplastics fundamentally conflicts with reducing plastic pollution"
+            }
+        }
+    ]
+}

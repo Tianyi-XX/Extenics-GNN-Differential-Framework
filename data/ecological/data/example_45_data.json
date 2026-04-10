@@ -1,0 +1,131 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Rare medicinal plants and animals",
+            "features": {
+                "Population": "Sharply declining, nearing exhaustion" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Native habitat",
+            "features": {
+                "Status": "Severely damaged"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Fragile ecosystems (e.g., alpine, grassland)",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Predatory harvesting",
+            "features": {
+                "Attribute": "Unsustainable collection method"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct species and ecosystem protection",
+            "features": {
+                "Objective": "Protect rare species and their habitats"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause species to near exhaustion",
+            "features": {
+                "Reason": "Predatory harvesting"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Destroy native habitat",
+            "features": {
+                "Reason": "Predatory harvesting"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Damage fragile ecosystems",
+            "features": {
+                "Reason": "Native habitat destroyed"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Inhabits", 
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Is part of", 
+            "source": "M2",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M4",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M1"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Causing species exhaustion fundamentally conflicts with species protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying native habitat fundamentally conflicts with habitat protection"
+            }
+        }
+    ]
+}

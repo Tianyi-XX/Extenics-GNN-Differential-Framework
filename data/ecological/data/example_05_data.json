@@ -1,0 +1,136 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "American bullfrog (Lithobates catesbeianus)",
+            "features": {
+                "Habit": "Voracious predator",
+                "Property": "Carrier and spreader of lethal pathogens"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Native frogs, insects, fish fry, small birds",
+            "features": {
+                "Status": "Extensively preyed upon"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Food chain",
+            "features": {
+                "Status": "Severely disrupted"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Lethal amphibian pathogens (e.g., Chytridiomycosis)",
+            "features": {
+                "Attribute": "Lethal"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Native species",
+            "features": {
+                "Competitive Status": "At an absolute disadvantage"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological protection and species control",
+            "features": {
+                "Objective": "Protect native species, maintain ecological balance"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Prey on large numbers of native species",
+            "features": {
+                "Executor": "American bullfrog"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Spread lethal pathogens",
+            "features": {
+                "Executor": "American bullfrog"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Disrupt food chain",
+            "features": {
+                "Reason": "Preys on large numbers of native species"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Carries",
+            "source": "M1",
+            "target": "M4",
+            "features": {
+                "Description": "American bullfrog is a carrier of pathogens"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Endangers",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Spreading lethal pathogens fundamentally conflicts with the objective of ecological protection"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Disrupting the food chain fundamentally conflicts with the objective of maintaining ecological balance"
+            }
+        }
+    ]
+}

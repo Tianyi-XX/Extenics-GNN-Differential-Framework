@@ -1,0 +1,154 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Overfishing and destructive fishing methods (e.g., 'exhaustive nets')",
+            "features": {
+                "Attribute": "Root cause"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Coastal fishing grounds",
+            "features": {
+                "Attribute": "Geographic area"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Major commercial fish stocks",
+            "features": {
+                "Status": "Severely depleted"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Catch composition",
+            "features": {
+                "Trend": "Miniaturization, juvenilization" 
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Vicious cycle of 'fishing down the food web'",
+            "features": {
+                "Attribute": "Systemic problem"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Marine food web structure",
+            "features": {
+                "Status": "Severely damaged"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct sustainable fisheries management",
+            "features": {
+                "Objective": "Restore fishery resources, protect marine ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause resource depletion",
+            "features": {
+                "Reason": "Destructive fishing methods"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Form a vicious cycle",
+            "features": {
+                "Reason": "Resource depletion"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Damage food web structure",
+            "features": {
+                "Reason": "Destructive fishing methods"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M2",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Resource depletion fundamentally conflicts with restoring resources"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "The vicious cycle fundamentally conflicts with sustainable fisheries"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging the food web fundamentally conflicts with protecting the marine ecosystem"
+            }
+        }
+    ]
+}

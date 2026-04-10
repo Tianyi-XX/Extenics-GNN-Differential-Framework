@@ -1,0 +1,208 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Global warming",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Sea level",
+            "features": {
+                "Status": "Continuously rising"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Low-lying coastal megacities",
+            "features": {
+                "Status": "Severely threatened"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Storm surge",
+            "features": {
+                "Disaster Risk": "Increased"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Freshwater sources",
+            "features": {
+                "Status": "Contaminated by saltwater intrusion"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Low-lying areas and wetlands",
+            "features": {
+                "Status": "Submerged"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Coastline",
+            "features": {
+                "Status": "Erosion intensified"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct climate change adaptation and coastal zone protection",
+            "features": {
+                "Objective": "Ensure coastal city safety, protect freshwater resources and coastal ecosystems"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause sea level rise",
+            "features": {
+                "Reason": "Global warming"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase storm surge risk",
+            "features": {
+                "Reason": "Sea level rise"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Trigger saltwater intrusion",
+            "features": {
+                "Reason": "Sea level rise"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Submerge low-lying areas and wetlands",
+            "features": {
+                "Reason": "Sea level rise"
+            }
+        },
+        {
+            "id": "A6",
+            "action": "Intensify coastline erosion",
+            "features": {
+                "Reason": "Sea level rise"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M3",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M3",
+            "target": "M6"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A6"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R10",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R11",
+            "relation": "Harms",
+            "source": "A6",
+            "target": "M7"
+        },
+        {
+            "id": "R12",
+            "relation": "Endangers",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R13",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Increased storm surge risk fundamentally conflicts with ensuring city safety"
+            }
+        },
+        {
+            "id": "R14",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Saltwater intrusion fundamentally conflicts with protecting freshwater resources"
+            }
+        },
+        {
+            "id": "R15",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Submerging wetlands conflicts with coastal ecological protection"
+            }
+        },
+        {
+            "id": "R16",
+            "relation": "Conflicts",
+            "source": "A6",
+            "target": "A1",
+            "features": {
+                "Description": "Coastline erosion conflicts with coastal zone protection"
+            }
+        }
+    ]
+}

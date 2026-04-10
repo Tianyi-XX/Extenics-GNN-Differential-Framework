@@ -1,0 +1,175 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Water Hyacinth (Eichhornia crassipes)",
+            "features": {
+                "Reproduction Rate": "Rapid",
+                "Property": "Forms a thick 'green carpet' completely covering the water surface"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Submerged native plants",
+            "features": {
+                "Status": "Die due to lack of photosynthesis"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Dissolved oxygen in water",
+            "features": {
+                "Status": "Heavily depleted"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Fish",
+            "features": {
+                "Status": "Die from suffocation"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Waterways and hydroelectric station inlets",
+            "features": {
+                "Status": "Blocked"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Traditional mechanical harvesting",
+            "features": {
+                "Cost": "High",
+                "Effectiveness": "Residual parts can re-propagate rapidly"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct water body ecological management",
+            "features": {
+                "Objective": "Control water hyacinth infestation, restore aquatic ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Block sunlight",
+            "features": {
+                "Executor": "Water Hyacinth"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Deplete dissolved oxygen",
+            "features": {
+                "Reason": "Plant decay"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Obstruct passages",
+            "features": {
+                "Executor": "Water Hyacinth"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lead to repeated control failures",
+            "features": {
+                "Reason": [
+                    "High cost",
+                    "Rapid re-propagation"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Acts on",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Endangers",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Obstructs",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Blocking sunlight causing ecological damage conflicts with the objective of ecological management"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Depleting oxygen causing organism death fundamentally conflicts with the objective of restoring the ecosystem"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Obstructing passages conflicts with the objective of restoring ecosystem function"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Control failure fundamentally conflicts with the objective of effective control"
+            }
+        }
+    ]
+}

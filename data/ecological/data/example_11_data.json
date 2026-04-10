@@ -1,0 +1,172 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Agricultural non-point source pollution and domestic sewage",
+            "features": {
+                "Property": "Continuous discharge, difficult to eradicate"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Large freshwater lake",
+            "features": {
+                "Status": "Severe water eutrophication"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Cyanobacterial (blue-green algae) bloom",
+            "features": {
+                "Property": "Produces algal toxins, consumes oxygen when decaying"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Drinking water source",
+            "features": {
+                "Safety": "Severely threatened"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Fish and shrimp",
+            "features": {
+                "Status": "Dead"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Control measures",
+            "features": {
+                "Investment": "Huge",
+                "Effectiveness": "Problem often recurs"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct water body management and water source protection",
+            "features": {
+                "Objective": "Ensure drinking water safety, restore aquatic ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause water eutrophication",
+            "features": {
+                "Reason": "Influx of non-point source pollution and domestic sewage"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Outbreak of cyanobacterial bloom",
+            "features": {
+                "Reason": "Water eutrophication"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Threaten drinking water source safety",
+            "features": {
+                "Reason": "Algal toxins produced by cyanobacteria"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Deplete dissolved oxygen in water",
+            "features": {
+                "Reason": "Decay of cyanobacteria"
+            }
+        },
+        {
+            "id": "A6",
+            "action": "Lead to recurring control failure",
+            "features": {
+                "Reason": "Non-point source pollution is difficult to eradicate"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Breeds in",
+            "source": "M3",
+            "target": "M2",
+            "features": {
+                "Description": "Cyanobacterial blooms breed in eutrophic lakes"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Produces",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Produces",
+            "source": "M3",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A6"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Endangers",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Threatening drinking water safety fundamentally conflicts with the objective of ensuring safety"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Depleting oxygen causing fish death fundamentally conflicts with restoring the ecosystem"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A6",
+            "target": "A1",
+            "features": {
+                "Description": "Recurring control failure conflicts with the objective of effective control"
+            }
+        }
+    ]
+}

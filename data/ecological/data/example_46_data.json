@@ -1,0 +1,145 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Hydropower station",
+            "features": {
+                "Behavior": "Opens gates to 'abandon water'"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Electricity demand or grid absorption capacity",
+            "features": {
+                "Status": "Insufficient"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Large amount of clean energy",
+            "features": {
+                "Status": "Wasted"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Downstream river channel",
+            "features": {
+                "Status": "Suffers drastic hydrological impact"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Aquatic organisms",
+            "features": {
+                "Status": "Survival affected"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Energy production, consumption, dispatch system",
+            "features": {
+                "Status": "Systemic mismatch exists"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct energy system optimization and ecological protection",
+            "features": {
+                "Objective": "Efficiently utilize clean energy, protect river ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Open gates to 'abandon water'",
+            "features": {
+                "Reason": "Insufficient electricity demand or grid absorption capacity"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Waste clean energy",
+            "features": {
+                "Reason": "Water abandonment"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Impact downstream ecosystem",
+            "features": {
+                "Reason": "Gate opening for flood discharge"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M4",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Manifests as", 
+            "source": "A2",
+            "target": "M6"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Endangers",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Wasting clean energy fundamentally conflicts with efficient utilization"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Impacting downstream ecosystem fundamentally conflicts with ecological protection"
+            }
+        }
+    ]
+}

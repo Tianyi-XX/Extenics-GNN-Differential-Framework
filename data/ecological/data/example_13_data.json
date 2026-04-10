@@ -1,0 +1,161 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Microplastics",
+            "features": {
+                "Property": "Adsorb toxic pollutants, becoming a toxicity vector"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Pollution sources",
+            "features": {
+                "Type": [
+                    "Plastic waste degradation",
+                    "Laundry of synthetic fibers"
+                ]
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Marine organisms",
+            "features": {
+                "Behavior": "Ingest microplastics"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Food chain",
+            "features": {
+                "Status": "Microplastics bioaccumulate at every level"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Toxic pollutants",
+            "features": {
+                "Status": "Adsorbed by microplastics"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Existing wastewater treatment technology",
+            "features": {
+                "Capacity": "Cannot completely remove microplastics"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct marine environmental protection and pollution control",
+            "features": {
+                "Objective": "Control microplastic pollution, protect marine ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Discharge microplastics",
+            "features": {
+                "Source": "Pollution sources"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Bioaccumulate in the food chain",
+            "features": {
+                "Reason": "Ingestion by marine organisms"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Become a toxicity vector",
+            "features": {
+                "Reason": "Adsorption of toxic pollutants"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lead to control difficulties",
+            "features": {
+                "Reason": "Widespread sources and existing tech cannot fully remove them"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Constitutes",
+            "source": "M3",
+            "target": "M4",
+            "features": {
+                "Description": "Marine organisms at all levels constitute the food chain"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Originates from",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Acts on",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Bioaccumulation in the food chain fundamentally conflicts with protecting the marine ecosystem"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Becoming a toxicity vector fundamentally conflicts with environmental protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Control difficulties conflict with the objective of effective control"
+            }
+        }
+    ]
+}

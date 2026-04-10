@@ -1,0 +1,161 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Large amount of food waste",
+            "features": {
+                "Stages": "Production, transport, storage, consumption, etc." 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Natural resources (e.g., water, land, energy)",
+            "features": {
+                "Status": "Wasted in vain"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Carbon emissions and environmental pollution during agricultural production",
+            "features": {
+                "Status": "Rendered ineffective" 
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Wasted food",
+            "features": {
+                "Behavior": "Decomposes in landfills"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Landfills",
+            "features": {
+                "Attribute": "Decomposition site"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Large amount of methane",
+            "features": {
+                "Attribute": "Potent greenhouse gas"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Ecosystem",
+            "features": {
+                "Status": "Burden increased" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct resource conservation and environmental protection",
+            "features": {
+                "Objective": "Reduce waste, protect the ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Waste natural resources and environmental inputs",
+            "features": {
+                "Reason": "Large amount of food waste"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Decompose and produce methane",
+            "features": {
+                "Reason": "Wasted food"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase burden on the ecosystem",
+            "features": {
+                "Reason": [
+                    "Resource waste",
+                    "Methane production"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Exists in",
+            "source": "M4",
+            "target": "M5"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M7"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Wasting natural resources fundamentally conflicts with resource conservation"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Producing methane exacerbating climate change fundamentally conflicts with environmental protection"
+            }
+        }
+    ]
+}

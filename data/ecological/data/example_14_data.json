@@ -1,0 +1,171 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Ultra-thin plastic mulch film",
+            "features": {
+                "Recovery Rate": "Extremely low",
+                "Status": "Large fragments remain in the soil"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Soil physical structure",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Water infiltration and crop root growth",
+            "features": {
+                "Status": "Affected"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Tillage machinery operation",
+            "features": {
+                "Status": "Obstructed"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Harmful chemical substances",
+            "features": {
+                "Property": "May be released during degradation"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Agricultural sustainable development",
+            "features": {
+                "Status": "Threatened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct agricultural environmental protection",
+            "features": {
+                "Objective": "Ensure soil health, achieve agricultural sustainable development"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Damage soil structure",
+            "features": {
+                "Reason": "Mulch film residue"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Obstruct agricultural production",
+            "features": {
+                "Reason": [
+                    "Affects crop growth",
+                    "Obstructs machinery operation"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Release harmful substances",
+            "features": {
+                "Reason": "Mulch film degradation"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Threaten agricultural sustainable development",
+            "features": {
+                "Reason": "Cumulative 'white pollution' over years"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Obstructs",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Releases",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Endangers",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging soil structure fundamentally conflicts with ensuring soil health"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Obstructing agricultural production conflicts with the objective of sustainable development"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Threatening sustainable development fundamentally conflicts with achieving it"
+            }
+        }
+    ]
+}

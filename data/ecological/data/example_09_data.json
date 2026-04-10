@@ -1,0 +1,155 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Natural mixed forest",
+            "features": {
+                "Property": "Species-rich"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Monoculture eucalyptus or fir plantations",
+            "features": {
+                "Property": "Fast-growing, extremely low biodiversity"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Forest biodiversity",
+            "features": {
+                "Status": "Extremely low"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Wildlife habitat",
+            "features": {
+                "Status": "Lost"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Soil",
+            "features": {
+                "Status": "Soil fertility depleted quickly, leading to degradation"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Water retention and soil conservation capacity",
+            "features": {
+                "Status": "Far lower than natural forest"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct forest ecological protection",
+            "features": {
+                "Objective": "Protect biodiversity and ecosystem functions"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Convert natural forest to monoculture fast-growing forest",
+            "features": {
+                "Reason": "Pursuit of short-term economic benefits"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce biodiversity",
+            "features": {
+                "Reason": "Single tree species"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause soil degradation",
+            "features": {
+                "Reason": "Fast-growing forest depletes soil fertility quickly"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Weaken soil and water conservation capacity",
+            "features": {
+                "Reason": "Sparse undergrowth"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R4",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Reducing biodiversity fundamentally conflicts with the objective of ecological protection"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Soil degradation fundamentally conflicts with the objective of ecological protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Weakening soil and water conservation conflicts with the objective of protecting ecosystem functions"
+            }
+        }
+    ]
+}

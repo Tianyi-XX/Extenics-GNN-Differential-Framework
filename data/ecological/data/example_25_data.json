@@ -1,0 +1,160 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Linear projects (e.g., highways, railways)",
+            "features": {
+                "Behavior": "Traverse and fragment habitat"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Intact wildlife habitat",
+            "features": {
+                "Status": "Fragmented into isolated 'patches'"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Wildlife",
+            "features": {
+                "Status": "Migration and gene flow blocked, collision risk increased"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Habitat fragmentation",
+            "features": {
+                "Attribute": "Core ecological problem"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Microenvironment within the habitat",
+            "features": {
+                "Status": "Adversely affected by road edge effects"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological corridor construction and habitat protection",
+            "features": {
+                "Objective": "Protect biodiversity, maintain ecosystem connectivity"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Fragment habitat",
+            "features": {
+                "Executor": "Linear projects"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Block migration and gene flow",
+            "features": {
+                "Reason": "Habitat fragmentation"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase vehicle collision risk",
+            "features": {
+                "Reason": "Habitat fragmentation"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Produce edge effects",
+            "features": {
+                "Reason": "Road construction"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M2",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Produces",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Endangers",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Blocking migration fundamentally conflicts with maintaining ecological connectivity"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Increasing collision risk fundamentally conflicts with protecting biodiversity"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Edge effects conflict with the objective of habitat protection"
+            }
+        }
+    ]
+}

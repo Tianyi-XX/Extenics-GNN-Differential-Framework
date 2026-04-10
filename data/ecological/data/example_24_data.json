@@ -1,0 +1,170 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Mountain body",
+            "features": {
+                "Status": "Large areas 'disemboweled'"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Original vegetation",
+            "features": {
+                "Status": "Completely destroyed"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Soil erosion and landslides",
+            "features": {
+                "Attribute": "Severe geological disasters"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Regional natural landscape",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Mine ecological restoration work",
+            "features": {
+                "Status": "Severely lagging"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological protection and restoration",
+            "features": {
+                "Objective": "Protect mountain body, prevent geological disasters, restore ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Conduct disorderly quarrying",
+            "features": {
+                "Reason": "Meet construction market demand"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Destroy original vegetation",
+            "features": {
+                "Reason": "Quarrying"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Trigger geological disasters",
+            "features": {
+                "Reason": "Vegetation destroyed"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Damage natural landscape",
+            "features": {
+                "Reason": "Quarrying"
+            }
+        },
+        {
+            "id": "A6",
+            "action": "Restoration work lags",
+            "features": {
+                "Status": "Severely lagging"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R4",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M1"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Produces",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Manifests as",
+            "source": "M5",
+            "target": "A6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering geological disasters fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying vegetation fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging landscape conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A6",
+            "target": "A1",
+            "features": {
+                "Description": "Lagging restoration conflicts with effective restoration"
+            }
+        }
+    ]
+}

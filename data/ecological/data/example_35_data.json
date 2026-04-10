@@ -1,0 +1,199 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Climate change",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Seasonal drought",
+            "features": {
+                "Status": "More frequent and persistent"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Agriculture",
+            "features": {
+                "Status": "Large-scale yield reduction"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Drinking water for humans and livestock",
+            "features": {
+                "Status": "Difficulties"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Forests and grasslands",
+            "features": {
+                "Status": "Dried out"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Forest fires",
+            "features": {
+                "Risk": "Greatly increased"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Wetlands and river channels",
+            "features": {
+                "Status": "Shrinking and drying up"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct climate adaptation and disaster risk reduction",
+            "features": {
+                "Objective": "Ensure agricultural production, drinking water safety, and ecological stability"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Intensify seasonal drought",
+            "features": {
+                "Reason": "Affected by climate change"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause agricultural yield reduction",
+            "features": {
+                "Reason": "Prolonged drought"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause drinking water difficulties",
+            "features": {
+                "Reason": "Prolonged drought"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Increase forest fire risk",
+            "features": {
+                "Reason": "Dried out forests and grasslands"
+            }
+        },
+        {
+            "id": "A6",
+            "action": "Cause ecosystem degradation",
+            "features": {
+                "Manifestation": [
+                    "Wetland shrinkage",
+                    "River channels drying up"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A6"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Endangers",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Produces",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R10",
+            "relation": "Harms",
+            "source": "A6",
+            "target": "M7"
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Drinking water difficulties fundamentally conflict with ensuring water safety"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Increased fire risk fundamentally conflicts with disaster risk reduction"
+            }
+        },
+        {
+            "id": "R13",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Agricultural yield reduction conflicts with ensuring agricultural production"
+            }
+        },
+        {
+            "id": "R14",
+            "relation": "Conflicts",
+            "source": "A6",
+            "target": "A1",
+            "features": {
+                "Description": "Ecosystem degradation conflicts with ecological stability"
+            }
+        }
+    ]
+}

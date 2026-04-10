@@ -1,0 +1,126 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Climate warming",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Plants and animals",
+            "features": {
+                "Behavior": "Migrate towards higher latitudes or altitudes"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Species on mountain tops or in polar regions",
+            "features": {
+                "Status": "Nowhere to retreat, face extremely high extinction risk"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Extinction risk",
+            "features": {
+                "Level": "Extremely high" 
+            }
+        },
+        {
+            "id": "M5",
+            "name": "New biological invasion events",
+            "features": {
+                "Attribute": "Potential risk"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological protection and species rescue",
+            "features": {
+                "Objective": "Protect biodiversity, maintain ecological stability"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Drive species migration",
+            "features": {
+                "Reason": "Climate warming"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Leave some species with nowhere to retreat",
+            "features": {
+                "Reason": "Species migration"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Trigger new biological invasions",
+            "features": {
+                "Reason": "Species migration"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Endangers",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R5",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Produces",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Leaving species nowhere to retreat fundamentally conflicts with species protection"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering new invasions conflicts with maintaining ecological stability"
+            }
+        }
+    ]
+}

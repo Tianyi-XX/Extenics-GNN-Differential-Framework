@@ -1,0 +1,146 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Municipal solid waste landfill",
+            "features": {
+                "Liner": "Aged or damaged"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "High-concentration toxic and hazardous leachate",
+            "features": {
+                "Composition": "Complex",
+                "Treatment Difficulty": "Technically difficult, high cost"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Groundwater",
+            "features": {
+                "Status": "Severely polluted",
+                "Remediation": "Extremely difficult"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Surrounding soil",
+            "features": {
+                "Status": "Polluted, lost its value for use"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Treatment technology",
+            "features": {
+                "Operational Cost": "Very high"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct pollution control and remediation",
+            "features": {
+                "Objective": "Protect groundwater and soil, effectively treat leachate"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Leak and pollute groundwater",
+            "features": {
+                "Reason": "Aged or damaged liner"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Pollute surrounding soil",
+            "features": {
+                "Reason": "Leachate leakage"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to treatment difficulties",
+            "features": {
+                "Reason": [
+                    "Complex composition of leachate",
+                    "High technology cost"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Polluting groundwater fundamentally conflicts with environmental protection"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Polluting soil conflicts with environmental protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Treatment difficulties conflict with effective treatment"
+            }
+        }
+    ]
+}

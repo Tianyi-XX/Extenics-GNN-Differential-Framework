@@ -1,0 +1,145 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Global warming",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Permafrost layer",
+            "features": {
+                "Status": "Starting to thaw"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Surface infrastructure (e.g., roads, pipelines, houses)",
+            "features": {
+                "Status": "Stability compromised"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Potent greenhouse gases (e.g., methane)",
+            "features": {
+                "Status": "Being released"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Vicious cycle",
+            "features": {
+                "Description": "Released gases exacerbate global warming"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct climate change response and ecological protection",
+            "features": {
+                "Objective": "Slow down global warming, protect infrastructure"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause permafrost thaw",
+            "features": {
+                "Reason": "Global warming"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Compromise infrastructure stability",
+            "features": {
+                "Reason": "Permafrost thaw"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Release greenhouse gases",
+            "features": {
+                "Reason": "Permafrost thaw"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Exacerbate global warming",
+            "features": {
+                "Reason": "Release of potent greenhouse gases"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Sealed in",
+            "source": "M4",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A4",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Exacerbates",
+            "source": "A5",
+            "target": "M1"
+        },
+        {
+            "id": "R8",
+            "relation": "Forms",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "The vicious cycle exacerbating global warming fundamentally conflicts with climate response objectives"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Compromising infrastructure conflicts with infrastructure protection objectives"
+            }
+        }
+    ]
+}

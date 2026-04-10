@@ -1,0 +1,167 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "High-density shellfish or shrimp farming",
+            "features": {
+                "Attribute": "Human activity"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Dense aquaculture rafts and net cages",
+            "features": {
+                "Effect": "Alters water flow conditions"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Excrement and residual feed from farmed organisms",
+            "features": {
+                "Attribute": "Pollutants"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Sediment (Bottom substrate)",
+            "features": {
+                "Status": "Severe eutrophication and hypoxia"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Habitat for native benthic organisms",
+            "features": {
+                "Status": "Destroyed"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Tidal flat",
+            "features": {
+                "Status": "Disturbed and damaged during harvest"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct sustainable tidal flat aquaculture and protection",
+            "features": {
+                "Objective": "Protect native tidal flat ecosystem, achieve sustainable fisheries"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Alter water flow conditions",
+            "features": {
+                "Reason": "Aquaculture rafts and net cages"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Pollute sediment",
+            "features": {
+                "Reason": "Excrement and residual feed"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Destroy benthic organism habitat",
+            "features": {
+                "Reason": "Sediment eutrophication and hypoxia"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Damage tidal flat",
+            "features": {
+                "Timing": "During harvest"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Polluting sediment fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying benthic habitat fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging the tidal flat conflicts with tidal flat protection"
+            }
+        }
+    ]
+}

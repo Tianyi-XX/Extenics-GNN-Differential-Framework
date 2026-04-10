@@ -1,0 +1,155 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Neonicotinoids and other pesticides",
+            "features": {
+                "Usage": "Long-term and widespread"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Honeybees and other wild pollinating insects",
+            "features": {
+                "Population": "Sharply declining"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Pollination-dependent crops",
+            "features": {
+                "Yield": "Threatened"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Wild plants",
+            "features": {
+                "Reproduction": "Affected"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Ecosystem stability",
+            "features": {
+                "Status": "Disrupted"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Artificial pollination",
+            "features": {
+                "Dependency Level": "Increased",
+                "Cost": "Expensive"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct agricultural production and ecological protection",
+            "features": {
+                "Objective": "Ensure crop yield while maintaining ecological stability"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Drastically reduce pollinator insect populations",
+            "features": {
+                "Reason": "Long-term widespread use of pesticides"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Threaten agricultural production",
+            "features": {
+                "Reason": "Sharp decline in pollinating insects"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Disrupt ecological stability",
+            "features": {
+                "Reason": [
+                    "Sharp decline in pollinating insects",
+                    "Affects wild plant reproduction"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2",
+            "features": {
+                "Description": "Pesticide use triggers the decline in insect populations"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Exacerbates",
+            "source": "A3",
+            "target": "M6",
+            "features": {
+                "Description": "Threats to agricultural production exacerbate the dependency on artificial pollination"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Threatening agricultural production fundamentally conflicts with the objective of ensuring yield"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Disrupting ecological stability fundamentally conflicts with the objective of maintaining ecological stability"
+            }
+        }
+    ]
+}

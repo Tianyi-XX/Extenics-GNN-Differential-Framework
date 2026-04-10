@@ -1,0 +1,151 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Persistent organic pesticide residues (e.g., DDT)",
+            "features": {
+                "Property": "Difficult to degrade"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Farmland soil",
+            "features": {
+                "Status": "Residues exist"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Agricultural product quality",
+            "features": {
+                "Status": "Poses a long-term threat"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Food chain",
+            "features": {
+                "Behavior": "Biomagnifies at each level"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Top predators (e.g., eagles, falcons)",
+            "features": {
+                "Status": "Reproductive capacity harmed"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Cleanup technology",
+            "features": {
+                "Cost": "Extremely high"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct soil remediation and ecological protection",
+            "features": {
+                "Objective": "Ensure agricultural product safety, protect biodiversity"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Threaten agricultural product quality",
+            "features": {
+                "Reason": "Absorbed by crop roots"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Harm top predators",
+            "features": {
+                "Reason": "Biomagnifies up the food chain"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to cleanup difficulties",
+            "features": {
+                "Reason": "Technology cost is extremely high"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Exists in",
+            "source": "M1",
+            "target": "M2",
+            "features": {
+                "Description": "Pesticide residues exist in the soil"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A4"
+        },
+        {
+            "id":"R5",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Threatening agricultural product quality fundamentally conflicts with the safety objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Harming top predators fundamentally conflicts with protecting biodiversity"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Cleanup difficulties conflict with the objective of effective remediation"
+            }
+        }
+    ]
+}

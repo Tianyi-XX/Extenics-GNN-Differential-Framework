@@ -1,0 +1,158 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Groundwater",
+            "features": {
+                "Status": "Long-term severe over-extraction"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "North China Plain",
+            "features": {
+                "Attribute": "Geographic area"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "World's largest 'groundwater depression cone'",
+            "features": {
+                "Attribute": "Problem area"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Rivers, lakes, wetlands",
+            "features": {
+                "Status": "Flow interruption, drying up, shrinking"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Large-scale land subsidence",
+            "features": {
+                "Attribute": "Geological disaster"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Buildings and infrastructure",
+            "features": {
+                "Status": "Safety severely threatened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct water resource management and geological disaster prevention",
+            "features": {
+                "Objective": "Restore groundwater levels, ensure ecological and facility safety"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Long-term severe over-extraction of groundwater",
+            "features": {
+                "Reason": "Meet agricultural irrigation and urban water demands"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Form 'groundwater depression cone'",
+            "features": {
+                "Reason": "Groundwater over-extraction"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause ecosystem degradation",
+            "features": {
+                "Reason": "Groundwater over-extraction"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Trigger land subsidence",
+            "features": {
+                "Reason": "Groundwater over-extraction"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M2",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M2",
+            "target": "M6"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Produces",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Endangers",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering land subsidence fundamentally conflicts with ensuring facility safety"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Causing ecological degradation fundamentally conflicts with ecological protection"
+            }
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Climate warming",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Plants",
+            "features": {
+                "Status": "Flowering period advanced"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Pollinating insects",
+            "features": {
+                "Status": "Active period not synchronized"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "\"Phenological mismatch\"",
+            "features": {
+                "Description": "Temporal and spatial decoupling"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Plant fruiting rate and insect food source",
+            "features": {
+                "Status": "Affected"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Stable relationship formed by long-term co-evolution between species",
+            "features": {
+                "Status": "Disrupted"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Populations of some species",
+            "features": {
+                "Status": "May collapse"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecosystem protection",
+            "features": {
+                "Objective": "Protect species synergistic relationships, maintain ecological stability"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cause phenological mismatch",
+            "features": {
+                "Reason": "Asynchrony between plant and insect active periods"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Affect plant reproduction and insect survival",
+            "features": {
+                "Reason": "Phenological mismatch"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Disrupt co-evolutionary relationships",
+            "features": {
+                "Reason": "Phenological mismatch"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lead to population collapse",
+            "features": {
+                "Reason": "Co-evolutionary relationships disrupted"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Constitutes",
+            "source": "M2",
+            "target": "M6"
+        },
+        {
+            "id": "R2",
+            "relation": "Constitutes",
+            "source": "M3",
+            "target": "M6"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "May cause", 
+            "source": "A4",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Produces",
+            "source": "A2",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R10",
+            "relation": "Endangers",
+            "source": "A5",
+            "target": "M7"
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Disrupting co-evolutionary relationships fundamentally conflicts with maintaining ecological stability"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Leading to population collapse fundamentally conflicts with species protection"
+            }
+        }
+    ]
+}

@@ -1,0 +1,161 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Wetlands (e.g., tidal flats, mangrove forests)",
+            "features": {
+                "Status": "Undergoing large-scale reclamation"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Spawning grounds and 'nurseries' for fish, shrimp, crabs",
+            "features": {
+                "Status": "Destroyed"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Coastal fishery resources",
+            "features": {
+                "Status": "Declining"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Stopover sites for migratory birds",
+            "features": {
+                "Status": "Destroyed"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Natural barrier of the coastal zone",
+            "features": {
+                "Function": "Defend against typhoons and storm surges",
+                "Status": "Weakened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct coastal zone ecological protection",
+            "features": {
+                "Objective": "Protect wetlands, maintain fishery resources and coastal safety"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Reclaim wetlands on a large scale",
+            "features": {
+                "Reason": "For developing aquaculture, ports, and real estate"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Destroy key ecological functional areas",
+            "features": {
+                "Reason": "Large-scale reclamation"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause decline in fishery resources",
+            "features": {
+                "Reason": "Spawning grounds destroyed"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Weaken coastal protection capacity",
+            "features": {
+                "Reason": "Natural barrier destroyed"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M4"
+        },
+        {
+            "id": "R3",
+            "relation": "Executes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying key ecological areas fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Fishery resource decline fundamentally conflicts with maintaining fishery resources"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Weakening coastal protection fundamentally conflicts with ensuring coastal safety"
+            }
+        }
+    ]
+}

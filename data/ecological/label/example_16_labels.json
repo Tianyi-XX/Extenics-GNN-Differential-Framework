@@ -1,0 +1,109 @@
+{
+    "description": "The pollution problem of high-density aquaculture",
+    "metadata": {
+        "example_name": "example_16",
+        "domain": "ecological"
+    },
+    "node_scores": {
+        "M1": {
+            "importance": 1.0,
+            "problem_relevance": 1.0
+        },
+        "M2": {
+            "importance": 1.0,
+            "problem_relevance": 1.0
+        },
+        "M3": {
+            "importance": 0.9,
+            "problem_relevance": 0.95
+        },
+        "M4": {
+            "importance": 0.85,
+            "problem_relevance": 0.9
+        },
+        "M5": {
+            "importance": 0.7,
+            "problem_relevance": 0.75
+        },
+        "M6": {
+            "importance": 0.95,
+            "problem_relevance": 1.0
+        },
+        "M7": {
+            "importance": 1.0,
+            "problem_relevance": 1.0
+        },
+        "A1": {
+            "importance": 1.0,
+            "problem_relevance": 0.1
+        },
+        "A2": {
+            "importance": 1.0,
+            "problem_relevance": 1.0
+        },
+        "A3": {
+            "importance": 0.9,
+            "problem_relevance": 0.9
+        },
+        "A4": {
+            "importance": 0.8,
+            "problem_relevance": 0.85
+        },
+        "A5": {
+            "importance": 1.0,
+            "problem_relevance": 1.0
+        }
+    },
+    "edge_scores": {
+        "R1": {
+            "is_problem": 0,
+            "severity": 0.0,
+            "is_conflict": 0
+        },
+        "R2": {
+            "is_problem": 1,
+            "severity": 1.0,
+            "is_conflict": 0
+        },
+        "R3": {
+            "is_problem": 1,
+            "severity": 0.9,
+            "is_conflict": 0
+        },
+        "R4": {
+            "is_problem": 1,
+            "severity": 0.8,
+            "is_conflict": 0
+        },
+        "R5": {
+            "is_problem": 1,
+            "severity": 1.0,
+            "is_conflict": 0
+        },
+        "R6": {
+            "is_problem": 1,
+            "severity": 0.75,
+            "is_conflict": 0
+        },
+        "R7": {
+            "is_problem": 1,
+            "severity": 0.7,
+            "is_conflict": 0
+        },
+        "R8": {
+            "is_problem": 1,
+            "severity": 0.8,
+            "is_conflict": 0
+        },
+        "R9": {
+            "is_problem": 1,
+            "severity": 1.0,
+            "is_conflict": 1
+        },
+        "R10": {
+            "is_problem": 1,
+            "severity": 1.0,
+            "is_conflict": 1
+        }
+    }
+}

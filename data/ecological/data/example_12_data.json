@@ -1,0 +1,166 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Non-ferrous metal mining area",
+            "features": {
+                "Attribute": "Pollution source"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Farmland soil",
+            "features": {
+                "Status": "Heavy metals (e.g., Cadmium, Lead, Arsenic) seriously exceed standards"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Crops",
+            "features": {
+                "Behavior": "Accumulate heavy metals through root system"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "\"Toxic rice\", \"Toxic vegetables\"",
+            "features": {
+                "Attribute": "Contaminated agricultural products"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Public health and food safety",
+            "features": {
+                "Status": "Severely threatened"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Soil microorganisms and wildlife",
+            "features": {
+                "Status": "Poisoned"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Soil remediation technology",
+            "features": {
+                "Property": "High cost, long cycle",
+                "Application": "Difficult to implement on a large scale"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct soil remediation and health protection",
+            "features": {
+                "Objective": "Ensure food safety, restore soil ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Contaminate farmland soil",
+            "features": {
+                "Source": "Non-ferrous metal mining area"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Form contaminated agricultural products",
+            "features": {
+                "Reason": "Crops accumulate heavy metals"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Poison soil ecosystem",
+            "features": {
+                "Reason": "Heavy metal pollution"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lead to remediation difficulties",
+            "features": {
+                "Reason": "Technology is high-cost and long-cycle"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Originates from",
+            "source": "A2",
+            "target": "M1",
+            "features": {
+                "Description": "Soil pollution originates from the mining area"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M7",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Endangers",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Contaminated products threatening public health fundamentally conflicts with the health protection objective"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Poisoning the soil ecosystem conflicts with the objective of restoring the ecosystem"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Remediation difficulties conflict with the objective of effective remediation"
+            }
+        }
+    ]
+}

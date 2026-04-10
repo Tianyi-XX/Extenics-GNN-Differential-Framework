@@ -1,0 +1,152 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Monoculture artificial forest",
+            "features": {
+                "Ecosystem Structure": "Simple",
+                "Stability": "Poor"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Large-scale pest and disease outbreaks",
+            "features": {
+                "Status": "Prone to suffer"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Biodiversity level",
+            "features": {
+                "Status": "Extremely low"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Ecological functions (e.g., water retention, soil conservation)",
+            "features": {
+                "Status": "Far inferior to mixed forests"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Native mixed forest",
+            "features": {
+                "Property": "Species-rich, strong ecological functions"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological restoration",
+            "features": {
+                "Objective": "Build a species-rich, functionally sound, and stable ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Plant single fast-growing tree species",
+            "features": {
+                "Reason": "Pursuit of short-term results"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Reduce ecosystem stability",
+            "features": {
+                "Reason": "Single species, simple structure"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Reduce biodiversity",
+            "features": {
+                "Reason": "Planting single tree species"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Weaken ecological functions",
+            "features": {
+                "Reason": "Single species"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Compares with",
+            "source": "M1",
+            "target": "M5",
+            "features": {
+                "Description": "The ecological functions of artificial forests are far inferior to native mixed forests"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Triggers",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Reducing stability fundamentally conflicts with building a stable ecosystem"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Reducing biodiversity fundamentally conflicts with building a species-rich ecosystem"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Weakening ecological functions conflicts with building a functionally sound ecosystem"
+            }
+        }
+    ]
+}

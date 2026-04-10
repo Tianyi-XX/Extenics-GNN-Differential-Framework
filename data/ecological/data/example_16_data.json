@@ -1,0 +1,159 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "High-density aquaculture zone",
+            "features": {
+                "Polluting Property": "Produces large amounts of feed residue and excrement"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Uneaten feed and fish excrement",
+            "features": {
+                "Attribute": "Main pollutants"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Aquaculture water body",
+            "features": {
+                "Status": "Self-pollution, excessive ammonia nitrogen and nitrite"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Fish",
+            "features": {
+                "Status": "Frequent disease outbreaks"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Antibiotics and other drugs",
+            "features": {
+                "Usage": "Increased"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Aquaculture effluent containing drug residues",
+            "features": {
+                "Attribute": "Secondary pollution source"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Surrounding rivers and lakes",
+            "features": {
+                "Status": "Becomes a major pollution source"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct sustainable aquaculture",
+            "features": {
+                "Objective": "Ensure aquatic health while protecting the water environment"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Deteriorate its own water quality",
+            "features": {
+                "Reason": "Pollution from feed and excrement"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger fish diseases",
+            "features": {
+                "Reason": "Water quality deterioration"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase drug use",
+            "features": {
+                "Reason": "Frequent disease outbreaks"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Discharge pollution to surrounding water bodies",
+            "features": {
+                "Method": "Direct discharge of aquaculture effluent"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Triggers",
+            "source": "M6",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M7"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Deteriorating its own water quality fundamentally conflicts with sustainable aquaculture"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Discharging pollution fundamentally conflicts with protecting the water environment"
+            }
+        }
+    ]
+}

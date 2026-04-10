@@ -1,0 +1,163 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Pine wilt disease",
+            "features": {
+                "Property": "Once contracted, pine trees cannot be cured"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Pine sawyer beetle and other insect vectors",
+            "features": {
+                "Behavior": "Transmit disease"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Pine trees",
+            "features": {
+                "Status": "Wither and die quickly"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Forest ecosystem",
+            "features": {
+                "Status": "Severely damaged"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Preventive drug injection",
+            "features": {
+                "Cost": "Extremely high",
+                "Scalability": "Cannot be applied over large areas"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Felling and disposal of infected wood",
+            "features": {
+                "Workload": "Immense",
+                "Side Effect": "Severely damages forest ecosystem"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct forest pest and disease control",
+            "features": {
+                "Objective": "Effectively control disease, protect forest ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Rapid spread and diffusion",
+            "features": {
+                "Executor": "Pine sawyer beetle"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Cause pine trees to die",
+            "features": {
+                "Reason": "Pine wilt disease"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Damage forest ecosystem",
+            "features": {
+                "Reason": "Felling and disposal of infected wood"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Fall into a control dilemma",
+            "features": {
+                "Reason": [
+                    "Rapid spread due to transmission method",
+                    "Both prevention and treatment methods have major drawbacks"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Depends on",
+            "source": "M1",
+            "target": "M2",
+            "features": {
+                "Description": "Pine wilt disease relies on insect vectors for transmission"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Executes",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Pine tree death fundamentally conflicts with the objective of protecting the forest ecosystem"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "The primary control method damaging the ecosystem conflicts with the objective of protecting it"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "The control dilemma fundamentally conflicts with the objective of effective control"
+            }
+        }
+    ]
+}

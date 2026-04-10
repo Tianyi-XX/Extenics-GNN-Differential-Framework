@@ -1,0 +1,162 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Global warming",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Glaciers",
+            "features": {
+                "Status": "Retreating at an unprecedented rate",
+                "Alias": "Asia's Water Tower"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Glacial lake outburst floods (GLOFs) and flood disasters",
+            "features": {
+                "Attribute": "Short-term disasters"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Water resource security in downstream areas",
+            "features": {
+                "Status": "Severely threatened"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Ancient viruses trapped in ice",
+            "features": {
+                "Status": "May be released"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Public health",
+            "features": {
+                "Status": "Potentially threatened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct climate change response and ecological security protection",
+            "features": {
+                "Objective": "Slow down glacier retreat, ensure water resources and ecological security"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Accelerate glacier retreat",
+            "features": {
+                "Reason": "Global warming"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger short-term disasters",
+            "features": {
+                "Reason": "Increased glacial meltwater"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Threaten long-term water resource security",
+            "features": {
+                "Reason": "Glacier shrinkage"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Release ancient viruses",
+            "features": {
+                "Reason": "Glacier shrinkage"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Sealed in",
+            "source": "M5",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Endangers",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Endangers",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Threatening water security fundamentally conflicts with ensuring security"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering short-term disasters conflicts with ecological security protection"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Releasing ancient viruses conflicts with ecological security protection"
+            }
+        }
+    ]
+}

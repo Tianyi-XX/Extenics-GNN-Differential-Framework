@@ -1,0 +1,173 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "River channel",
+            "features": {
+                "Attribute": "Geographic area"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Riverbed",
+            "features": {
+                "Physical Structure": "Severely damaged" 
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Spawning grounds for fish and habitat for benthic organisms",
+            "features": {
+                "Status": "Destroyed"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Riverbanks and bridge foundations",
+            "features": {
+                "Status": "Potential collapse and instability"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "River's water and sediment balance",
+            "features": {
+                "Status": "Altered"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Downstream river channel morphology",
+            "features": {
+                "Status": "Unpredictable impacts generated"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct river ecological protection and facility safety maintenance",
+            "features": {
+                "Objective": "Protect riverbed structure, maintain ecological and facility safety"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Conduct large-scale sand mining",
+            "features": {
+                "Reason": "To obtain sand for construction"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Destroy biological habitat",
+            "features": {
+                "Reason": "Damage to riverbed physical structure"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Endanger bank revetments and facility safety",
+            "features": {
+                "Reason": "Damage to riverbed physical structure"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Alter water and sediment balance",
+            "features": {
+                "Reason": "Large-scale sand mining"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Includes",
+            "source": "M2",
+            "target": "M3"
+        },
+        {
+            "id": "R3",
+            "relation": "Executed on", 
+            "source": "A2",
+            "target": "M1"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Endangers",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R9",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R10",
+            "relation": "Affects",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Endangering facility safety fundamentally conflicts with safety maintenance"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying habitat fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R13",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Altering water-sediment balance conflicts with ecological protection"
+            }
+        }
+    ]
+}

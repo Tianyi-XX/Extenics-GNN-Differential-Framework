@@ -1,0 +1,139 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Canada goldenrod (Solidago canadensis)",
+            "features": {
+                "Property": "Roots can release allelopathic chemicals",
+                "Root System": "Extremely developed"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Native plant diversity",
+            "features": {
+                "Status": "Severely damaged"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Farmland and orchards",
+            "features": {
+                "Status": "Invaded"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Crops",
+            "features": {
+                "Status": "Yield reduced due to competition for nutrients and water"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Manual removal",
+            "features": {
+                "Effectiveness": "Difficult to eradicate"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological management and agricultural protection",
+            "features": {
+                "Objective": "Effectively control invasion, protect biodiversity and agricultural production"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Inhibit other plant growth",
+            "features": {
+                "Method": "Releases chemical substances"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Compete with crops for resources",
+            "features": {
+                "Resources": [
+                    "Nutrients",
+                    "Water"
+                ]
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Lead to control difficulties",
+            "features": {
+                "Reason": "Developed root system, difficult to eradicate"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Acts on",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Inhibiting native plants fundamentally conflicts with the objective of protecting biodiversity"
+            }
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Competition with crops causing yield loss fundamentally conflicts with ensuring agricultural production"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Control difficulties conflict with the objective of effective control"
+            }
+        }
+    ]
+}

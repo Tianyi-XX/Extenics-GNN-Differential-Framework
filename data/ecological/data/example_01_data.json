@@ -1,0 +1,178 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Procambarus clarkii (Crayfish)",
+            "features": {
+                "Reproduction Rate": "Extremely High",
+                "Behavior": "Burrows extensively at the bottom"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Lake embankments and water facilities",
+            "features": {
+                "Status": "Damaged"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Native fish fry and aquatic plants",
+            "features": {
+                "Status": "Preyed upon"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Biodiversity",
+            "features": {
+                "Status": "Severely threatened"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Water quality",
+            "features": {
+                "Status": "Deteriorated due to excrement and sediment disturbance"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Traditional control methods",
+            "features": {
+                "Type": "Manual capture, chemical killing",
+                "Drawbacks": [
+                    "High cost",
+                    "Prone to secondary pollution"
+                ]
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct biological invasion control and ecological protection",
+            "features": {
+                "Objective": "Effectively control invasive species, protect biodiversity and water quality"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Damage infrastructure",
+            "features": {
+                "Reason": "Burrows extensively at the bottom"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Threaten biodiversity",
+            "features": {
+                "Reason": "Preys on native species"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Deteriorate water quality",
+            "features": {
+                "Reason": [
+                    "Excrement",
+                    "Sediment disturbance"
+                ]
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lead to control dilemma",
+            "features": {
+                "Reason": "Traditional methods are costly and polluting"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Damaging infrastructure conflicts with the objective of ecological protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Threatening biodiversity fundamentally conflicts with the objective of protecting biodiversity"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Deteriorating water quality conflicts with the objective of protecting water quality"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "The control dilemma fundamentally conflicts with the objective of effective control"
+            }
+        }
+    ]
+}

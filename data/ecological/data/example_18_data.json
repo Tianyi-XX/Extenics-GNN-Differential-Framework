@@ -1,0 +1,181 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Multiple pollution sources",
+            "features": {
+                "Components": [
+                    "Coal combustion",
+                    "Industrial emissions",
+                    "Vehicle exhaust"
+                ]
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Severe smog (haze) weather",
+            "features": {
+                "Property": "Persistent"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Human respiratory and cardiovascular systems",
+            "features": {
+                "Status": "Health severely endangered"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Atmospheric visibility",
+            "features": {
+                "Status": "Drastically reduced"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Transportation",
+            "features": {
+                "Status": "Affected"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Acid rain",
+            "features": {
+                "Attribute": "Secondary disaster"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Precursors (NOx, SO₂, etc.)",
+            "features": {
+                "Source": "Multiple pollution sources"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct air pollution control",
+            "features": {
+                "Objective": "Protect public health, improve air quality"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Form severe smog",
+            "features": {
+                "Reason": "Combination of multiple pollution sources"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Endanger human health",
+            "features": {
+                "Reason": "Severe smog"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Affect transportation",
+            "features": {
+                "Reason": "Reduced atmospheric visibility"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Form acid rain",
+            "features": {
+                "Reason": "Emission of precursors"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Constitutes",
+            "source": "M1",
+            "target": "M7",
+            "features": {
+                "Description": "Multiple pollution sources are the main source of precursors"
+            }
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M2",
+            "target": "M4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Triggers",
+            "source": "M7",
+            "target": "A5"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Produces",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Endangering human health fundamentally conflicts with protecting public health"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Forming severe smog fundamentally conflicts with improving air quality"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Forming acid rain conflicts with improving air quality"
+            }
+        }
+    ]
+}

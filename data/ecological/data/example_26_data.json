@@ -1,0 +1,155 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "City",
+            "features": {
+                "Process": "Rapid expansion"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Green spaces and soil",
+            "features": {
+                "Status": "Covered by impervious surfaces"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Impervious surfaces (e.g., concrete, asphalt)",
+            "features": {
+                "Attribute": "Covering material"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Urban waterlogging",
+            "features": {
+                "Status": "Easily formed"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Groundwater",
+            "features": {
+                "Status": "Recharge obstructed"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Urban 'heat island effect'",
+            "features": {
+                "Status": "Exacerbated"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct urban ecological planning",
+            "features": {
+                "Objective": "Alleviate waterlogging and heat island effect, promote water cycle"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Cover natural ground surfaces (urban hardening)",
+            "features": {
+                "Reason": "Rapid urban expansion"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase surface runoff",
+            "features": {
+                "Reason": "Rainwater cannot infiltrate"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Obstruct groundwater recharge",
+            "features": {
+                "Reason": "Rainwater cannot infiltrate"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Exacerbate 'heat island effect'",
+            "features": {
+                "Reason": "Hardened surfaces absorb significant heat"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M6"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Increasing waterlogging fundamentally conflicts with urban ecological planning objectives"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Obstructing groundwater recharge conflicts with promoting the water cycle"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Exacerbating the heat island effect conflicts with ecological planning objectives"
+            }
+        }
+    ]
+}

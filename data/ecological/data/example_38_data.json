@@ -1,0 +1,174 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Global warming",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Prolonged high temperatures and drought",
+            "features": {
+                "Attribute": "Climatic manifestation"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Forest areas",
+            "features": {
+                "Attribute": "Geographic region"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Combustible materials",
+            "features": {
+                "Status": "Extremely dry"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Forest fire danger rating and fire season",
+            "features": {
+                "Status": "Significantly increased, extended"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Uncontrollable mega forest fires",
+            "features": {
+                "Attribute": "Ultimate disaster"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Ecosystem recovery process",
+            "features": {
+                "Status": "More difficult"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct forest fire prevention and ecological restoration",
+            "features": {
+                "Objective": "Reduce fire risk, protect forest ecosystem"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Exacerbate high temperatures and drought",
+            "features": {
+                "Reason": "Global warming"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Increase fire danger rating and extend season",
+            "features": {
+                "Reason": "Extremely dry combustible materials"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Increase risk of mega fires",
+            "features": {
+                "Reason": "Increased fire danger rating"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Hinder ecological recovery",
+            "features": {
+                "Reason": "Post-fire conditions"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M3",
+            "target": "M4"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "M4",
+            "target": "A3"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Causes",
+            "source": "M6",
+            "target": "A5"
+        },
+        {
+            "id": "R6",
+            "relation": "Affects",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R7",
+            "relation": "Affects",
+            "source": "A3",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Produces",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Affects",
+            "source": "A5",
+            "target": "M7"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Increased fire danger fundamentally conflicts with reducing risk"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Increased risk of mega fires fundamentally conflicts with fire prevention"
+            }
+        },
+        {
+            "id": "R12",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Hindering ecological recovery conflicts with ecological protection"
+            }
+        }
+    ]
+}

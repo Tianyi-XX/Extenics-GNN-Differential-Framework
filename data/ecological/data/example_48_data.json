@@ -1,0 +1,148 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Terraces reclaimed on steep slopes",
+            "features": {
+                "Design Flaw": "Lacks scientific soil and water conservation design" 
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Landslides and severe soil erosion",
+            "features": {
+                "Attribute": "Geological disasters"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Original mountain vegetation",
+            "features": {
+                "Status": "Destroyed"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Production efficiency",
+            "features": {
+                "Status": "Low"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Arable land area and mechanized operation",
+            "features": {
+                "Status": "Small, difficult to perform"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct sustainable land use and ecological protection",
+            "features": {
+                "Objective": "Prevent soil erosion, ensure production efficiency"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Unreasonable reclamation on steep slopes",
+            "features": {
+                "Method": "Lacks scientific design" 
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Destroy original vegetation",
+            "features": {
+                "Reason": "Reclamation"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Trigger geological disasters",
+            "features": {
+                "Reason": "Vegetation destruction, lack of soil conservation"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Lead to low production efficiency",
+            "features": {
+                "Reason": "Small land area, difficult mechanization"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R2",
+            "relation": "Causes",
+            "source": "A3",
+            "target": "A4"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R4",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R5",
+            "relation": "Produces",
+            "source": "A4",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A5",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Attributed to", 
+            "source": "A5",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering disasters fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Destroying vegetation fundamentally conflicts with ecological protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Low production efficiency conflicts with ensuring efficiency"
+            }
+        }
+    ]
+}

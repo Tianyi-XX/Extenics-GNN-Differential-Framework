@@ -1,0 +1,137 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "In-situ leaching mining and smelting processes (Uranium)",
+            "features": {
+                "Attribute": "Polluting processes"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Groundwater",
+            "features": {
+                "Status": "Severely polluted"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Waste gas, wastewater, and tailings containing radioactive materials",
+            "features": {
+                "Treatment Difficulty": "Extremely high"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Ecosystem around the mining area",
+            "features": {
+                "Status": "Suffers long-term ecological damage ('trauma')" 
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct ecological protection and pollution control",
+            "features": {
+                "Objective": "Protect water and soil environment, safely treat waste"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Pollute groundwater",
+            "features": {
+                "Reason": "In-situ leaching process"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Produce hazardous waste",
+            "features": {
+                "Reason": "Smelting process"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Cause long-term ecological damage",
+            "features": {
+                "Reason": [
+                    "Groundwater pollution",
+                    "Difficulty in treating hazardous waste"
+                ]
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Causes",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Causes",
+            "source": "M3", 
+            "target": "A4"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Polluting groundwater fundamentally conflicts with protecting the water environment"
+            }
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Producing hazardous waste fundamentally conflicts with safe treatment"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Causing long-term ecological damage fundamentally conflicts with ecological protection"
+            }
+        }
+    ]
+}

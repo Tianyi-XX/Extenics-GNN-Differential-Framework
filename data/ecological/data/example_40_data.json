@@ -1,0 +1,174 @@
+{
+    "domain": "ecological", 
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Global warming",
+            "features": {
+                "Attribute": "Fundamental driver"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Water cycle",
+            "features": {
+                "Status": "Intensified"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Extreme weather events (e.g., short-duration heavy rainfall)",
+            "features": {
+                "Status": "More frequent and intense"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Cities",
+            "features": {
+                "Attribute": "Affected area"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Mountainous areas",
+            "features": {
+                "Attribute": "Affected area"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Urban drainage system",
+            "features": {
+                "Capacity": "Exceeded" 
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Severe urban waterlogging",
+            "features": {
+                "Attribute": "Urban disaster"
+            }
+        },
+        {
+            "id": "M8",
+            "name": "Flash floods, landslides, and debris flows",
+            "features": {
+                "Attribute": "Geological disasters"
+            }
+        },
+        {
+            "id": "M9",
+            "name": "Safety of people's lives and property",
+            "features": {
+                "Status": "Seriously threatened"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct climate adaptation and disaster risk reduction",
+            "features": {
+                "Objective": "Ensure the safety of people's lives and property"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Intensify water cycle",
+            "features": {
+                "Reason": "Global warming"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Trigger severe urban waterlogging",
+            "features": {
+                "Location": "Cities", 
+                "Reason": "Exceeding drainage system capacity"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Induce geological disasters",
+            "features": {
+                "Location": "Mountainous areas", 
+                "Reason": "Short-duration heavy rainfall"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M4",
+            "target": "M6"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R3",
+            "relation": "Produces",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "M3",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Triggers",
+            "source": "M3",
+            "target": "A4"
+        },
+        {
+            "id": "R6",
+            "relation": "Produces",
+            "source": "A3",
+            "target": "M7"
+        },
+        {
+            "id": "R7",
+            "relation": "Produces",
+            "source": "A4",
+            "target": "M8"
+        },
+        {
+            "id": "R8",
+            "relation": "Endangers",
+            "source": "A3",
+            "target": "M9"
+        },
+        {
+            "id": "R9",
+            "relation": "Endangers",
+            "source": "A4",
+            "target": "M9"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Triggering waterlogging fundamentally conflicts with ensuring safety"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Inducing geological disasters fundamentally conflicts with ensuring safety"
+            }
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Spartina alterniflora (Smooth cordgrass)",
+            "features": {
+                "Property": "Rapid expansion, transforms environment"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Flat muddy tidal flats",
+            "features": {
+                "Status": "Transformed into high-density meadows"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Benthic organisms (e.g., Fiddler crabs, mudskippers)",
+            "features": {
+                "Status": "Habitat lost"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Foraging grounds for migratory waterbirds",
+            "features": {
+                "Status": "Crowded out"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Tidal creeks",
+            "features": {
+                "Status": "Blocked"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Seawater exchange and aquaculture zones",
+            "features": {
+                "Status": "Health affected"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct tidal flat wetland ecological protection",
+            "features": {
+                "Objective": "Protect native tidal flat ecosystem and aquaculture"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Transform tidal flat environment",
+            "features": {
+                "Executor": "Spartina alterniflora"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Crowd out waterbird foraging grounds",
+            "features": {
+                "Executor": "Spartina alterniflora"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Block tidal creeks",
+            "features": {
+                "Executor": "Spartina alterniflora"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A2"
+        },
+        {
+            "id": "R2",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Executes",
+            "source": "M1",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M2"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R6",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R7",
+            "relation": "Obstructs",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R8",
+            "relation": "Affects",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Transforming the tidal flat, destroying the native environment, fundamentally conflicts with the objective of ecological protection"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Crowding out foraging grounds conflicts with the objective of protecting the ecosystem"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Blocking tidal creeks affecting aquaculture conflicts with the objective of protecting aquaculture"
+            }
+        }
+    ]
+}

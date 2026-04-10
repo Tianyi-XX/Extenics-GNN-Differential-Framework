@@ -1,0 +1,154 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Large-scale livestock and poultry farms",
+            "features": {
+                "Pollution Generation Capacity": "Produce far more manure and sewage than can be assimilated"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Manure and sewage",
+            "features": {
+                "Attribute": "Pollutants"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Surrounding rivers, lakes, and groundwater",
+            "features": {
+                "Status": "Excessive ammonia nitrogen and total phosphorus"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Farmland soil",
+            "features": {
+                "Status": "Nutrient imbalance, accumulation of heavy metals and antibiotics"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Noxious gases (odor)",
+            "features": {
+                "Attribute": "Pollutants"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Lives of nearby residents",
+            "features": {
+                "Status": "Severely affected"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct environmental protection and pollution control",
+            "features": {
+                "Objective": "Achieve resource recovery of manure, protect water and soil environment and resident health"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Pollute water bodies",
+            "features": {
+                "Method": "Direct discharge or leakage"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Pollute soil",
+            "features": {
+                "Method": "Excessive application"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Affect residents' lives",
+            "features": {
+                "Method": "Production of noxious gases"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "M2"
+        },
+        {
+            "id": "R2",
+            "relation": "Produces",
+            "source": "M1",
+            "target": "M5"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "M2",
+            "target": "A2"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "M2",
+            "target": "A3"
+        },
+        {
+            "id": "R5",
+            "relation": "Triggers",
+            "source": "M5",
+            "target": "A4"
+        },
+        {
+            "id":"R6",
+            "relation": "Harms",
+            "source": "A2",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M6"
+        },
+        {
+            "id": "R9",
+            "relation": "Conflicts",
+            "source": "A2",
+            "target": "A1",
+            "features": {
+                "Description": "Polluting water bodies fundamentally conflicts with protecting the water environment"
+            }
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Polluting soil fundamentally conflicts with protecting the soil environment"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A4",
+            "target": "A1",
+            "features": {
+                "Description": "Affecting residents' lives conflicts with the objective of protecting resident health"
+            }
+        }
+    ]
+}

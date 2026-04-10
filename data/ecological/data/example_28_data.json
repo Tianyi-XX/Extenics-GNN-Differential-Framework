@@ -1,0 +1,166 @@
+{
+    "domain": "ecological",
+    "matter_elements": [
+        {
+            "id": "M1",
+            "name": "Dam of a large hydropower station",
+            "features": {
+                "Function": "Blocks the river"
+            }
+        },
+        {
+            "id": "M2",
+            "name": "Migratory routes for fish",
+            "features": {
+                "Status": "Blocked"
+            }
+        },
+        {
+            "id": "M3",
+            "name": "Many rare and endemic fish species",
+            "features": {
+                "Status": "Facing extinction due to inability to spawn"
+            }
+        },
+        {
+            "id": "M4",
+            "name": "Downstream water and sediment conditions",
+            "features": {
+                "Status": "Altered"
+            }
+        },
+        {
+            "id": "M5",
+            "name": "Riverbed and river mouth delta",
+            "features": {
+                "Status": "Incision and shrinkage"
+            }
+        },
+        {
+            "id": "M6",
+            "name": "Flowing river ecosystem",
+            "features": {
+                "Status": "Altered"
+            }
+        },
+        {
+            "id": "M7",
+            "name": "Lentic (still water) lake ecosystem",
+            "features": {
+                "Attribute": "Result after transformation"
+            }
+        }
+    ],
+    "action_elements": [
+        {
+            "id": "A1",
+            "action": "Conduct river ecological protection",
+            "features": {
+                "Objective": "Protect migratory fish, maintain river ecosystem stability"
+            }
+        },
+        {
+            "id": "A2",
+            "action": "Construct large hydropower station",
+            "features": {
+                "Core Behavior": "Blocking the river"
+            }
+        },
+        {
+            "id": "A3",
+            "action": "Block fish migratory routes",
+            "features": {
+                "Reason": "Dam construction"
+            }
+        },
+        {
+            "id": "A4",
+            "action": "Alter downstream water and sediment conditions",
+            "features": {
+                "Reason": "Dam construction"
+            }
+        },
+        {
+            "id": "A5",
+            "action": "Transform ecosystem type",
+            "features": {
+                "Reason": "Dam construction",
+                "Transformation Process": "From river to lake"
+            }
+        }
+    ],
+    "relation_elements": [
+        {
+            "id": "R1",
+            "relation": "Includes",
+            "source": "M6",
+            "target": "M3"
+        },
+        {
+            "id": "R2",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A3"
+        },
+        {
+            "id": "R3",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A4"
+        },
+        {
+            "id": "R4",
+            "relation": "Triggers",
+            "source": "A2",
+            "target": "A5"
+        },
+        {
+            "id": "R5",
+            "relation": "Harms",
+            "source": "A3",
+            "target": "M2"
+        },
+        {
+            "id": "R6",
+            "relation": "Endangers",
+            "source": "A3",
+            "target": "M3"
+        },
+        {
+            "id": "R7",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M4"
+        },
+        {
+            "id": "R8",
+            "relation": "Harms",
+            "source": "A4",
+            "target": "M5"
+        },
+        {
+            "id": "R9",
+            "relation": "Transforms into",
+            "source": "A5",
+            "target": "M7"
+        },
+        {
+            "id": "R10",
+            "relation": "Conflicts",
+            "source": "A3",
+            "target": "A1",
+            "features": {
+                "Description": "Blocking migratory routes fundamentally conflicts with protecting migratory fish"
+            }
+        },
+        {
+            "id": "R11",
+            "relation": "Conflicts",
+            "source": "A5",
+            "target": "A1",
+            "features": {
+                "Description": "Transforming the ecosystem type fundamentally conflicts with maintaining river ecosystem stability"
+            }
+        }
+    ]
+}
